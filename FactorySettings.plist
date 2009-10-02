@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>UpdateIntervalLaunchCounts</key>
-	<integer>10</integer>
+	<integer>20</integer>
 	<key>CurrentLaunchCount</key>
 	<integer>0</integer>
 </dict>

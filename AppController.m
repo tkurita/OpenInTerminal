@@ -39,9 +39,9 @@ static OSAScript *MAIN_SCRIPT = nil;
 	int interval_count = [user_defaults integerForKey:@"UpdateIntervalLaunchCounts"];
 	int current_count = [user_defaults integerForKey:@"CurrentLaunchCount"];
 	if (current_count >= interval_count) {
-		[updater checkForUpdates:self];
+		[updater checkForUpdatesInBackground];
 	} else {
-		[user_defaults setInteger:current_count++ forKey:@"CurrentLaunchCount"];
+		[user_defaults setInteger:++current_count forKey:@"CurrentLaunchCount"];
 	}
 }
 
