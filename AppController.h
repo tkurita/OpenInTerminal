@@ -2,7 +2,7 @@
 
 
 @interface AppController : NSObject {
-
+	IBOutlet SUUpdater *updater;
 }
 
 @end

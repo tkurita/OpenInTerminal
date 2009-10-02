@@ -34,6 +34,15 @@ static OSAScript *MAIN_SCRIPT = nil;
 {
 	NSLog(@"applicationWillFinishLaunching");
 	[DonationReminder remindDonation];
+	
+	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
+	int interval_count = [user_defaults integerForKey:@"UpdateIntervalLaunchCounts"];
+	int current_count = [user_defaults integerForKey:@"CurrentLaunchCount"];
+	if (current_count >= interval_count) {
+		[updater checkForUpdates:self];
+	} else {
+		[user_defaults setInteger:current_count++ forKey:@"CurrentLaunchCount"];
+	}
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
@@ -122,8 +131,17 @@ static OSAScript *MAIN_SCRIPT = nil;
 
 - (void)awakeFromNib
 {
+	/* Setup User Defaults */
+	NSString *defaults_plist = [[NSBundle mainBundle] pathForResource:@"FactorySettings" ofType:@"plist"];
+	NSDictionary *factory_defaults = [NSDictionary dictionaryWithContentsOfFile:defaults_plist];
+	
+	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
+	[user_defaults registerDefaults:factory_defaults];
+	
+	/* Setup Services Menu */
 	[NSApp setServicesProvider:self];
 	
+	/* Setup worker script */
 	NSString *path = [[NSBundle mainBundle] pathForResource:@"Application"
 													 ofType:@"scpt" inDirectory:@"Scripts"];
 	NSDictionary *err_info = nil;

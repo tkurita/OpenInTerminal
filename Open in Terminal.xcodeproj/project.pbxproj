@@ -31,6 +31,10 @@
 		2CE6B4C210744D8E005C6B05 /* DonationReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE6B4C110744D8E005C6B05 /* DonationReminder.framework */; };
 		2CE6B4C410744DC4005C6B05 /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2CE6B4C110744D8E005C6B05 /* DonationReminder.framework */; };
 		2CE6B51C10745441005C6B05 /* SmartActivate.osax in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2CE6B50610745441005C6B05 /* SmartActivate.osax */; };
+		2CE6B5481074818F005C6B05 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE6B5471074818F005C6B05 /* Sparkle.framework */; };
+		2CE6B5511074819B005C6B05 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2CE6B5471074818F005C6B05 /* Sparkle.framework */; };
+		2CE6B57E10749FE4005C6B05 /* FactorySettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CE6B57D10749FE4005C6B05 /* FactorySettings.plist */; };
+		2CE6B58B10757A46005C6B05 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 2CE6B58A10757A46005C6B05 /* dsa_pub.pem */; };
 		60A014E50DBD2B4C0071D9A8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60A014E30DBD2B4C0071D9A8 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +45,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				2CE6B5511074819B005C6B05 /* Sparkle.framework in CopyFiles */,
 				2CE6B4C410744DC4005C6B05 /* DonationReminder.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,6 +77,9 @@
 		2CE6B49910744546005C6B05 /* OSAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OSAKit.framework; path = /System/Library/Frameworks/OSAKit.framework; sourceTree = "<absolute>"; };
 		2CE6B4C110744D8E005C6B05 /* DonationReminder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DonationReminder.framework; path = ../DonationReminder.framework; sourceTree = SOURCE_ROOT; };
 		2CE6B50610745441005C6B05 /* SmartActivate.osax */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SmartActivate.osax; path = ../SmartActivate.osax; sourceTree = SOURCE_ROOT; };
+		2CE6B5471074818F005C6B05 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = ../Sparkle.framework; sourceTree = SOURCE_ROOT; };
+		2CE6B57D10749FE4005C6B05 /* FactorySettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FactorySettings.plist; sourceTree = "<group>"; };
+		2CE6B58A10757A46005C6B05 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		60A014E40DBD2B4C0071D9A8 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		653593B5078DD4D900E8BB2F /* AppleScriptKit.sdef */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.sdef; name = AppleScriptKit.sdef; path = /System/Library/Frameworks/AppleScriptKit.framework/Versions/A/Resources/AppleScriptKit.sdef; sourceTree = "<absolute>"; };
 		DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptKit.framework; path = /System/Library/Frameworks/AppleScriptKit.framework; sourceTree = "<absolute>"; };
@@ -87,6 +95,7 @@
 				2575736D072882A0000BE9CA /* AppleScriptKit.framework in Frameworks */,
 				2CE6B49A10744546005C6B05 /* OSAKit.framework in Frameworks */,
 				2CE6B4C210744D8E005C6B05 /* DonationReminder.framework in Frameworks */,
+				2CE6B5481074818F005C6B05 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +113,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2CE6B5471074818F005C6B05 /* Sparkle.framework */,
 				2CE6B4C110744D8E005C6B05 /* DonationReminder.framework */,
 				2CE6B49910744546005C6B05 /* OSAKit.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
@@ -156,10 +166,12 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2CE6B58A10757A46005C6B05 /* dsa_pub.pem */,
 				2CE6B50610745441005C6B05 /* SmartActivate.osax */,
 				60A014E30DBD2B4C0071D9A8 /* MainMenu.xib */,
 				653593B5078DD4D900E8BB2F /* AppleScriptKit.sdef */,
 				2CE6B3F61072FA6F005C6B05 /* ServicesMenu.strings */,
+				2CE6B57D10749FE4005C6B05 /* FactorySettings.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -233,6 +245,8 @@
 			files = (
 				60A014E50DBD2B4C0071D9A8 /* MainMenu.xib in Resources */,
 				2CE6B3F71072FA6F005C6B05 /* ServicesMenu.strings in Resources */,
+				2CE6B57E10749FE4005C6B05 /* FactorySettings.plist in Resources */,
+				2CE6B58B10757A46005C6B05 /* dsa_pub.pem in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

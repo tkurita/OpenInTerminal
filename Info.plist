@@ -53,6 +53,12 @@
 	<string>1.5 copyright 2003-2009, Tetsuro KURITA</string>
 	<key>DonationURL</key>
 	<string>http://homepage.mac.com/tkurita/scriptfactory/donationproxy.html</string>
+	<key>SUPublicDSAKeyFile</key>
+	<string>dsa_pub.pem</string>
+	<key>SUFeedURL</key>
+	<string>http://homepage.mac.com/tkurita/scriptfactory/appcast/OpeninTerminal.xml</string>
+	<key>SUEnableAutomaticChecks</key>
+	<true/>
 	<key>NSServices</key>
 	<array>
 		<dict>
