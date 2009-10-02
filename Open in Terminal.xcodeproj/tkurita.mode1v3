@@ -343,7 +343,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>History.rd</string>
+								<string>AppController.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -351,11 +351,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>History.rd</string>
+										<string>AppController.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2CE6B5C610758C07005C6B05</string>
+										<string>2CE6B5CF10758C87005C6B05</string>
 										<key>history</key>
 										<array>
 											<string>2CE6B2EE1072281F005C6B05</string>
@@ -366,10 +366,10 @@
 											<string>2CE6B5AA10758930005C6B05</string>
 											<string>2CE6B5B710758BBD005C6B05</string>
 											<string>2CE6B5B910758BBD005C6B05</string>
-											<string>2CE6B5BA10758BBD005C6B05</string>
 											<string>2CE6B5BB10758BBD005C6B05</string>
 											<string>2CE6B5BC10758BBD005C6B05</string>
-											<string>2CE6B5BD10758BBD005C6B05</string>
+											<string>2CE6B5CD10758C87005C6B05</string>
+											<string>2CE6B5C910758C82005C6B05</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -392,6 +392,7 @@
 											<string>2CE6B5C010758BBD005C6B05</string>
 											<string>2CE6B5C110758BBD005C6B05</string>
 											<string>2CE6B5C210758BBD005C6B05</string>
+											<string>2CE6B5CE10758C87005C6B05</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -607,12 +608,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>AppController.h</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -621,7 +624,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {849, 499}}</string>
 								<key>RubberWindowFrame</key>
-								<string>156 159 849 719 0 0 1440 878 </string>
+								<string>416 159 849 719 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -647,7 +650,7 @@
 								<key>Frame</key>
 								<string>{{0, 504}, {849, 174}}</string>
 								<key>RubberWindowFrame</key>
-								<string>156 159 849 719 0 0 1440 878 </string>
+								<string>416 159 849 719 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXBuildResultsModule</string>
@@ -677,7 +680,7 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.buildV3</string>
 			<key>WindowString</key>
-			<string>156 159 849 719 0 0 1440 878 </string>
+			<string>416 159 849 719 0 0 1440 878 </string>
 			<key>WindowToolGUID</key>
 			<string>2CE6B2C91071F029005C6B05</string>
 			<key>WindowToolIsVisible</key>

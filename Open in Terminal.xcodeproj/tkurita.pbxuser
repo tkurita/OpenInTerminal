@@ -242,6 +242,11 @@
 			2CE6B5C210758BBD005C6B05 /* PlistBookmark */ = 2CE6B5C210758BBD005C6B05 /* PlistBookmark */;
 			2CE6B5C310758BBD005C6B05 /* PBXTextBookmark */ = 2CE6B5C310758BBD005C6B05 /* PBXTextBookmark */;
 			2CE6B5C610758C07005C6B05 /* PBXTextBookmark */ = 2CE6B5C610758C07005C6B05 /* PBXTextBookmark */;
+			2CE6B5C910758C82005C6B05 /* PBXTextBookmark */ = 2CE6B5C910758C82005C6B05 /* PBXTextBookmark */;
+			2CE6B5CA10758C82005C6B05 /* PBXTextBookmark */ = 2CE6B5CA10758C82005C6B05 /* PBXTextBookmark */;
+			2CE6B5CD10758C87005C6B05 /* PBXTextBookmark */ = 2CE6B5CD10758C87005C6B05 /* PBXTextBookmark */;
+			2CE6B5CE10758C87005C6B05 /* PBXTextBookmark */ = 2CE6B5CE10758C87005C6B05 /* PBXTextBookmark */;
+			2CE6B5CF10758C87005C6B05 /* PBXTextBookmark */ = 2CE6B5CF10758C87005C6B05 /* PBXTextBookmark */;
 			DA458A96036079E503C91932 = DA458A96036079E503C91932 /* Application.applescript */;
 		};
 		sourceControlManager = 25D9446E07B15AA800FF306F /* Source Control */;
@@ -268,8 +273,8 @@
 	2CE6B2E4107227B7005C6B05 /* AppController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {669, 497}}";
-			sepNavSelRange = "{93, 0}";
-			sepNavVisRange = "{0, 102}";
+			sepNavSelRange = "{93, 30}";
+			sepNavVisRange = "{0, 131}";
 		};
 	};
 	2CE6B2E5107227B7005C6B05 /* AppController.m */ = {
@@ -304,7 +309,7 @@
 		fRef = 2CE6B2E4107227B7005C6B05 /* AppController.h */;
 		name = "AppController.h: 6";
 		rLen = 0;
-		rLoc = 94;
+		rLoc = 123;
 		rType = 0;
 		vrLen = 73;
 		vrLoc = 0;
@@ -334,7 +339,7 @@
 		fRef = 2CE6B2E4107227B7005C6B05 /* AppController.h */;
 		name = "AppController.h: 6";
 		rLen = 0;
-		rLoc = 94;
+		rLoc = 123;
 		rType = 0;
 		vrLen = 73;
 		vrLoc = 0;
@@ -566,7 +571,7 @@
 		fRef = 2CE6B2E4107227B7005C6B05 /* AppController.h */;
 		name = "AppController.h: 6";
 		rLen = 0;
-		rLoc = 94;
+		rLoc = 123;
 		rType = 0;
 		vrLen = 73;
 		vrLoc = 0;
@@ -603,7 +608,7 @@
 		fRef = 2CE6B2E4107227B7005C6B05 /* AppController.h */;
 		name = "AppController.h: 6";
 		rLen = 0;
-		rLoc = 94;
+		rLoc = 123;
 		rType = 0;
 		vrLen = 73;
 		vrLoc = 0;
@@ -1055,7 +1060,7 @@
 		fRef = 2CE6B2E4107227B7005C6B05 /* AppController.h */;
 		name = "AppController.h: 5";
 		rLen = 0;
-		rLoc = 93;
+		rLoc = 122;
 		rType = 0;
 		vrLen = 102;
 		vrLoc = 0;
@@ -1119,7 +1124,7 @@
 		fRef = 2CE6B2E4107227B7005C6B05 /* AppController.h */;
 		name = "AppController.h: 5";
 		rLen = 0;
-		rLoc = 93;
+		rLoc = 122;
 		rType = 0;
 		vrLen = 102;
 		vrLoc = 0;
@@ -1164,6 +1169,54 @@
 		rLoc = 5;
 		rType = 0;
 		vrLen = 814;
+		vrLoc = 0;
+	};
+	2CE6B5C910758C82005C6B05 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: syntax error before ‘SUUpdater’";
+		fRef = 2CE6B2E4107227B7005C6B05 /* AppController.h */;
+		rLen = 1;
+		rLoc = 4;
+		rType = 1;
+	};
+	2CE6B5CA10758C82005C6B05 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CE6B2E4107227B7005C6B05 /* AppController.h */;
+		name = "AppController.h: 2";
+		rLen = 0;
+		rLoc = 53;
+		rType = 0;
+		vrLen = 131;
+		vrLoc = 0;
+	};
+	2CE6B5CD10758C87005C6B05 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CE6B34610723CBF005C6B05 /* History.rd */;
+		name = "History.rd: 1";
+		rLen = 0;
+		rLoc = 5;
+		rType = 0;
+		vrLen = 814;
+		vrLoc = 0;
+	};
+	2CE6B5CE10758C87005C6B05 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CE6B34610723CBF005C6B05 /* History.rd */;
+		name = "History.rd: 1";
+		rLen = 0;
+		rLoc = 5;
+		rType = 0;
+		vrLen = 814;
+		vrLoc = 0;
+	};
+	2CE6B5CF10758C87005C6B05 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CE6B2E4107227B7005C6B05 /* AppController.h */;
+		name = "AppController.h: 5";
+		rLen = 30;
+		rLoc = 93;
+		rType = 0;
+		vrLen = 131;
 		vrLoc = 0;
 	};
 	DA458A96036079E503C91932 /* Application.applescript */ = {
