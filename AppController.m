@@ -2,13 +2,11 @@
 #import <OSAKit/OSAScript.h>
 #import "DonationReminder/DonationReminder.h"
 
-@class ASKScriptCache;
-@class ASKScript;
+#define useLog 0
 
 static BOOL AUTO_QUIT = YES;
 static OSAScript *MAIN_SCRIPT = nil;
 
-//static BOOL IS_LAUNCHED = NO;
 @implementation AppController
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication
@@ -19,7 +17,6 @@ static OSAScript *MAIN_SCRIPT = nil;
 - (void)processForLaunched
 {
     NSDictionary *errorInfo = nil;
-    //ASKScript *a_script = [[ASKScriptCache sharedScriptCache] scriptWithName:@"Application"];
     [MAIN_SCRIPT executeHandlerWithName:@"process_for_context"
 				arguments:nil error:&errorInfo];
 	if (!errorInfo) {
@@ -32,7 +29,9 @@ static OSAScript *MAIN_SCRIPT = nil;
 
 - (void)applicationWillFinishLaunching:(NSNotification *)aNotification
 {
+#if uselOg
 	NSLog(@"applicationWillFinishLaunching");
+#endif
 	[DonationReminder remindDonation];
 	
 	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
@@ -47,19 +46,25 @@ static OSAScript *MAIN_SCRIPT = nil;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+#if useLog
 	NSLog(@"applicationDidFinishLaunching");
-
+#endif
 	NSAppleEventDescriptor *ev = [ [NSAppleEventManager sharedAppleEventManager] currentAppleEvent];
 	NSLog([ev description]);
 	AEEventID evid = [ev eventID];
 	BOOL should_process = NO;
+	NSAppleEventDescriptor *propData;
 	switch (evid) {
 		case kAEOpenDocuments:
+#if useLog			
 			NSLog(@"kAEOpenDocuments");
+#endif
 			break;
 		case kAEOpenApplication:
+#if useLog			
 			NSLog(@"kAEOpenApplication");
-			NSAppleEventDescriptor* propData = [ev paramDescriptorForKeyword: keyAEPropData];
+#endif
+			propData = [ev paramDescriptorForKeyword: keyAEPropData];
 			DescType type = propData ? [propData descriptorType] : typeNull;
 			OSType value = 0;
 			if(type == typeType) {
@@ -77,11 +82,6 @@ static OSAScript *MAIN_SCRIPT = nil;
 			break;
 	}
 	
-	/*
-	IS_LAUNCHED = YES;
-	if (should_process)
-		[self processForLaunched];
-	 */
 	if (should_process && [[NSApp windows] count]) {
 		/* when donation reminder is opened, applicationOpenUntitled is not called. */
 		[self processForLaunched];
@@ -91,7 +91,6 @@ static OSAScript *MAIN_SCRIPT = nil;
 - (void)application:(NSApplication *)sender openFiles:(NSArray *)filenames
 {
 	NSDictionary *errorInfo = nil;
-    //ASKScript *a_script = [[ASKScriptCache sharedScriptCache] scriptWithName:@"Application"];
     [MAIN_SCRIPT executeHandlerWithName:@"service_for_pathes"
 								arguments:[NSArray arrayWithObject:filenames]
 							   error:&errorInfo];
@@ -123,8 +122,9 @@ static OSAScript *MAIN_SCRIPT = nil;
 
 - (BOOL)applicationOpenUntitledFile:(NSApplication *)theApplication
 {
+#if useLog
 	NSLog(@"applicationOpenUntitledFile");
-	//if (IS_LAUNCHED) [self processForLaunched];
+#endif	
 	[self processForLaunched];
 	return YES;
 }

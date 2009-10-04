@@ -3,7 +3,6 @@ property TerminalCommander : missing value
 property XFile : missing value
 property FrontAccess : missing value
 property GUIScriptingChecker : missing value
---property is_processed : false
 
 on load_modules(loader)
 	tell loader
@@ -24,12 +23,6 @@ on initialize()
 end initialize
 
 property _ : initialize()
-
-on launched theObject
-	log "launched"
-	--delay 10 -- to activate after open handler
-	--activate
-end launched
 
 on current_app_name()
 	set a_result to ""
@@ -72,21 +65,13 @@ on submain()
 end submain
 
 on process_for_context()
-	(*
-	if is_processed then
-		--quit
-		return
-	end if
-	set is_processed to true
-	*)
-	--log "process in process_for_context"
+	--log "start process in process_for_context"
 	try
 		submain()
 	on error msg number errno
 		activate
 		display alert msg message "Error Number : " & errno
 	end try
-	--quit
 end process_for_context
 
 on open_location(a_location)
@@ -112,13 +97,6 @@ on process_pathes(a_list)
 end process_pathes
 
 on service_for_pathes(a_list)
-	(*
-	if is_processed then
-		--quit
-		return
-	end if
-	set is_processed to true
-	*)
 	set pathlist to {}
 	try
 		repeat with a_path in a_list
@@ -135,37 +113,4 @@ on service_for_pathes(a_list)
 		activate
 		display alert errMsg
 	end try
-	--quit
 end service_for_pathes
-(*
-on open a_list
-	--log "open"
-	if is_processed then
-		--quit
-		return
-	end if
-	set is_processed to true
-	--log "process in open"
-	
-	if class of a_list is not list then
-		set a_list to {a_list}
-	end if
-	set pathlist to {}
-	try
-		repeat with an_item in a_list
-			set a_xfile to XFile's make_with(an_item)
-			tell a_xfile
-				if not is_folder() or is_package() then
-					set a_xfile to parent_folder()
-				end if
-			end tell
-			set end of pathlist to a_xfile's posix_path()
-		end repeat
-		return process_pathes(pathlist)
-	on error errMsg
-		activate
-		display alert errMsg
-	end try
-	--quit
-end open
-*)
