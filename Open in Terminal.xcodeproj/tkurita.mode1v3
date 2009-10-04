@@ -240,6 +240,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -286,7 +288,6 @@
 								<string>29B97323FDCFA39411CA2CEA</string>
 								<string>1058C7A0FEA54F0111CA2CBB</string>
 								<string>2CE6B5471074818F005C6B05</string>
-								<string>2CE660951075A3A30057941A</string>
 								<string>2CE6B4C110744D8E005C6B05</string>
 								<string>19C28FACFE9D520D11CA2CBB</string>
 								<string>1C37FBAC04509CD000000102</string>
@@ -296,11 +297,9 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>24</integer>
-									<integer>21</integer>
-									<integer>20</integer>
-									<integer>19</integer>
-									<integer>18</integer>
+									<integer>8</integer>
+									<integer>7</integer>
+									<integer>4</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -337,14 +336,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>AppController.m</string>
+								<string>FactorySettings.plist</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -352,11 +349,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>AppController.m</string>
+										<string>FactorySettings.plist</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2CE660D21075A4F20057941A</string>
+										<string>2CE5E4961078EE5A007EE095</string>
 										<key>history</key>
 										<array>
 											<string>2CE6B2EE1072281F005C6B05</string>
@@ -368,13 +365,9 @@
 											<string>2CE6B5BB10758BBD005C6B05</string>
 											<string>2CE6B5CD10758C87005C6B05</string>
 											<string>2CE660B61075A41A0057941A</string>
-											<string>2CE660B71075A41A0057941A</string>
 											<string>2CE660CF1075A4F20057941A</string>
-											<string>2CE660D01075A4F20057941A</string>
-										</array>
-										<key>nextStack</key>
-										<array>
-											<string>2CE660D11075A4F20057941A</string>
+											<string>2CE660D91075A5E10057941A</string>
+											<string>2CE5E4951078EE5A007EE095</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -388,8 +381,7 @@
 											<string>2CE6B42D107354C0005C6B05</string>
 											<string>2CE6B5BE10758BBD005C6B05</string>
 											<string>2CE6B5C110758BBD005C6B05</string>
-											<string>2CE660B91075A41A0057941A</string>
-											<string>2CE660BA1075A41A0057941A</string>
+											<string>2CE660DB1075A5E10057941A</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -447,9 +439,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>2CE660AF1075A3B00057941A</string>
+				<string>2CE5E4971078EE5A007EE095</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>2CE660B01075A3B00057941A</string>
+				<string>2CE5E4981078EE5A007EE095</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -583,9 +575,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C78EAAD065D492600B07095</string>
-		<string>1CD10A99069EF8BA00B06720</string>
-		<string>2CE6B2C91071F029005C6B05</string>
 		<string>/Users/tkurita/Dev/Projects/Open in Terminal/OpenInTerminal/trunk/Open in Terminal.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

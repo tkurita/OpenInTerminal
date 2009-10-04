@@ -24,6 +24,7 @@
 		2575736A072882A0000BE9CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		2575736C072882A0000BE9CA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		2575736D072882A0000BE9CA /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */; };
+		2CE5E4AF1078EFD7007EE095 /* OiT_icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2CE5E4AE1078EFD7007EE095 /* OiT_icon.icns */; };
 		2CE6B2E6107227B7005C6B05 /* AppController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CE6B2E4107227B7005C6B05 /* AppController.h */; };
 		2CE6B2E7107227B7005C6B05 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE6B2E5107227B7005C6B05 /* AppController.m */; };
 		2CE6B3F71072FA6F005C6B05 /* ServicesMenu.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CE6B3F61072FA6F005C6B05 /* ServicesMenu.strings */; };
@@ -69,6 +70,7 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		2CE5E4AE1078EFD7007EE095 /* OiT_icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = OiT_icon.icns; sourceTree = "<group>"; };
 		2CE6B2E4107227B7005C6B05 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		2CE6B2E5107227B7005C6B05 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		2CE6B34610723CBF005C6B05 /* History.rd */ = {isa = PBXFileReference; fileEncoding = 2147483649; lastKnownFileType = text; name = History.rd; path = ../../History.rd; sourceTree = SOURCE_ROOT; };
@@ -166,6 +168,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2CE5E4AE1078EFD7007EE095 /* OiT_icon.icns */,
 				2CE6B58A10757A46005C6B05 /* dsa_pub.pem */,
 				2CE6B50610745441005C6B05 /* SmartActivate.osax */,
 				60A014E30DBD2B4C0071D9A8 /* MainMenu.xib */,
@@ -247,6 +250,7 @@
 				2CE6B3F71072FA6F005C6B05 /* ServicesMenu.strings in Resources */,
 				2CE6B57E10749FE4005C6B05 /* FactorySettings.plist in Resources */,
 				2CE6B58B10757A46005C6B05 /* dsa_pub.pem in Resources */,
+				2CE5E4AF1078EFD7007EE095 /* OiT_icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
