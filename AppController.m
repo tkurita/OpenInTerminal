@@ -81,11 +81,6 @@ static OSAScript *MAIN_SCRIPT = nil;
 			}
 			break;
 	}
-	
-	if (should_process && [[NSApp windows] count]) {
-		/* when donation reminder is opened, applicationOpenUntitled is not called. */
-		[self processForLaunched];
-	}
 }
 
 - (void)application:(NSApplication *)sender openFiles:(NSArray *)filenames
