@@ -93,7 +93,8 @@
 			25757362072882A0000BE9CA /* Open in Terminal */,
 		);
 		breakpoints = (
-			2CE6B44510736F2D005C6B05 /* AppController.m:70 */,
+			2CE6B44510736F2D005C6B05 /* AppController.m:78 */,
+			2C9860A51084669F00F01509 /* AppController.m:42 */,
 		);
 		codeSenseManager = 25D9446F07B15AA800FF306F /* Code sense */;
 		executables = (
@@ -179,6 +180,31 @@
 			2C98609810845A7400F01509 /* PBXTextBookmark */ = 2C98609810845A7400F01509 /* PBXTextBookmark */;
 			2C98609910845A7400F01509 /* PBXTextBookmark */ = 2C98609910845A7400F01509 /* PBXTextBookmark */;
 			2C98609A10845A7400F01509 /* PlistBookmark */ = 2C98609A10845A7400F01509 /* PlistBookmark */;
+			2C9860A71084746500F01509 /* PlistBookmark */ = 2C9860A71084746500F01509 /* PlistBookmark */;
+			2C9860A81084746500F01509 /* PBXTextBookmark */ = 2C9860A81084746500F01509 /* PBXTextBookmark */;
+			2C9860A91084746500F01509 /* PlistBookmark */ = 2C9860A91084746500F01509 /* PlistBookmark */;
+			2C9860AA1084746500F01509 /* PBXTextBookmark */ = 2C9860AA1084746500F01509 /* PBXTextBookmark */;
+			2C9860AB1084746500F01509 /* PlistBookmark */ = 2C9860AB1084746500F01509 /* PlistBookmark */;
+			2C9860AC1084746500F01509 /* PlistBookmark */ = 2C9860AC1084746500F01509 /* PlistBookmark */;
+			2C9860AD1084746500F01509 /* PBXTextBookmark */ = 2C9860AD1084746500F01509 /* PBXTextBookmark */;
+			2C9860AE1084746500F01509 /* PBXTextBookmark */ = 2C9860AE1084746500F01509 /* PBXTextBookmark */;
+			2C9860AF1084746500F01509 /* PBXTextBookmark */ = 2C9860AF1084746500F01509 /* PBXTextBookmark */;
+			2C9860B01084746500F01509 /* PlistBookmark */ = 2C9860B01084746500F01509 /* PlistBookmark */;
+			2C9860B11084746500F01509 /* PBXTextBookmark */ = 2C9860B11084746500F01509 /* PBXTextBookmark */;
+			2C9860B4108474D000F01509 /* PBXTextBookmark */ = 2C9860B4108474D000F01509 /* PBXTextBookmark */;
+			2C9860B81084754900F01509 /* PlistBookmark */ = 2C9860B81084754900F01509 /* PlistBookmark */;
+			2C9860B91084754900F01509 /* PBXTextBookmark */ = 2C9860B91084754900F01509 /* PBXTextBookmark */;
+			2C9860BA1084754900F01509 /* PBXTextBookmark */ = 2C9860BA1084754900F01509 /* PBXTextBookmark */;
+			2C9860BB1084754900F01509 /* PBXTextBookmark */ = 2C9860BB1084754900F01509 /* PBXTextBookmark */;
+			2C9860BC1084754900F01509 /* PlistBookmark */ = 2C9860BC1084754900F01509 /* PlistBookmark */;
+			2C9860BD1084754900F01509 /* PBXTextBookmark */ = 2C9860BD1084754900F01509 /* PBXTextBookmark */;
+			2C9860BE1084754900F01509 /* PBXTextBookmark */ = 2C9860BE1084754900F01509 /* PBXTextBookmark */;
+			2C9860C01084756E00F01509 /* PBXTextBookmark */ = 2C9860C01084756E00F01509 /* PBXTextBookmark */;
+			2C9860C3108475B100F01509 /* PBXTextBookmark */ = 2C9860C3108475B100F01509 /* PBXTextBookmark */;
+			2C9860C61084761200F01509 /* PBXTextBookmark */ = 2C9860C61084761200F01509 /* PBXTextBookmark */;
+			2C9860C71084761200F01509 /* PlistBookmark */ = 2C9860C71084761200F01509 /* PlistBookmark */;
+			2C9860C81084761200F01509 /* PBXTextBookmark */ = 2C9860C81084761200F01509 /* PBXTextBookmark */;
+			2C9860C91084761200F01509 /* PlistBookmark */ = 2C9860C91084761200F01509 /* PlistBookmark */;
 			2CE5E4D31078F479007EE095 = 2CE5E4D31078F479007EE095 /* PlistBookmark */;
 			2CE5E4D71078F479007EE095 = 2CE5E4D71078F479007EE095 /* PBXBookmark */;
 			2CE660B61075A41A0057941A = 2CE660B61075A41A0057941A /* PBXTextBookmark */;
@@ -207,7 +233,7 @@
 	};
 	29B97316FDCFA39411CA2CEA /* main.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {645, 515}}";
+			sepNavIntBoundsRect = "{{0, 0}, {866, 497}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 197}";
 		};
@@ -231,7 +257,7 @@
 		fRef = 2CE6B2E5107227B7005C6B05 /* AppController.m */;
 		name = "AppController.m: 83";
 		rLen = 0;
-		rLoc = 2154;
+		rLoc = 2333;
 		rType = 0;
 		vrLen = 928;
 		vrLoc = 101;
@@ -241,7 +267,7 @@
 		fRef = 2CE6B2E5107227B7005C6B05 /* AppController.m */;
 		name = "AppController.m: 83";
 		rLen = 0;
-		rLoc = 2154;
+		rLoc = 2333;
 		rType = 0;
 		vrLen = 928;
 		vrLoc = 101;
@@ -383,6 +409,287 @@
 		rLen = 0;
 		rLoc = 2147483647;
 	};
+	2C9860A51084669F00F01509 /* AppController.m:42 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 2CE6B2E5107227B7005C6B05 /* AppController.m */;
+		functionName = "-applicationWillFinishLaunching:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 42;
+		modificationTime = 277112479.342175;
+		state = 1;
+	};
+	2C9860A71084746500F01509 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 2CE6B57D10749FE4005C6B05 /* FactorySettings.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/tkurita/Dev/Projects/Open in Terminal/OpenInTerminal/trunk/FactorySettings.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	2C9860A81084746500F01509 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
+		name = "main.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 197;
+		vrLoc = 0;
+	};
+	2C9860A91084746500F01509 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 25757375072882A0000BE9CA /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			NSAppleScriptEnabled,
+		);
+		name = "/Users/tkurita/Dev/Projects/Open in Terminal/OpenInTerminal/trunk/Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	2C9860AA1084746500F01509 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CE6B2E5107227B7005C6B05 /* AppController.m */;
+		name = "AppController.m: 38";
+		rLen = 6;
+		rLoc = 955;
+		rType = 0;
+		vrLen = 1045;
+		vrLoc = 2157;
+	};
+	2C9860AB1084746500F01509 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 25757375072882A0000BE9CA /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/tkurita/Dev/Projects/Open in Terminal/OpenInTerminal/trunk/Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	2C9860AC1084746500F01509 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 2CE6B57D10749FE4005C6B05 /* FactorySettings.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/tkurita/Dev/Projects/Open in Terminal/OpenInTerminal/trunk/FactorySettings.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	2C9860AD1084746500F01509 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CE6B2E5107227B7005C6B05 /* AppController.m */;
+		name = "AppController.m: 83";
+		rLen = 0;
+		rLoc = 2333;
+		rType = 0;
+		vrLen = 800;
+		vrLoc = 0;
+	};
+	2C9860AE1084746500F01509 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
+		name = "main.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 197;
+		vrLoc = 0;
+	};
+	2C9860AF1084746500F01509 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CE6B2E5107227B7005C6B05 /* AppController.m */;
+		name = "AppController.m: 38";
+		rLen = 6;
+		rLoc = 955;
+		rType = 0;
+		vrLen = 1045;
+		vrLoc = 2157;
+	};
+	2C9860B01084746500F01509 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 25757375072882A0000BE9CA /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			NSAppleScriptEnabled,
+		);
+		name = "/Users/tkurita/Dev/Projects/Open in Terminal/OpenInTerminal/trunk/Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	2C9860B11084746500F01509 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CE6B2E5107227B7005C6B05 /* AppController.m */;
+		name = "AppController.m: 42";
+		rLen = 0;
+		rLoc = 1152;
+		rType = 0;
+		vrLen = 1049;
+		vrLoc = 513;
+	};
+	2C9860B4108474D000F01509 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CE6B2E5107227B7005C6B05 /* AppController.m */;
+		name = "AppController.m: 46";
+		rLen = 0;
+		rLoc = 1212;
+		rType = 0;
+		vrLen = 1044;
+		vrLoc = 596;
+	};
+	2C9860B81084754900F01509 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 25757375072882A0000BE9CA /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			DonationURL,
+		);
+		name = "/Users/tkurita/Dev/Projects/Open in Terminal/OpenInTerminal/trunk/Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	2C9860B91084754900F01509 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
+		name = "main.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 197;
+		vrLoc = 0;
+	};
+	2C9860BA1084754900F01509 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CE6B2E5107227B7005C6B05 /* AppController.m */;
+		name = "AppController.m: 46";
+		rLen = 0;
+		rLoc = 1212;
+		rType = 0;
+		vrLen = 1065;
+		vrLoc = 394;
+	};
+	2C9860BB1084754900F01509 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CE6B2E5107227B7005C6B05 /* AppController.m */;
+		name = "AppController.m: 46";
+		rLen = 0;
+		rLoc = 1212;
+		rType = 0;
+		vrLen = 1065;
+		vrLoc = 394;
+	};
+	2C9860BC1084754900F01509 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 25757375072882A0000BE9CA /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			DonationURL,
+		);
+		name = "/Users/tkurita/Dev/Projects/Open in Terminal/OpenInTerminal/trunk/Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	2C9860BD1084754900F01509 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
+		name = "main.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 197;
+		vrLoc = 0;
+	};
+	2C9860BE1084754900F01509 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CE6B2E5107227B7005C6B05 /* AppController.m */;
+		name = "AppController.m: 8";
+		rLen = 0;
+		rLoc = 177;
+		rType = 0;
+		vrLen = 785;
+		vrLoc = 0;
+	};
+	2C9860C01084756E00F01509 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CE6B2E5107227B7005C6B05 /* AppController.m */;
+		name = "AppController.m: 44";
+		rLen = 0;
+		rLoc = 1152;
+		rType = 0;
+		vrLen = 1023;
+		vrLoc = 652;
+	};
+	2C9860C3108475B100F01509 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CE6B2E5107227B7005C6B05 /* AppController.m */;
+		name = "AppController.m: 8";
+		rLen = 0;
+		rLoc = 151;
+		rType = 0;
+		vrLen = 828;
+		vrLoc = 0;
+	};
+	2C9860C61084761200F01509 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CE6B2E5107227B7005C6B05 /* AppController.m */;
+		name = "AppController.m: 19";
+		rLen = 0;
+		rLoc = 388;
+		rType = 0;
+		vrLen = 828;
+		vrLoc = 0;
+	};
+	2C9860C71084761200F01509 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 25757375072882A0000BE9CA /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			DonationURL,
+		);
+		name = "/Users/tkurita/Dev/Projects/Open in Terminal/OpenInTerminal/trunk/Info.plist";
+		rLen = 64;
+		rLoc = 0;
+	};
+	2C9860C81084761200F01509 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CE6B2E5107227B7005C6B05 /* AppController.m */;
+		name = "AppController.m: 19";
+		rLen = 0;
+		rLoc = 388;
+		rType = 0;
+		vrLen = 828;
+		vrLoc = 0;
+	};
+	2C9860C91084761200F01509 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 25757375072882A0000BE9CA /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			LSUIElement,
+		);
+		name = "/Users/tkurita/Dev/Projects/Open in Terminal/OpenInTerminal/trunk/Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
 	2CE5E4D31078F479007EE095 /* PlistBookmark */ = {
 		isa = PlistBookmark;
 		fRef = 2CE6B57D10749FE4005C6B05 /* FactorySettings.plist */;
@@ -427,9 +734,9 @@
 	};
 	2CE6B2E5107227B7005C6B05 /* AppController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {866, 2142}}";
-			sepNavSelRange = "{2154, 0}";
-			sepNavVisRange = "{101, 928}";
+			sepNavIntBoundsRect = "{{0, 0}, {866, 2324}}";
+			sepNavSelRange = "{388, 0}";
+			sepNavVisRange = "{0, 828}";
 		};
 	};
 	2CE6B2EE1072281F005C6B05 /* PBXTextBookmark */ = {
@@ -572,7 +879,7 @@
 		path = /System/Library/Frameworks/AppleScriptKit.framework/Headers/ASKPluginObject.h;
 		sourceTree = "<absolute>";
 	};
-	2CE6B44510736F2D005C6B05 /* AppController.m:70 */ = {
+	2CE6B44510736F2D005C6B05 /* AppController.m:78 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -584,7 +891,7 @@
 		functionName = "-applicationDidFinishLaunching:";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 70;
+		lineNumber = 78;
 		modificationTime = 276782388.619669;
 		state = 1;
 	};

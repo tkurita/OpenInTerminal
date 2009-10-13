@@ -56,7 +56,7 @@
 	<key>SUPublicDSAKeyFile</key>
 	<string>dsa_pub.pem</string>
 	<key>SUFeedURL</key>
-	<string>http://homepage.mac.com/tkurita/scriptfactory/appcast/OpeninTerminal.xml</string>
+	<string>http://homepage.mac.com/tkurita/scriptfactory/appcast/OpenInTerminal.xml</string>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>NSServices</key>

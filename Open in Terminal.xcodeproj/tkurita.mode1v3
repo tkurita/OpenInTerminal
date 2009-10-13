@@ -243,8 +243,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -294,8 +292,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>19</integer>
-									<integer>18</integer>
+									<integer>20</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -349,21 +346,21 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2C98609A10845A7400F01509</string>
+										<string>2C9860C91084761200F01509</string>
 										<key>history</key>
 										<array>
-											<string>2CE6B2EE1072281F005C6B05</string>
 											<string>2CE6B40210731B0F005C6B05</string>
 											<string>2CE6B427107354C0005C6B05</string>
 											<string>2CE6B5A910758930005C6B05</string>
 											<string>2CE6B5BB10758BBD005C6B05</string>
 											<string>2CE660CF1075A4F20057941A</string>
-											<string>2CE5E4D31078F479007EE095</string>
 											<string>2C4DC8AE107B29B300894BC0</string>
 											<string>2C4DC8F4107B5F3F00894BC0</string>
-											<string>2C4DC908107B61ED00894BC0</string>
 											<string>2C98609510845A7400F01509</string>
-											<string>2C98609610845A7400F01509</string>
+											<string>2C9860A71084746500F01509</string>
+											<string>2C9860B91084754900F01509</string>
+											<string>2C9860C61084761200F01509</string>
+											<string>2C9860C71084761200F01509</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -381,6 +378,16 @@
 											<string>2C98609710845A7400F01509</string>
 											<string>2C98609810845A7400F01509</string>
 											<string>2C98609910845A7400F01509</string>
+											<string>2C9860AB1084746500F01509</string>
+											<string>2C9860AC1084746500F01509</string>
+											<string>2C9860AD1084746500F01509</string>
+											<string>2C9860AE1084746500F01509</string>
+											<string>2C9860AF1084746500F01509</string>
+											<string>2C9860B01084746500F01509</string>
+											<string>2C9860BB1084754900F01509</string>
+											<string>2C9860BC1084754900F01509</string>
+											<string>2C9860BD1084754900F01509</string>
+											<string>2C9860C81084761200F01509</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -576,6 +583,7 @@
 	<array>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>2CE6B2C91071F029005C6B05</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/tkurita/Dev/Projects/Open in Terminal/OpenInTerminal/trunk/Open in Terminal.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -950,7 +958,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>2C4DC8EA107B5DFF00894BC0</string>
+				<string>2C9860B21084746500F01509</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>

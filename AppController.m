@@ -5,6 +5,7 @@
 #define useLog 0
 
 static BOOL AUTO_QUIT = YES;
+//static BOOL AUTO_QUIT = NO;
 static OSAScript *MAIN_SCRIPT = nil;
 
 @implementation AppController
@@ -38,7 +39,12 @@ static OSAScript *MAIN_SCRIPT = nil;
 	int interval_count = [user_defaults integerForKey:@"UpdateIntervalLaunchCounts"];
 	int current_count = [user_defaults integerForKey:@"CurrentLaunchCount"];
 	if (current_count >= interval_count) {
-		[updater checkForUpdatesInBackground];
+		if (AUTO_QUIT) {
+			[updater checkForUpdates:self];
+		} else {
+			[updater checkForUpdatesInBackground];
+		}
+		[user_defaults setInteger:0 forKey:@"CurrentLaunchCount"];
 	} else {
 		[user_defaults setInteger:++current_count forKey:@"CurrentLaunchCount"];
 	}
@@ -50,7 +56,9 @@ static OSAScript *MAIN_SCRIPT = nil;
 	NSLog(@"applicationDidFinishLaunching");
 #endif
 	NSAppleEventDescriptor *ev = [ [NSAppleEventManager sharedAppleEventManager] currentAppleEvent];
+#if useLog
 	NSLog([ev description]);
+#endif
 	AEEventID evid = [ev eventID];
 	BOOL should_process = NO;
 	NSAppleEventDescriptor *propData;
