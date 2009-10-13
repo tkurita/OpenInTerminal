@@ -20,6 +20,7 @@ on initialize()
 		set_allow_package_contents(true)
 		set_use_gui_scripting(false)
 	end tell
+	TerminalCommander's set_use_osax_for_customtitle(false)
 end initialize
 
 property _ : initialize()
