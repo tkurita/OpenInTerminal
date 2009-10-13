@@ -201,6 +201,10 @@
 			2C9860BE1084754900F01509 /* PBXTextBookmark */ = 2C9860BE1084754900F01509 /* PBXTextBookmark */;
 			2C9860C01084756E00F01509 /* PBXTextBookmark */ = 2C9860C01084756E00F01509 /* PBXTextBookmark */;
 			2C9860C3108475B100F01509 /* PBXTextBookmark */ = 2C9860C3108475B100F01509 /* PBXTextBookmark */;
+			2C9860C61084761200F01509 /* PBXTextBookmark */ = 2C9860C61084761200F01509 /* PBXTextBookmark */;
+			2C9860C71084761200F01509 /* PlistBookmark */ = 2C9860C71084761200F01509 /* PlistBookmark */;
+			2C9860C81084761200F01509 /* PBXTextBookmark */ = 2C9860C81084761200F01509 /* PBXTextBookmark */;
+			2C9860C91084761200F01509 /* PlistBookmark */ = 2C9860C91084761200F01509 /* PlistBookmark */;
 			2CE5E4D31078F479007EE095 = 2CE5E4D31078F479007EE095 /* PlistBookmark */;
 			2CE5E4D71078F479007EE095 = 2CE5E4D71078F479007EE095 /* PBXBookmark */;
 			2CE660B61075A41A0057941A = 2CE660B61075A41A0057941A /* PBXTextBookmark */;
@@ -642,6 +646,50 @@
 		vrLen = 828;
 		vrLoc = 0;
 	};
+	2C9860C61084761200F01509 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CE6B2E5107227B7005C6B05 /* AppController.m */;
+		name = "AppController.m: 19";
+		rLen = 0;
+		rLoc = 388;
+		rType = 0;
+		vrLen = 828;
+		vrLoc = 0;
+	};
+	2C9860C71084761200F01509 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 25757375072882A0000BE9CA /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			DonationURL,
+		);
+		name = "/Users/tkurita/Dev/Projects/Open in Terminal/OpenInTerminal/trunk/Info.plist";
+		rLen = 64;
+		rLoc = 0;
+	};
+	2C9860C81084761200F01509 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CE6B2E5107227B7005C6B05 /* AppController.m */;
+		name = "AppController.m: 19";
+		rLen = 0;
+		rLoc = 388;
+		rType = 0;
+		vrLen = 828;
+		vrLoc = 0;
+	};
+	2C9860C91084761200F01509 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 25757375072882A0000BE9CA /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			LSUIElement,
+		);
+		name = "/Users/tkurita/Dev/Projects/Open in Terminal/OpenInTerminal/trunk/Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
 	2CE5E4D31078F479007EE095 /* PlistBookmark */ = {
 		isa = PlistBookmark;
 		fRef = 2CE6B57D10749FE4005C6B05 /* FactorySettings.plist */;
@@ -687,7 +735,7 @@
 	2CE6B2E5107227B7005C6B05 /* AppController.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {866, 2324}}";
-			sepNavSelRange = "{151, 0}";
+			sepNavSelRange = "{388, 0}";
 			sepNavVisRange = "{0, 828}";
 		};
 	};
