@@ -155,6 +155,12 @@ static OSAScript *MAIN_SCRIPT = nil;
 		NSRunAlertPanel(nil, @"Fail to load FinderController.scpt", @"OK", nil, nil);
 		[NSApp terminate:self];
 	}
+	
+	[MAIN_SCRIPT executeHandlerWithName:@"setup" arguments:nil error:&err_info];
+	if (!err_info) {
+		NSRunAlertPanel(nil, [err_info description],@"OK", nil, nil);
+		[NSApp terminate:self];
+	}
 }
 
 @end

@@ -4,7 +4,7 @@ property XFile : missing value
 property FrontAccess : missing value
 property GUIScriptingChecker : missing value
 
-on load_modules(loader)
+on _load_modules(loader)
 	tell loader
 		set my InsertionLocator to load("InsertionLocator")
 		set my TerminalCommander to load("TerminalCommander")
@@ -12,18 +12,29 @@ on load_modules(loader)
 		set my FrontAccess to load("FrontAccess")
 		set my GUIScriptingChecker to load("GUIScriptingChecker")
 	end tell
-end load_modules
+end _load_modules
 
-on initialize()
-	load_modules(proxy_with({autocollect:true}) of application (get "OpenInTerminalLib"))
+on _initialize()
+	_load_modules(proxy_with({autocollect:true}) of application (get "OpenInTerminalLib"))
 	tell InsertionLocator
 		set_allow_package_contents(true)
 		set_use_gui_scripting(false)
 	end tell
-	TerminalCommander's set_use_osax_for_customtitle(false)
-end initialize
+	TerminalCommander's set_use_osax_for_customtitle(true)
+end _initialize
 
-property _ : initialize()
+property _ : _initialize()
+
+on import_script(script_name)
+	tell main bundle
+		set script_path to path for script script_name extension "scpt"
+	end tell
+	return load script POSIX file script_path
+end import_script
+
+on setup()
+	GUIScriptingChecker's set_delegate(import_script("MessageDelegate"))
+end setup
 
 on current_app_name()
 	set a_result to ""
@@ -61,7 +72,6 @@ on submain()
 		end if
 		set a_location to a_location's as_alias()
 	end if
-	
 	return open_location(POSIX path of a_location)
 end submain
 
