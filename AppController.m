@@ -7,21 +7,42 @@
 static BOOL AUTO_QUIT = YES;
 //static BOOL AUTO_QUIT = NO;
 static OSAScript *MAIN_SCRIPT = nil;
-
+static BOOL SCRIPT_IS_RUNNING = NO;
+static BOOL CHECK_UPDATE = NO;
 @implementation AppController
+
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication
 {
-	return AUTO_QUIT;
+	return (!SCRIPT_IS_RUNNING && AUTO_QUIT);
+}
+
+- (void)runScriptHandler:(NSString *)handlerName arguments:(NSArray *)args error:(NSDictionary **)errorInfo
+{
+	SCRIPT_IS_RUNNING = YES;
+    [MAIN_SCRIPT executeHandlerWithName:handlerName arguments:nil error:errorInfo];
+	SCRIPT_IS_RUNNING = NO;
+	if (*errorInfo) {
+		NSLog([*errorInfo description]);
+	}	
+}
+
+- (void)checkUpdate
+{
+	if (AUTO_QUIT) {
+		[updater checkForUpdates:self];
+	} else {
+		[updater checkForUpdatesInBackground];
+	}
+	CHECK_UPDATE = NO;
 }
 
 - (void)processForLaunched
 {
-    NSDictionary *errorInfo = nil;
-    [MAIN_SCRIPT executeHandlerWithName:@"process_for_context"
-				arguments:nil error:&errorInfo];
-	if (!errorInfo) {
-		NSLog([errorInfo description]);
+	NSDictionary *errorInfo = nil;
+	[self runScriptHandler:@"process_for_context" arguments:nil error:&errorInfo];
+	if (CHECK_UPDATE) {
+		[self checkUpdate];
 	}
 	if (AUTO_QUIT && ![[NSApp windows] count]) {
 		[NSApp terminate:self];
@@ -39,11 +60,7 @@ static OSAScript *MAIN_SCRIPT = nil;
 	int interval_count = [user_defaults integerForKey:@"UpdateIntervalLaunchCounts"];
 	int current_count = [user_defaults integerForKey:@"CurrentLaunchCount"];
 	if (current_count >= interval_count) {
-		if (AUTO_QUIT) {
-			[updater checkForUpdates:self];
-		} else {
-			[updater checkForUpdatesInBackground];
-		}
+		CHECK_UPDATE = YES;
 		[user_defaults setInteger:0 forKey:@"CurrentLaunchCount"];
 	} else {
 		[user_defaults setInteger:++current_count forKey:@"CurrentLaunchCount"];
@@ -94,12 +111,10 @@ static OSAScript *MAIN_SCRIPT = nil;
 - (void)application:(NSApplication *)sender openFiles:(NSArray *)filenames
 {
 	NSDictionary *errorInfo = nil;
-    [MAIN_SCRIPT executeHandlerWithName:@"service_for_pathes"
-								arguments:[NSArray arrayWithObject:filenames]
-							   error:&errorInfo];
-	if (!errorInfo) {
-		NSLog([errorInfo description]);
-	}
+	[self runScriptHandler:@"service_for_pathes" 
+				 arguments:[NSArray arrayWithObject:filenames]
+					 error:&errorInfo];
+	
 	if (AUTO_QUIT && ![[NSApp windows] count]) {
 		[NSApp terminate:self];
 	}	
@@ -121,6 +136,9 @@ static OSAScript *MAIN_SCRIPT = nil;
     }
 
 	[self application:NSApp openFiles:filenames];
+	if (CHECK_UPDATE) {
+		[self checkUpdate];
+	}	
 }
 
 - (BOOL)applicationOpenUntitledFile:(NSApplication *)theApplication
@@ -152,7 +170,7 @@ static OSAScript *MAIN_SCRIPT = nil;
 														  error:&err_info];
 	if (err_info) {
 		NSLog([err_info description]);
-		NSRunAlertPanel(nil, @"Fail to load FinderController.scpt", @"OK", nil, nil);
+		NSRunAlertPanel(@"Fail to load FinderController.scpt", [err_info objectForKey:@"OSAScriptErrorMessage"], @"OK", nil, nil);
 		[NSApp terminate:self];
 	}
 }

@@ -13,6 +13,18 @@
 			contextName = "";
 			files = (
 				25757365072882A0000BE9CA /* Application.applescript in AppleScript */,
+				2CB1DCD310854397007CDBA3 /* MessageDelegate.applescript in AppleScript */,
+			);
+			isSharedContext = 0;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CB1DC301084F6CE007CDBA3 /* AppleScript */ = {
+			isa = PBXAppleScriptBuildPhase;
+			buildActionMask = 2147483647;
+			contextName = "";
+			files = (
+				2CB1DC311084F6CE007CDBA3 /* Application.applescript in AppleScript */,
+				2CB1DCD210854397007CDBA3 /* MessageDelegate.applescript in AppleScript */,
 			);
 			isSharedContext = 0;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -24,8 +36,29 @@
 		2575736A072882A0000BE9CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		2575736C072882A0000BE9CA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		2575736D072882A0000BE9CA /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */; };
-		2C4DC82E1079DE4B00894BC0 /* URI Escape.osax in Resources */ = {isa = PBXBuildFile; fileRef = 2C4DC8161079DE4B00894BC0 /* URI Escape.osax */; };
 		2C4DC82F1079DE5500894BC0 /* URI Escape.osax in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C4DC8161079DE4B00894BC0 /* URI Escape.osax */; };
+		2CB1DC2F1084F6CE007CDBA3 /* AppController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CE6B2E4107227B7005C6B05 /* AppController.h */; };
+		2CB1DC311084F6CE007CDBA3 /* Application.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = DA458A96036079E503C91932 /* Application.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
+		2CB1DC331084F6CE007CDBA3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60A014E30DBD2B4C0071D9A8 /* MainMenu.xib */; };
+		2CB1DC341084F6CE007CDBA3 /* ServicesMenu.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CE6B3F61072FA6F005C6B05 /* ServicesMenu.strings */; };
+		2CB1DC351084F6CE007CDBA3 /* FactorySettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CE6B57D10749FE4005C6B05 /* FactorySettings.plist */; };
+		2CB1DC361084F6CE007CDBA3 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 2CE6B58A10757A46005C6B05 /* dsa_pub.pem */; };
+		2CB1DC371084F6CE007CDBA3 /* OiT_icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2CE5E4AE1078EFD7007EE095 /* OiT_icon.icns */; };
+		2CB1DC3A1084F6CE007CDBA3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		2CB1DC3B1084F6CE007CDBA3 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE6B2E5107227B7005C6B05 /* AppController.m */; };
+		2CB1DC3D1084F6CE007CDBA3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		2CB1DC3E1084F6CE007CDBA3 /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */; };
+		2CB1DC3F1084F6CE007CDBA3 /* OSAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE6B49910744546005C6B05 /* OSAKit.framework */; };
+		2CB1DC401084F6CE007CDBA3 /* DonationReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE6B4C110744D8E005C6B05 /* DonationReminder.framework */; };
+		2CB1DC411084F6CE007CDBA3 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE6B5471074818F005C6B05 /* Sparkle.framework */; };
+		2CB1DC431084F6CE007CDBA3 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2CE6B5471074818F005C6B05 /* Sparkle.framework */; };
+		2CB1DC441084F6CE007CDBA3 /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2CE6B4C110744D8E005C6B05 /* DonationReminder.framework */; };
+		2CB1DCB71084FCA5007CDBA3 /* SmartActivate.osax in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2CB1DC9E1084FC7D007CDBA3 /* SmartActivate.osax */; };
+		2CB1DCB81084FCA5007CDBA3 /* URI Escape.osax in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2CB1DCA91084FC7D007CDBA3 /* URI Escape.osax */; };
+		2CB1DCD210854397007CDBA3 /* MessageDelegate.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2CB1DCD110854397007CDBA3 /* MessageDelegate.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
+		2CB1DCD310854397007CDBA3 /* MessageDelegate.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2CB1DCD110854397007CDBA3 /* MessageDelegate.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
+		2CB1DCD61085480C007CDBA3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CB1DCD41085480C007CDBA3 /* Localizable.strings */; };
+		2CB1DCD71085480C007CDBA3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CB1DCD41085480C007CDBA3 /* Localizable.strings */; };
 		2CE5E4AF1078EFD7007EE095 /* OiT_icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2CE5E4AE1078EFD7007EE095 /* OiT_icon.icns */; };
 		2CE6B2E6107227B7005C6B05 /* AppController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CE6B2E4107227B7005C6B05 /* AppController.h */; };
 		2CE6B2E7107227B7005C6B05 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE6B2E5107227B7005C6B05 /* AppController.m */; };
@@ -42,6 +75,28 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		2CB1DC421084F6CE007CDBA3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2CB1DC431084F6CE007CDBA3 /* Sparkle.framework in CopyFiles */,
+				2CB1DC441084F6CE007CDBA3 /* DonationReminder.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CB1DC451084F6CE007CDBA3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "Scripting Additions";
+			dstSubfolderSpec = 7;
+			files = (
+				2CB1DCB71084FCA5007CDBA3 /* SmartActivate.osax in CopyFiles */,
+				2CB1DCB81084FCA5007CDBA3 /* URI Escape.osax in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2CE6B4C810744DD3005C6B05 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -74,6 +129,13 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		2C4DC8161079DE4B00894BC0 /* URI Escape.osax */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "URI Escape.osax"; path = "../URI Escape.osax"; sourceTree = SOURCE_ROOT; };
+		2CB1DC4B1084F6CE007CDBA3 /* Open in Terminal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Open in Terminal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CB1DC4D1084F6CF007CDBA3 /* Info_10_5.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_10_5.plist; sourceTree = "<group>"; };
+		2CB1DC9E1084FC7D007CDBA3 /* SmartActivate.osax */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SmartActivate.osax; path = ../OSAX_10_5/SmartActivate.osax; sourceTree = SOURCE_ROOT; };
+		2CB1DCA91084FC7D007CDBA3 /* URI Escape.osax */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "URI Escape.osax"; path = "../OSAX_10_5/URI Escape.osax"; sourceTree = SOURCE_ROOT; };
+		2CB1DCD110854397007CDBA3 /* MessageDelegate.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = MessageDelegate.applescript; sourceTree = "<group>"; };
+		2CB1DCD51085480C007CDBA3 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; lineEnding = 0; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2CB1DCFA10854973007CDBA3 /* Japanese */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; lineEnding = 0; name = Japanese; path = Japanese.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2CE5E4AE1078EFD7007EE095 /* OiT_icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = OiT_icon.icns; sourceTree = "<group>"; };
 		2CE6B2E4107227B7005C6B05 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		2CE6B2E5107227B7005C6B05 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
@@ -105,6 +167,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2CB1DC3C1084F6CE007CDBA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CB1DC3D1084F6CE007CDBA3 /* Cocoa.framework in Frameworks */,
+				2CB1DC3E1084F6CE007CDBA3 /* AppleScriptKit.framework in Frameworks */,
+				2CB1DC3F1084F6CE007CDBA3 /* OSAKit.framework in Frameworks */,
+				2CB1DC401084F6CE007CDBA3 /* DonationReminder.framework in Frameworks */,
+				2CB1DC411084F6CE007CDBA3 /* Sparkle.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -112,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				DA458A96036079E503C91932 /* Application.applescript */,
+				2CB1DCD110854397007CDBA3 /* MessageDelegate.applescript */,
 			);
 			name = Scripts;
 			sourceTree = "<group>";
@@ -141,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				25757376072882A0000BE9CA /* Open in Terminal.app */,
+				2CB1DC4B1084F6CE007CDBA3 /* Open in Terminal.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,10 +227,13 @@
 				2CE6B34610723CBF005C6B05 /* History.rd */,
 				080E96DDFE201D6D7F000001 /* Scripts */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
+				2CB1DC4E1084F73E007CDBA3 /* OSAX */,
+				2CB1DC4F1084F74E007CDBA3 /* OSAX_10_5 */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				25757375072882A0000BE9CA /* Info.plist */,
+				2CB1DC4D1084F6CF007CDBA3 /* Info_10_5.plist */,
 			);
 			name = "Open in Terminal";
 			sourceTree = "<group>";
@@ -172,10 +251,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2C4DC8161079DE4B00894BC0 /* URI Escape.osax */,
+				2CB1DCD41085480C007CDBA3 /* Localizable.strings */,
 				2CE5E4AE1078EFD7007EE095 /* OiT_icon.icns */,
 				2CE6B58A10757A46005C6B05 /* dsa_pub.pem */,
-				2CE6B50610745441005C6B05 /* SmartActivate.osax */,
 				60A014E30DBD2B4C0071D9A8 /* MainMenu.xib */,
 				653593B5078DD4D900E8BB2F /* AppleScriptKit.sdef */,
 				2CE6B3F61072FA6F005C6B05 /* ServicesMenu.strings */,
@@ -193,6 +271,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2CB1DC4E1084F73E007CDBA3 /* OSAX */ = {
+			isa = PBXGroup;
+			children = (
+				2C4DC8161079DE4B00894BC0 /* URI Escape.osax */,
+				2CE6B50610745441005C6B05 /* SmartActivate.osax */,
+			);
+			name = OSAX;
+			sourceTree = "<group>";
+		};
+		2CB1DC4F1084F74E007CDBA3 /* OSAX_10_5 */ = {
+			isa = PBXGroup;
+			children = (
+				2CB1DC9E1084FC7D007CDBA3 /* SmartActivate.osax */,
+				2CB1DCA91084FC7D007CDBA3 /* URI Escape.osax */,
+			);
+			name = OSAX_10_5;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -201,6 +297,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CE6B2E6107227B7005C6B05 /* AppController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CB1DC2E1084F6CE007CDBA3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CB1DC2F1084F6CE007CDBA3 /* AppController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +333,28 @@
 			productReference = 25757376072882A0000BE9CA /* Open in Terminal.app */;
 			productType = "com.apple.product-type.application";
 		};
+		2CB1DC2D1084F6CE007CDBA3 /* Open in Terminal for 10.5 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CB1DC481084F6CE007CDBA3 /* Build configuration list for PBXNativeTarget "Open in Terminal for 10.5" */;
+			buildPhases = (
+				2CB1DC2E1084F6CE007CDBA3 /* Headers */,
+				2CB1DC301084F6CE007CDBA3 /* AppleScript */,
+				2CB1DC321084F6CE007CDBA3 /* Resources */,
+				2CB1DC391084F6CE007CDBA3 /* Sources */,
+				2CB1DC3C1084F6CE007CDBA3 /* Frameworks */,
+				2CB1DC421084F6CE007CDBA3 /* CopyFiles */,
+				2CB1DC451084F6CE007CDBA3 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Open in Terminal for 10.5";
+			productInstallPath = "$(HOME)/Applications";
+			productName = "Open in Terminal";
+			productReference = 2CB1DC4B1084F6CE007CDBA3 /* Open in Terminal.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -242,6 +368,7 @@
 			projectRoot = "";
 			targets = (
 				25757362072882A0000BE9CA /* Open in Terminal */,
+				2CB1DC2D1084F6CE007CDBA3 /* Open in Terminal for 10.5 */,
 			);
 		};
 /* End PBXProject section */
@@ -256,7 +383,20 @@
 				2CE6B57E10749FE4005C6B05 /* FactorySettings.plist in Resources */,
 				2CE6B58B10757A46005C6B05 /* dsa_pub.pem in Resources */,
 				2CE5E4AF1078EFD7007EE095 /* OiT_icon.icns in Resources */,
-				2C4DC82E1079DE4B00894BC0 /* URI Escape.osax in Resources */,
+				2CB1DCD71085480C007CDBA3 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CB1DC321084F6CE007CDBA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CB1DC331084F6CE007CDBA3 /* MainMenu.xib in Resources */,
+				2CB1DC341084F6CE007CDBA3 /* ServicesMenu.strings in Resources */,
+				2CB1DC351084F6CE007CDBA3 /* FactorySettings.plist in Resources */,
+				2CB1DC361084F6CE007CDBA3 /* dsa_pub.pem in Resources */,
+				2CB1DC371084F6CE007CDBA3 /* OiT_icon.icns in Resources */,
+				2CB1DCD61085480C007CDBA3 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,9 +412,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2CB1DC391084F6CE007CDBA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CB1DC3A1084F6CE007CDBA3 /* main.m in Sources */,
+				2CB1DC3B1084F6CE007CDBA3 /* AppController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		2CB1DCD41085480C007CDBA3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CB1DCD51085480C007CDBA3 /* English */,
+				2CB1DCFA10854973007CDBA3 /* Japanese */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		2CE6B3F61072FA6F005C6B05 /* ServicesMenu.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -295,6 +453,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2CB1DC491084F6CE007CDBA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/..\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info_10_5.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "Open in Terminal";
+				SYMROOT = build_10_5;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2CB1DC4A1084F6CE007CDBA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/..\"",
+				);
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = Info_10_5.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_OSAFLAGS = "-x";
+				PRODUCT_NAME = "Open in Terminal";
+				SYMROOT = build_10_5;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		4E59BBC908A816B0001206A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -363,6 +559,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2CB1DC481084F6CE007CDBA3 /* Build configuration list for PBXNativeTarget "Open in Terminal for 10.5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CB1DC491084F6CE007CDBA3 /* Debug */,
+				2CB1DC4A1084F6CE007CDBA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4E59BBC808A816B0001206A8 /* Build configuration list for PBXNativeTarget "Open in Terminal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

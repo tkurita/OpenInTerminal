@@ -3,6 +3,7 @@ property TerminalCommander : missing value
 property XFile : missing value
 property FrontAccess : missing value
 property GUIScriptingChecker : missing value
+property MessageDelegate : missing value
 
 on load_modules(loader)
 	tell loader
@@ -24,6 +25,20 @@ on initialize()
 end initialize
 
 property _ : initialize()
+
+on import_script(script_name)
+	tell main bundle
+		set script_path to path for script script_name extension "scpt"
+	end tell
+	return load script POSIX file script_path
+end import_script
+
+on setup()
+	if MessageDelegate is missing value then
+		set MessageDelegate to import_script("MessageDelegate")
+		GUIScriptingChecker's set_delegate(MessageDelegate)
+	end if
+end setup
 
 on current_app_name()
 	set a_result to ""
@@ -68,6 +83,7 @@ end submain
 on process_for_context()
 	--log "start process in process_for_context"
 	try
+		setup()
 		submain()
 	on error msg number errno
 		activate
@@ -100,6 +116,7 @@ end process_pathes
 on service_for_pathes(a_list)
 	set pathlist to {}
 	try
+		setup()
 		repeat with a_path in a_list
 			set a_xfile to XFile's make_with(POSIX file a_path)
 			tell a_xfile
