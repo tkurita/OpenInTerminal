@@ -20,10 +20,12 @@ static BOOL CHECK_UPDATE = NO;
 - (void)runScriptHandler:(NSString *)handlerName arguments:(NSArray *)args error:(NSDictionary **)errorInfo
 {
 	SCRIPT_IS_RUNNING = YES;
-    [MAIN_SCRIPT executeHandlerWithName:handlerName arguments:nil error:errorInfo];
+    [MAIN_SCRIPT executeHandlerWithName:handlerName arguments:args error:errorInfo];
 	SCRIPT_IS_RUNNING = NO;
 	if (*errorInfo) {
 		NSLog([*errorInfo description]);
+		NSRunAlertPanel([NSString stringWithFormat:@"Fail to run %@", handlerName], 
+						[*errorInfo objectForKey:@"OSAScriptErrorMessage"], @"OK", nil, nil);
 	}	
 }
 
@@ -134,7 +136,7 @@ static BOOL CHECK_UPDATE = NO;
 								   @"Pasteboard couldn't give string.");
         return;
     }
-
+	
 	[self application:NSApp openFiles:filenames];
 	if (CHECK_UPDATE) {
 		[self checkUpdate];
