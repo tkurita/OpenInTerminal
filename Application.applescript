@@ -1,22 +1,19 @@
-property InsertionLocator : missing value
-property TerminalCommander : missing value
-property XFile : missing value
+property loader : proxy() of application (get "OpenInTerminalLib")
+
+on load(a_name)
+	return loader's load(a_name)
+end load
+
+property InsertionLocator : load("InsertionLocator")
+property TerminalCommanderBase : load("TerminalCommander")
+property XFile : load("XFile")
+property FrontAccessBase : load("FrontAccess")
+property GUIScriptingChecker : load("GUIScriptingChecker")
 property FrontAccess : missing value
-property GUIScriptingChecker : missing value
+property TerminalCommander : missing value
 property MessageDelegate : missing value
 
-on load_modules(loader)
-	tell loader
-		set my InsertionLocator to load("InsertionLocator")
-		set my TerminalCommander to load("TerminalCommander")
-		set my XFile to load("XFile")
-		set my FrontAccess to load("FrontAccess")
-		set my GUIScriptingChecker to load("GUIScriptingChecker")
-	end tell
-end load_modules
-
 on initialize()
-	load_modules(proxy_with({autocollect:true}) of application (get "OpenInTerminalLib"))
 	tell InsertionLocator
 		set_allow_package_contents(true)
 		set_use_gui_scripting(false)
@@ -32,12 +29,27 @@ on import_script(script_name)
 	return load script POSIX file script_path
 end import_script
 
+on is_need_TerminalControl()
+	set sysver to system version of (get system info)
+	considering numeric strings
+		set a_result to (sysver is greater than or equal to "10.6")
+		if not a_result then
+			set a_result to sysver is less than or equal to "10.5.6"
+		end if
+	end considering
+	
+	return a_result
+end is_need_TerminalControl
+
 on setup()
 	if MessageDelegate is missing value then
 		set MessageDelegate to import_script("MessageDelegate")
 		GUIScriptingChecker's set_delegate(MessageDelegate)
+		set FrontAccess to buildup() of (import_script("FrontAccess"))
+		set TerminalCommander to buildup() of (import_script("TerminalCommander"))
+		
 		set info_dict to call method "infoDictionary" of main bundle
-		TerminalCommander's set_use_osax_for_customtitle(|UseTerminalControl| of info_dict)
+		TerminalCommander's set_use_osax_for_customtitle(is_need_TerminalControl())
 	end if
 end setup
 

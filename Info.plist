@@ -29,18 +29,22 @@
 	<string>OiT_icon</string>
 	<key>CFBundleIdentifier</key>
 	<string>Scriptfactory.OpenInTerminal</string>
-	<key>CFBundleInfoDictionaryVersion</key>
-	<string>6.0</string>
-	<key>CFBundlePackageType</key>
-	<string>APPL</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>copyright 2003-2009, Tetsuro KURITA</string>
+	<key>CFBundleGetInfoString</key>
+	<string>1.6 copyright 2003-2009, Tetsuro KURITA</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.6</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleVersion</key>
+	<string>5</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.5</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
-	<key>CFBundleVersion</key>
-	<string>4</string>
-	<key>LSMinimumSystemVersion</key>
-	<string>10.6</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
 	<key>NSAppleScriptEnabled</key>
 	<string>YES</string>
 	<key>NSMainNibFile</key>
@@ -49,10 +53,6 @@
 	<string>NSApplication</string>
 	<key>LSUIElement</key>
 	<true/>
-	<key>NSHumanReadableCopyright</key>
-	<string>copyright 2003-2009, Tetsuro KURITA</string>
-	<key>CFBundleGetInfoString</key>
-	<string>1.6 copyright 2003-2009, Tetsuro KURITA</string>
 	<key>DonationURL</key>
 	<string>http://homepage.mac.com/tkurita/scriptfactory/donationproxy.html</string>
 	<key>SUPublicDSAKeyFile</key>
@@ -60,8 +60,6 @@
 	<key>SUFeedURL</key>
 	<string>http://homepage.mac.com/tkurita/scriptfactory/appcast/OpenInTerminal.xml</string>
 	<key>SUEnableAutomaticChecks</key>
-	<true/>
-	<key>UseTerminalControl</key>
 	<true/>
 	<key>NSServices</key>
 	<array>
