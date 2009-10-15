@@ -96,7 +96,7 @@
 		breakpoints = (
 			2CE6B44510736F2D005C6B05 /* AppController.m:101 */,
 			2C9860A51084669F00F01509 /* AppController.m:65 */,
-			2CB1DAE51084BD88007CDBA3 /* Application.applescript:57 */,
+			2CB1DAE51084BD88007CDBA3 /* Application.applescript:53 */,
 			2CB1DB191084C2FE007CDBA3 /* AppController.m:46 */,
 			2CB1DB1C1084C31C007CDBA3 /* AppController.m:46 */,
 			2CB1DD3110854BF8007CDBA3 /* AppController.m:177 */,
@@ -166,8 +166,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 277273838;
-			PBXWorkspaceStateSaveDate = 277273838;
+			PBXPerProjectTemplateStateSaveDate = 277273884;
+			PBXWorkspaceStateSaveDate = 277273884;
 		};
 		perUserProjectItems = {
 			2C2F929410869BF800230A71 = 2C2F929410869BF800230A71 /* PBXTextBookmark */;
@@ -216,7 +216,18 @@
 			2CE828A31086DB8F00E98A0C = 2CE828A31086DB8F00E98A0C /* PlistBookmark */;
 			2CE828A41086DB8F00E98A0C = 2CE828A41086DB8F00E98A0C /* PlistBookmark */;
 			2CE828A51086DB8F00E98A0C = 2CE828A51086DB8F00E98A0C /* PlistBookmark */;
-			2CE828FB1086DD1200E98A0C /* PlistBookmark */ = 2CE828FB1086DD1200E98A0C /* PlistBookmark */;
+			2CE828FB1086DD1200E98A0C = 2CE828FB1086DD1200E98A0C /* PlistBookmark */;
+			2CE8290B1086DD7B00E98A0C /* PlistBookmark */ = 2CE8290B1086DD7B00E98A0C /* PlistBookmark */;
+			2CE8290C1086DD7B00E98A0C /* PlistBookmark */ = 2CE8290C1086DD7B00E98A0C /* PlistBookmark */;
+			2CE829101086DEE600E98A0C /* PlistBookmark */ = 2CE829101086DEE600E98A0C /* PlistBookmark */;
+			2CE829111086DEE600E98A0C /* PlistBookmark */ = 2CE829111086DEE600E98A0C /* PlistBookmark */;
+			2CE829121086DEE600E98A0C /* PBXTextBookmark */ = 2CE829121086DEE600E98A0C /* PBXTextBookmark */;
+			2CE829131086DEE600E98A0C /* PlistBookmark */ = 2CE829131086DEE600E98A0C /* PlistBookmark */;
+			2CE829141086DEE600E98A0C /* PlistBookmark */ = 2CE829141086DEE600E98A0C /* PlistBookmark */;
+			2CE829151086DEE600E98A0C /* PlistBookmark */ = 2CE829151086DEE600E98A0C /* PlistBookmark */;
+			2CE829161086DEE600E98A0C /* PlistBookmark */ = 2CE829161086DEE600E98A0C /* PlistBookmark */;
+			2CE829171086DEE600E98A0C /* PlistBookmark */ = 2CE829171086DEE600E98A0C /* PlistBookmark */;
+			2CE829181086DEE600E98A0C /* PBXTextBookmark */ = 2CE829181086DEE600E98A0C /* PBXTextBookmark */;
 			DA458A96036079E503C91932 = DA458A96036079E503C91932 /* Application.applescript */;
 		};
 		sourceControlManager = 25D9446E07B15AA800FF306F /* Source Control */;
@@ -317,12 +328,12 @@
 		fRef = DA458A96036079E503C91932 /* Application.applescript */;
 		name = "Application.applescript: 119";
 		rLen = 0;
-		rLoc = 3278;
+		rLoc = 3200;
 		rType = 0;
 		vrLen = 232;
 		vrLoc = 2894;
 	};
-	2CB1DAE51084BD88007CDBA3 /* Application.applescript:57 */ = {
+	2CB1DAE51084BD88007CDBA3 /* Application.applescript:53 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -334,7 +345,7 @@
 		functionName = "on submain()";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 57;
+		lineNumber = 53;
 		modificationTime = 277171324.453585;
 		state = 1;
 	};
@@ -377,7 +388,7 @@
 		fRef = DA458A96036079E503C91932 /* Application.applescript */;
 		name = "Application.applescript: 125";
 		rLen = 0;
-		rLoc = 3278;
+		rLoc = 3200;
 		rType = 0;
 		vrLen = 832;
 		vrLoc = 1094;
@@ -865,7 +876,7 @@
 		fRef = DA458A96036079E503C91932 /* Application.applescript */;
 		name = "Application.applescript: 119";
 		rLen = 0;
-		rLoc = 3278;
+		rLoc = 3200;
 		rType = 0;
 		vrLen = 591;
 		vrLoc = 1296;
@@ -886,7 +897,7 @@
 		fRef = DA458A96036079E503C91932 /* Application.applescript */;
 		name = "Application.applescript: 123";
 		rLen = 0;
-		rLoc = 3278;
+		rLoc = 3200;
 		rType = 0;
 		vrLen = 570;
 		vrLoc = 1210;
@@ -946,11 +957,130 @@
 		rLen = 0;
 		rLoc = 2147483647;
 	};
+	2CE8290B1086DD7B00E98A0C /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 25757375072882A0000BE9CA /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/tkurita/Dev/Projects/Open in Terminal/OpenInTerminal/trunk/Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	2CE8290C1086DD7B00E98A0C /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 25757375072882A0000BE9CA /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/tkurita/Dev/Projects/Open in Terminal/OpenInTerminal/trunk/Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	2CE829101086DEE600E98A0C /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 2CB1DC4D1084F6CF007CDBA3 /* Info_10_5.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/tkurita/Dev/Projects/Open in Terminal/OpenInTerminal/trunk/Info_10_5.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	2CE829111086DEE600E98A0C /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 25757375072882A0000BE9CA /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/tkurita/Dev/Projects/Open in Terminal/OpenInTerminal/trunk/Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	2CE829121086DEE600E98A0C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DA458A96036079E503C91932 /* Application.applescript */;
+		name = "Application.applescript: 123";
+		rLen = 0;
+		rLoc = 3200;
+		rType = 0;
+		vrLen = 623;
+		vrLoc = 1147;
+	};
+	2CE829131086DEE600E98A0C /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 25757375072882A0000BE9CA /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/tkurita/Dev/Projects/Open in Terminal/OpenInTerminal/trunk/Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	2CE829141086DEE600E98A0C /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 2CB1DC4D1084F6CF007CDBA3 /* Info_10_5.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/tkurita/Dev/Projects/Open in Terminal/OpenInTerminal/trunk/Info_10_5.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	2CE829151086DEE600E98A0C /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 25757375072882A0000BE9CA /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/tkurita/Dev/Projects/Open in Terminal/OpenInTerminal/trunk/Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	2CE829161086DEE600E98A0C /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 25757375072882A0000BE9CA /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/tkurita/Dev/Projects/Open in Terminal/OpenInTerminal/trunk/Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	2CE829171086DEE600E98A0C /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 25757375072882A0000BE9CA /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/tkurita/Dev/Projects/Open in Terminal/OpenInTerminal/trunk/Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	2CE829181086DEE600E98A0C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DA458A96036079E503C91932 /* Application.applescript */;
+		name = "Application.applescript: 119";
+		rLen = 0;
+		rLoc = 3200;
+		rType = 0;
+		vrLen = 564;
+		vrLoc = 1147;
+	};
 	DA458A96036079E503C91932 /* Application.applescript */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {866, 1757}}";
-			sepNavSelRange = "{3278, 0}";
-			sepNavVisRange = "{1210, 518}";
+			sepNavIntBoundsRect = "{{0, 0}, {866, 1704}}";
+			sepNavSelRange = "{3200, 0}";
+			sepNavVisRange = "{1147, 564}";
 			sepNavWindowFrame = "{{15, 121}, {1077, 752}}";
 		};
 	};

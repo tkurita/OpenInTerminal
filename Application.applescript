@@ -43,11 +43,7 @@ end setup
 
 on submain()
 	set a_front to make FrontAccess
-	log "bbb"
-	set bid to a_front's bundle_identifier()
-	log a_front's is_current_application()
-	log "aaa"
-	if ((bid is "com.apple.finder") or (a_front's is_current_application())) then
+	if (("com.apple.finder" is a_front's bundle_identifier()) or (a_front's is_current_application())) then
 		set a_location to do() of InsertionLocator
 		if a_location is missing value then
 			activate

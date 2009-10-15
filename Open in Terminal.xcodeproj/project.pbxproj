@@ -512,7 +512,7 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "Open in Terminal";
 				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_SUFFIX = 1.6.0;
+				VERSION_INFO_SUFFIX = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -532,7 +532,7 @@
 				OTHER_OSAFLAGS = "-x";
 				PRODUCT_NAME = "Open in Terminal";
 				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_SUFFIX = 1.6.0;
+				VERSION_INFO_SUFFIX = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
