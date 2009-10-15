@@ -21,7 +21,6 @@ on initialize()
 		set_allow_package_contents(true)
 		set_use_gui_scripting(false)
 	end tell
-	TerminalCommander's set_use_osax_for_customtitle(false)
 end initialize
 
 property _ : initialize()
@@ -37,6 +36,8 @@ on setup()
 	if MessageDelegate is missing value then
 		set MessageDelegate to import_script("MessageDelegate")
 		GUIScriptingChecker's set_delegate(MessageDelegate)
+		set info_dict to call method "infoDictionary" of main bundle
+		TerminalCommander's set_use_osax_for_customtitle(|UseTerminalControl| of info_dict)
 	end if
 end setup
 
@@ -49,7 +50,7 @@ on current_app_name()
 			set a_result to short name of (info for (path to current application))
 		end try
 	end try
-	if a_result ends with ".app" then
+	if a_result ends with ".app" then --  a_reuslt may not have ".app" suffix.
 		set a_result to text 1 thru -5 of a_result
 	end if
 	return a_result
@@ -57,9 +58,7 @@ end current_app_name
 
 on submain()
 	set a_front to make FrontAccess
-	set front_app_name to a_front's application_name()
-	set c_app to current_app_name()
-	if (front_app_name is in {"Finder", c_app}) then
+	if ((a_front's bundle_identifier() is "com.apple.finder") or (a_front's is_current_app())) then
 		set a_location to do() of InsertionLocator
 		if a_location is missing value then
 			activate

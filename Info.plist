@@ -59,6 +59,8 @@
 	<string>http://homepage.mac.com/tkurita/scriptfactory/appcast/OpenInTerminal.xml</string>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
+	<key>UseTerminalControl</key>
+	<true/>
 	<key>NSServices</key>
 	<array>
 		<dict>
