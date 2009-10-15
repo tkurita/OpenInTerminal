@@ -77,7 +77,6 @@ on submain()
 end submain
 
 on process_for_context()
-	--log "start process in process_for_context"
 	try
 		setup()
 		submain()
