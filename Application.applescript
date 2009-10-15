@@ -41,21 +41,6 @@ on setup()
 	end if
 end setup
 
-on current_app_name()
-	set a_result to ""
-	try
-		set a_result to name of current application
-	on error
-		try
-			set a_result to short name of (info for (path to current application))
-		end try
-	end try
-	if a_result ends with ".app" then --  a_reuslt may not have ".app" suffix.
-		set a_result to text 1 thru -5 of a_result
-	end if
-	return a_result
-end current_app_name
-
 on submain()
 	set a_front to make FrontAccess
 	if ((a_front's bundle_identifier() is "com.apple.finder") or (a_front's is_current_app())) then

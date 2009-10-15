@@ -349,7 +349,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2C2F92CB1086AB5900230A71</string>
+										<string>2CA4A2311086CA60005AB775</string>
 										<key>history</key>
 										<array>
 											<string>2CE6B40210731B0F005C6B05</string>
@@ -366,7 +366,7 @@
 											<string>2CB1DC1E1084F541007CDBA3</string>
 											<string>2CB1DC201084F541007CDBA3</string>
 											<string>2CB1DDBE10855F43007CDBA3</string>
-											<string>2C5753881085663C00CC10A5</string>
+											<string>2C2F92CF1086AD7400230A71</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -424,7 +424,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2C2F92CC1086AB5900230A71</string>
+										<string>2CA4A2321086CA60005AB775</string>
 										<key>history</key>
 										<array>
 											<string>2CE6B40210731B0F005C6B05</string>
@@ -445,7 +445,7 @@
 											<string>2C2F929410869BF800230A71</string>
 											<string>2C2F929510869BF800230A71</string>
 											<string>2C2F92BD1086A0D300230A71</string>
-											<string>2C2F92BE1086A0D300230A71</string>
+											<string>2C2F92D01086AD7400230A71</string>
 										</array>
 										<key>nextStack</key>
 										<array>
@@ -470,8 +470,6 @@
 											<string>2CB1DCF31085491D007CDBA3</string>
 											<string>2CB1DD0610854A29007CDBA3</string>
 											<string>2C2F929810869BF800230A71</string>
-											<string>2C2F929910869BF800230A71</string>
-											<string>2C2F929A10869BF800230A71</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -530,9 +528,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>2C2F929C10869BF800230A71</string>
+				<string>2CA4A2331086CA60005AB775</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>2C2F929D10869BF800230A71</string>
+				<string>2CA4A2341086CA60005AB775</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
@@ -668,8 +666,6 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>2CE6B2C91071F029005C6B05</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/tkurita/Dev/Projects/Open in Terminal/OpenInTerminal/trunk/Open in Terminal.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -874,13 +870,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>2C2F92A210869C0A00230A71</string>
+				<string>2CA4A2351086CA60005AB775</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>2C2F92A310869C0A00230A71</string>
-				<string>2C2F92A410869C0A00230A71</string>
-				<string>2C2F92A510869C0A00230A71</string>
-				<string>2C2F92A610869C0A00230A71</string>
-				<string>2C2F92A710869C0A00230A71</string>
+				<string>2CA4A2361086CA60005AB775</string>
+				<string>2CA4A2371086CA60005AB775</string>
+				<string>2CA4A2381086CA60005AB775</string>
+				<string>2CA4A2391086CA60005AB775</string>
+				<string>2CA4A23A1086CA60005AB775</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
