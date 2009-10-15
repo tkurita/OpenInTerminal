@@ -40,7 +40,9 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.5.2</string>
+	<string>3</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.5.7</string>
 	<key>DonationURL</key>
 	<string>http://homepage.mac.com/tkurita/scriptfactory/donationproxy.html</string>
 	<key>LSUIElement</key>
@@ -48,7 +50,7 @@
 	<key>NSAppleScriptEnabled</key>
 	<string>YES</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>1.5.2 copyright 2003-2009, Tetsuro KURITA</string>
+	<string>copyright 2003-2009, Tetsuro KURITA</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
