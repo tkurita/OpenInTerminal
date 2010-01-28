@@ -1,14 +1,10 @@
-property loader : proxy() of application (get "OpenInTerminalLib")
+property InsertionLocator : module
+property TerminalCommanderBase : module "TerminalCommander"
+property XFile : module
+property FrontAccessBase : module "FrontAccess"
+property GUIScriptingChecker : module
+property loader : boot (module loader of application (get "OpenInTerminalLib")) for me
 
-on load(a_name)
-	return loader's load(a_name)
-end load
-
-property InsertionLocator : load("InsertionLocator")
-property TerminalCommanderBase : load("TerminalCommander")
-property XFile : load("XFile")
-property FrontAccessBase : load("FrontAccess")
-property GUIScriptingChecker : load("GUIScriptingChecker")
 property FrontAccess : missing value
 property TerminalCommander : missing value
 property MessageDelegate : missing value
