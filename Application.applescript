@@ -1,6 +1,7 @@
 property InsertionLocator : module
 property TerminalCommanderBase : module "TerminalCommander"
 property XFile : module
+property XText : module
 property FrontAccessBase : module "FrontAccess"
 property GUIScriptingChecker : module
 property loader : boot (module loader of application (get "OpenInTerminalLib")) for me
@@ -49,13 +50,54 @@ on setup()
 	end if
 end setup
 
+on location_for_safari()
+	set a_url to missing value
+	tell application "Safari"
+		tell front document
+			if exists then
+				set a_url to URL
+			end if
+		end tell
+	end tell
+	if a_url is missing value then
+		set msg to localized string "No document in Safari."
+		error msg number 1110
+	end if
+	
+	if a_url starts with "file://" then
+		set url_obj to call method "URLWithString:" of class "NSURL" with parameter a_url
+		set a_path to call method "path" of url_obj
+	else
+		set msg to XText's formatted_text(localized string "The scheme of $1 is not 'file'.", {quoted form of a_url})
+		error msg number 1110
+		return missing value
+	end if
+	
+	if 1 is not (call method "fileExists" of a_path) then
+		set msg to XText's formatted_text(localized string "$1 is not found.", {quoted form of a_path})
+		error msg number 1110
+		return missing value
+	end if
+	
+	if 1 is not (call method "isFolder" of a_path) then
+		set a_path to call method "stringByDeletingLastPathComponent" of a_path
+	end if
+	return a_path
+end location_for_safari
+
 on submain()
 	set a_front to make FrontAccess
-	if (("com.apple.finder" is a_front's bundle_identifier()) or (a_front's is_current_application())) then
+	set front_app_id to a_front's bundle_identifier()
+	if (("com.apple.finder" is front_app_id) or (a_front's is_current_application())) then
 		set a_location to do() of InsertionLocator
 		if a_location is missing value then
 			activate
 			display alert "Can't get selected location in Finder."
+			return false
+		end if
+	else if "com.apple.Safari" is front_app_id then
+		set a_location to location_for_safari()
+		if a_location is missing value then
 			return false
 		end if
 	else
