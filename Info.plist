@@ -64,6 +64,13 @@
 	<key>NSServices</key>
 	<array>
 		<dict>
+			<key>NSSendFileTypes</key>
+			<array>
+				<string>public.item</string>
+				<string>public.folder</string>
+				<string>public.symlink</string>
+				<string>com.apple.alias-file</string>
+			</array>
 			<key>NSMenuItem</key>
 			<dict>
 				<key>default</key>
