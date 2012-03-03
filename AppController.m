@@ -23,7 +23,7 @@ static BOOL CHECK_UPDATE = NO;
     [MAIN_SCRIPT executeHandlerWithName:handlerName arguments:args error:errorInfo];
 	SCRIPT_IS_RUNNING = NO;
 	if (*errorInfo) {
-		NSLog([*errorInfo description]);
+		NSLog(@"%@", [*errorInfo description]);
 		NSRunAlertPanel([NSString stringWithFormat:@"Fail to run %@", handlerName], 
 						[*errorInfo objectForKey:@"OSAScriptErrorMessage"], @"OK", nil, nil);
 	}	
@@ -171,7 +171,7 @@ static BOOL CHECK_UPDATE = NO;
 	MAIN_SCRIPT = [[OSAScript alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path]
 														  error:&err_info];
 	if (err_info) {
-		NSLog([err_info description]);
+		NSLog(@"%@", [err_info description]);
 		NSRunAlertPanel(@"Fail to load FinderController.scpt", [err_info objectForKey:@"OSAScriptErrorMessage"], @"OK", nil, nil);
 		[NSApp terminate:self];
 	}
