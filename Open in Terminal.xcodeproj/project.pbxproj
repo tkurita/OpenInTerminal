@@ -27,7 +27,6 @@
 		2575736A072882A0000BE9CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		2575736C072882A0000BE9CA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		2575736D072882A0000BE9CA /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */; };
-		2C1B4BF01185F63000F4A63D /* PathExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B4BEB1185F62600F4A63D /* PathExtra.m */; };
 		2C3BFE3B1086F9B9004224D8 /* TerminalCommander.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2C3BFE3A1086F9B9004224D8 /* TerminalCommander.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
 		2C3BFE521086FDDF004224D8 /* FrontAccess.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2C3BFE511086FDDF004224D8 /* FrontAccess.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
 		2C3BFE741086FF68004224D8 /* SmartActivate.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C3BFE711086FF68004224D8 /* SmartActivate.c */; };
@@ -70,22 +69,6 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		2C1B4BE01185F62600F4A63D /* DropBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropBox.h; sourceTree = "<group>"; };
-		2C1B4BE11185F62600F4A63D /* DropBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropBox.m; sourceTree = "<group>"; };
-		2C1B4BE21185F62600F4A63D /* FrontAppMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrontAppMonitor.h; sourceTree = "<group>"; };
-		2C1B4BE31185F62600F4A63D /* FrontAppMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrontAppMonitor.m; sourceTree = "<group>"; };
-		2C1B4BE41185F62600F4A63D /* HFSTypeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFSTypeUtils.h; sourceTree = "<group>"; };
-		2C1B4BE51185F62600F4A63D /* HFSTypeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFSTypeUtils.m; sourceTree = "<group>"; };
-		2C1B4BE61185F62600F4A63D /* NSURL+NDCarbonUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+NDCarbonUtilities.h"; sourceTree = "<group>"; };
-		2C1B4BE71185F62600F4A63D /* NSURL+NDCarbonUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+NDCarbonUtilities.m"; sourceTree = "<group>"; };
-		2C1B4BE81185F62600F4A63D /* PaletteWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaletteWindowController.h; sourceTree = "<group>"; };
-		2C1B4BE91185F62600F4A63D /* PaletteWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaletteWindowController.m; sourceTree = "<group>"; };
-		2C1B4BEA1185F62600F4A63D /* PathExtra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathExtra.h; sourceTree = "<group>"; };
-		2C1B4BEB1185F62600F4A63D /* PathExtra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathExtra.m; sourceTree = "<group>"; };
-		2C1B4BEC1185F62600F4A63D /* StringExtra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringExtra.h; sourceTree = "<group>"; };
-		2C1B4BED1185F62600F4A63D /* StringExtra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringExtra.m; sourceTree = "<group>"; };
-		2C1B4BEE1185F62600F4A63D /* WindowVisibilityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowVisibilityController.h; sourceTree = "<group>"; };
-		2C1B4BEF1185F62600F4A63D /* WindowVisibilityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowVisibilityController.m; sourceTree = "<group>"; };
 		2C3BFE3A1086F9B9004224D8 /* TerminalCommander.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = TerminalCommander.applescript; sourceTree = "<group>"; };
 		2C3BFE511086FDDF004224D8 /* FrontAccess.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; lineEnding = 0; path = FrontAccess.applescript; sourceTree = "<group>"; };
 		2C3BFE711086FF68004224D8 /* SmartActivate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SmartActivate.c; sourceTree = "<group>"; };
@@ -173,7 +156,6 @@
 				2CE6B34610723CBF005C6B05 /* History.rd */,
 				080E96DDFE201D6D7F000001 /* Scripts */,
 				2C3BFE701086FF68004224D8 /* SmartActivateLib */,
-				2C1B4BDF1185F62600F4A63D /* CocoaLib */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -214,29 +196,6 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		2C1B4BDF1185F62600F4A63D /* CocoaLib */ = {
-			isa = PBXGroup;
-			children = (
-				2C1B4BE01185F62600F4A63D /* DropBox.h */,
-				2C1B4BE11185F62600F4A63D /* DropBox.m */,
-				2C1B4BE21185F62600F4A63D /* FrontAppMonitor.h */,
-				2C1B4BE31185F62600F4A63D /* FrontAppMonitor.m */,
-				2C1B4BE41185F62600F4A63D /* HFSTypeUtils.h */,
-				2C1B4BE51185F62600F4A63D /* HFSTypeUtils.m */,
-				2C1B4BE61185F62600F4A63D /* NSURL+NDCarbonUtilities.h */,
-				2C1B4BE71185F62600F4A63D /* NSURL+NDCarbonUtilities.m */,
-				2C1B4BE81185F62600F4A63D /* PaletteWindowController.h */,
-				2C1B4BE91185F62600F4A63D /* PaletteWindowController.m */,
-				2C1B4BEA1185F62600F4A63D /* PathExtra.h */,
-				2C1B4BEB1185F62600F4A63D /* PathExtra.m */,
-				2C1B4BEC1185F62600F4A63D /* StringExtra.h */,
-				2C1B4BED1185F62600F4A63D /* StringExtra.m */,
-				2C1B4BEE1185F62600F4A63D /* WindowVisibilityController.h */,
-				2C1B4BEF1185F62600F4A63D /* WindowVisibilityController.m */,
-			);
-			path = CocoaLib;
 			sourceTree = "<group>";
 		};
 		2C3BFE701086FF68004224D8 /* SmartActivateLib */ = {
@@ -334,7 +293,6 @@
 				2CE6B2E7107227B7005C6B05 /* AppController.m in Sources */,
 				2C3BFE741086FF68004224D8 /* SmartActivate.c in Sources */,
 				2C3BFE761086FF68004224D8 /* SmartActivate.m in Sources */,
-				2C1B4BF01185F63000F4A63D /* PathExtra.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
