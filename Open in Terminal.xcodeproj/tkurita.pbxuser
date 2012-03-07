@@ -175,8 +175,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 352771356;
-			PBXWorkspaceStateSaveDate = 352771356;
+			PBXPerProjectTemplateStateSaveDate = 352771550;
+			PBXWorkspaceStateSaveDate = 352771550;
 		};
 		perUserProjectItems = {
 			2C361C431502376000EAB448 = 2C361C431502376000EAB448 /* PBXTextBookmark */;
@@ -196,7 +196,7 @@
 			2CB1DB911084D140007CDBA3 = 2CB1DB911084D140007CDBA3 /* PBXTextBookmark */;
 			2CB1DC1E1084F541007CDBA3 = 2CB1DC1E1084F541007CDBA3 /* PBXTextBookmark */;
 			2CB1DC201084F541007CDBA3 = 2CB1DC201084F541007CDBA3 /* PBXTextBookmark */;
-			2CB3629D1506DD2300BDD4DC /* PlistBookmark */ = 2CB3629D1506DD2300BDD4DC /* PlistBookmark */;
+			2CB3629D1506DD2300BDD4DC = 2CB3629D1506DD2300BDD4DC /* PlistBookmark */;
 			2CE6B2E5107227B7005C6B05 = 2CE6B2E5107227B7005C6B05 /* AppController.m */;
 			2CE6B34610723CBF005C6B05 = 2CE6B34610723CBF005C6B05 /* History.rd */;
 			2CE6B40210731B0F005C6B05 = 2CE6B40210731B0F005C6B05 /* PBXTextBookmark */;
@@ -575,7 +575,7 @@
 		);
 		name = "/Users/tkurita/Dev/Projects/Open in Terminal/OpenInTerminal/trunk/Info.plist";
 		rLen = 0;
-		rLoc = 9223372036854775807;
+		rLoc = 9223372036854775808;
 	};
 	2CE6B2E4107227B7005C6B05 /* AppController.h */ = {
 		uiCtxt = {
