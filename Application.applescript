@@ -26,8 +26,7 @@ on import_script(script_name)
 	return load script POSIX file script_path
 end import_script
 
-on is_need_TerminalControl()
-	set sysver to system version of (get system info)
+on is_need_TerminalControl(sysver)
 	considering numeric strings
 		set a_result to (sysver is greater than or equal to "10.6")
 		if not a_result then
@@ -38,6 +37,12 @@ on is_need_TerminalControl()
 	return a_result
 end is_need_TerminalControl
 
+on is_lion_or_later(sysver)
+	considering numeric strings
+		return sysver is greater than or equal to "10.7"
+	end considering
+end is_lion_or_later
+
 on setup()
 	if MessageDelegate is missing value then
 		set MessageDelegate to import_script("MessageDelegate")
@@ -46,7 +51,9 @@ on setup()
 		set TerminalCommander to buildup() of (import_script("TerminalCommander"))
 		
 		set info_dict to call method "infoDictionary" of main bundle
-		TerminalCommander's set_use_osax_for_customtitle(is_need_TerminalControl())
+		set sysver to system version of (get system info)
+		TerminalCommander's set_use_osax_for_customtitle(is_need_TerminalControl(sysver))
+		TerminalCommander's support_working_directory(is_lion_or_later(sysver))
 	end if
 end setup
 
@@ -127,7 +134,7 @@ end process_for_context
 on open_location(a_location)
 	set a_commander to make TerminalCommander
 	tell a_commander
-		set_custom_title_for_path(a_location)
+		set_working_directory(a_location)
 		set a_location to quoted form of a_location
 		do_command for "cd " & a_location with activation
 	end tell
