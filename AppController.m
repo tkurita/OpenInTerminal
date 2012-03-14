@@ -2,31 +2,33 @@
 #import <OSAKit/OSAScript.h>
 #import "DonationReminder/DonationReminder.h"
 
-#define useLog 0
+#define useLog 1
 
 static BOOL AUTO_QUIT = YES;
 //static BOOL AUTO_QUIT = NO;
 static OSAScript *MAIN_SCRIPT = nil;
 static BOOL SCRIPT_IS_RUNNING = NO;
 static BOOL CHECK_UPDATE = NO;
-@implementation AppController
 
+@implementation AppController
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication
 {
 	return (!SCRIPT_IS_RUNNING && AUTO_QUIT);
 }
 
-- (void)runScriptHandler:(NSString *)handlerName arguments:(NSArray *)args error:(NSDictionary **)errorInfo
+- (NSAppleEventDescriptor *)runScriptHandler:(NSString *)handlerName arguments:(NSArray *)args error:(NSDictionary **)errorInfo
 {
 	SCRIPT_IS_RUNNING = YES;
-    [MAIN_SCRIPT executeHandlerWithName:handlerName arguments:args error:errorInfo];
+	NSAppleEventDescriptor *result = nil;
+    result = [MAIN_SCRIPT executeHandlerWithName:handlerName arguments:args error:errorInfo];
 	SCRIPT_IS_RUNNING = NO;
 	if (*errorInfo) {
 		NSLog(@"%@", [*errorInfo description]);
-		NSRunAlertPanel([NSString stringWithFormat:@"Fail to run %@", handlerName], 
-						[*errorInfo objectForKey:@"OSAScriptErrorMessage"], @"OK", nil, nil);
-	}	
+		 NSRunAlertPanel([NSString stringWithFormat:@"Fail to run %@", handlerName], 
+		 [*errorInfo objectForKey:OSAScriptErrorMessage], @"OK", nil, nil);
+	}
+	return result;
 }
 
 - (void)checkUpdate
@@ -56,6 +58,7 @@ static BOOL CHECK_UPDATE = NO;
 #if uselOg
 	NSLog(@"applicationWillFinishLaunching");
 #endif
+	
 	[DonationReminder remindDonation];
 	
 	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
@@ -74,9 +77,10 @@ static BOOL CHECK_UPDATE = NO;
 #if useLog
 	NSLog(@"applicationDidFinishLaunching");
 #endif
+	
 	NSAppleEventDescriptor *ev = [ [NSAppleEventManager sharedAppleEventManager] currentAppleEvent];
 #if useLog
-	NSLog([ev description]);
+	NSLog(@"%@", [ev description]);
 #endif
 	AEEventID evid = [ev eventID];
 	BOOL should_process = NO;
@@ -154,6 +158,9 @@ static BOOL CHECK_UPDATE = NO;
 
 - (void)awakeFromNib
 {
+#if useLog
+	NSLog(@"awakeFromNib");
+#endif	
 	/* Setup User Defaults */
 	NSString *defaults_plist = [[NSBundle mainBundle] pathForResource:@"FactorySettings" ofType:@"plist"];
 	NSDictionary *factory_defaults = [NSDictionary dictionaryWithContentsOfFile:defaults_plist];
@@ -172,9 +179,10 @@ static BOOL CHECK_UPDATE = NO;
 														  error:&err_info];
 	if (err_info) {
 		NSLog(@"%@", [err_info description]);
-		NSRunAlertPanel(@"Fail to load FinderController.scpt", [err_info objectForKey:@"OSAScriptErrorMessage"], @"OK", nil, nil);
+		NSRunAlertPanel(@"Fail to load FinderController.scpt", [err_info objectForKey:OSAScriptErrorMessage], @"OK", nil, nil);
 		[NSApp terminate:self];
 	}
+	
 }
 
 @end

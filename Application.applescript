@@ -19,6 +19,10 @@ end initialize
 
 property _ : initialize()
 
+on return_true()
+	return true
+end return_true
+
 on import_script(script_name)
 	tell main bundle
 		set script_path to path for script script_name extension "scpt"
@@ -43,18 +47,43 @@ on is_lion_or_later(sysver)
 	end considering
 end is_lion_or_later
 
+on check_osax()
+	try
+		set term_control_ver to TerminalControl version
+	on error
+		activate
+		display alert (localized string "Install TerminalControl.osax")
+		return false
+	end try
+	
+	set required_ver to "1.3"
+	considering numeric strings
+		if term_control_ver is less than required_ver then
+			set ver_info to localized string "The installed version : $1, the required version : $2"
+			set msg to XText's formatted_text(ver_info, {term_control_ver, required_ver})
+			activate
+			display alert (localized string "Upgrade of TerminalControl.osax is required") message msg
+			return false
+		end if
+	end considering
+	return true
+end check_osax
+
 on setup()
-	if MessageDelegate is missing value then
-		set MessageDelegate to import_script("MessageDelegate")
-		GUIScriptingChecker's set_delegate(MessageDelegate)
-		set FrontAccess to buildup() of (import_script("FrontAccess"))
-		set TerminalCommander to buildup() of (import_script("TerminalCommander"))
-		
-		set info_dict to call method "infoDictionary" of main bundle
-		set sysver to system version of (get system info)
-		TerminalCommander's set_use_osax_for_customtitle(is_need_TerminalControl(sysver))
-		TerminalCommander's support_working_directory(is_lion_or_later(sysver))
+	if not check_osax() then
+		return false
 	end if
+	set MessageDelegate to import_script("MessageDelegate")
+	GUIScriptingChecker's set_delegate(MessageDelegate)
+	set FrontAccess to buildup() of (import_script("FrontAccess"))
+	set TerminalCommander to buildup() of (import_script("TerminalCommander"))
+	
+	set info_dict to call method "infoDictionary" of main bundle
+	set sysver to system version of (get system info)
+	TerminalCommander's set_use_osax_for_customtitle(is_need_TerminalControl(sysver))
+	TerminalCommander's support_working_directory(is_lion_or_later(sysver))
+	set my setup to my return_true
+	return true
 end setup
 
 on location_for_safari()
@@ -123,7 +152,7 @@ end submain
 
 on process_for_context()
 	try
-		setup()
+		if not setup() then return
 		submain()
 	on error msg number errno
 		activate
@@ -156,7 +185,7 @@ end process_pathes
 on service_for_pathes(a_list)
 	set pathlist to {}
 	try
-		setup()
+		if not setup() then return
 		repeat with a_path in a_list
 			set a_xfile to XFile's make_with(POSIX file a_path)
 			tell a_xfile
