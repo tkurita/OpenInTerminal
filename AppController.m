@@ -2,7 +2,7 @@
 #import <OSAKit/OSAScript.h>
 #import "DonationReminder/DonationReminder.h"
 
-#define useLog 1
+#define useLog 0
 
 static BOOL AUTO_QUIT = YES;
 //static BOOL AUTO_QUIT = NO;
@@ -14,6 +14,9 @@ static BOOL CHECK_UPDATE = NO;
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication
 {
+#if useLog
+	NSLog(@"start applicationShouldTerminateAfterLastWindowClosed");
+#endif
 	return (!SCRIPT_IS_RUNNING && AUTO_QUIT);
 }
 
@@ -48,6 +51,9 @@ static BOOL CHECK_UPDATE = NO;
 	if (CHECK_UPDATE) {
 		[self checkUpdate];
 	}
+#if useLog	
+	NSLog(@"window count : %d", [[NSApp windows] count]);
+#endif	
 	if (AUTO_QUIT && ![[NSApp windows] count]) {
 		[NSApp terminate:self];
 	}
@@ -123,7 +129,7 @@ static BOOL CHECK_UPDATE = NO;
 	
 	if (AUTO_QUIT && ![[NSApp windows] count]) {
 		[NSApp terminate:self];
-	}	
+	}
 }
 
 - (void)processAtLocationFromPasteboard:(NSPasteboard *)pboard userData:(NSString *)data error:(NSString **)error
@@ -162,7 +168,8 @@ static BOOL CHECK_UPDATE = NO;
 	NSLog(@"awakeFromNib");
 #endif	
 	/* Setup User Defaults */
-	NSString *defaults_plist = [[NSBundle mainBundle] pathForResource:@"FactorySettings" ofType:@"plist"];
+	NSString *defaults_plist = [[NSBundle mainBundle] pathForResource:@"FactorySettings"
+															   ofType:@"plist"];
 	NSDictionary *factory_defaults = [NSDictionary dictionaryWithContentsOfFile:defaults_plist];
 	
 	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
@@ -179,7 +186,9 @@ static BOOL CHECK_UPDATE = NO;
 														  error:&err_info];
 	if (err_info) {
 		NSLog(@"%@", [err_info description]);
-		NSRunAlertPanel(@"Fail to load FinderController.scpt", [err_info objectForKey:OSAScriptErrorMessage], @"OK", nil, nil);
+		NSRunAlertPanel(@"Fail to load FinderController.scpt", 
+						[err_info objectForKey:OSAScriptErrorMessage], 
+						@"OK", nil, nil);
 		[NSApp terminate:self];
 	}
 	
