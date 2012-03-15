@@ -71,6 +71,7 @@ end check_osax
 
 on setup()
 	if not check_osax() then
+		quit
 		return false
 	end if
 	set MessageDelegate to import_script("MessageDelegate")
