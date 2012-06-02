@@ -32,13 +32,13 @@
 	<key>NSHumanReadableCopyright</key>
 	<string>copyright 2003-2012, Tetsuro KURITA</string>
 	<key>CFBundleGetInfoString</key>
-	<string>1.7 copyright 2003-2012, Tetsuro KURITA</string>
+	<string>1.7.1 copyright 2003-2012, Tetsuro KURITA</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.7</string>
+	<string>1.7.1b</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleVersion</key>
-	<string>12</string>
+	<string>13</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>10.5</string>
 	<key>CFBundleSignature</key>

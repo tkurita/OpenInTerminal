@@ -81,7 +81,6 @@ on setup()
 	
 	set sysver to system version of (get system info)
 	TerminalCommander's set_use_osax_for_customtitle(is_need_TerminalControl(sysver))
-	TerminalCommander's support_working_directory(is_lion_or_later(sysver))
 	set my setup to my return_true
 	return true
 end setup
