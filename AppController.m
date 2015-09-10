@@ -5,8 +5,6 @@
 #define useLog 0
 
 static BOOL AUTO_QUIT = YES;
-//static BOOL AUTO_QUIT = NO;
-static OSAScript *MAIN_SCRIPT = nil;
 static BOOL SCRIPT_IS_RUNNING = NO;
 static BOOL CHECK_UPDATE = NO;
 
@@ -18,20 +16,6 @@ static BOOL CHECK_UPDATE = NO;
 	NSLog(@"start applicationShouldTerminateAfterLastWindowClosed");
 #endif
 	return (!SCRIPT_IS_RUNNING && AUTO_QUIT);
-}
-
-- (NSAppleEventDescriptor *)runScriptHandler:(NSString *)handlerName arguments:(NSArray *)args error:(NSDictionary **)errorInfo
-{
-	SCRIPT_IS_RUNNING = YES;
-	NSAppleEventDescriptor *result = nil;
-    result = [MAIN_SCRIPT executeHandlerWithName:handlerName arguments:args error:errorInfo];
-	SCRIPT_IS_RUNNING = NO;
-	if (*errorInfo) {
-		NSLog(@"%@", [*errorInfo description]);
-		 NSRunAlertPanel([NSString stringWithFormat:@"Fail to run %@", handlerName], 
-		 [*errorInfo objectForKey:OSAScriptErrorMessage], @"OK", nil, nil);
-	}
-	return result;
 }
 
 - (void)checkUpdate
@@ -46,8 +30,7 @@ static BOOL CHECK_UPDATE = NO;
 
 - (void)processForLaunched
 {
-	NSDictionary *errorInfo = nil;
-	[self runScriptHandler:@"process_for_context" arguments:nil error:&errorInfo];
+	[controlScript processForContext];
 	if (CHECK_UPDATE) {
 		[self checkUpdate];
 	}
@@ -122,10 +105,7 @@ static BOOL CHECK_UPDATE = NO;
 
 - (void)application:(NSApplication *)sender openFiles:(NSArray *)filenames
 {
-	NSDictionary *errorInfo = nil;
-	[self runScriptHandler:@"service_for_pathes" 
-				 arguments:[NSArray arrayWithObject:filenames]
-					 error:&errorInfo];
+	[controlScript serviceForPathes:filenames];
 	
 	if (AUTO_QUIT && ![[NSApp windows] count]) {
 		[NSApp terminate:self];
@@ -177,21 +157,6 @@ static BOOL CHECK_UPDATE = NO;
 	
 	/* Setup Services Menu */
 	[NSApp setServicesProvider:self];
-	
-	/* Setup worker script */
-	NSString *path = [[NSBundle mainBundle] pathForResource:@"Application"
-													 ofType:@"scpt" inDirectory:@"Scripts"];
-	NSDictionary *err_info = nil;
-	MAIN_SCRIPT = [[OSAScript alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path]
-														  error:&err_info];
-	if (err_info) {
-		NSLog(@"%@", [err_info description]);
-		NSRunAlertPanel(@"Fail to load Application.scpt", 
-						[err_info objectForKey:OSAScriptErrorMessage], 
-						@"OK", nil, nil);
-		[NSApp terminate:self];
-	}
-	
 }
 
 @end

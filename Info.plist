@@ -30,11 +30,11 @@
 	<key>CFBundleIdentifier</key>
 	<string>Scriptfactory.OpenInTerminal</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>copyright 2003-2012, Tetsuro KURITA</string>
+	<string>copyright 2003-2015, Tetsuro KURITA</string>
 	<key>CFBundleGetInfoString</key>
-	<string>1.7.1 copyright 2003-2012, Tetsuro KURITA</string>
+	<string>1.8 copyright 2003-2015, Tetsuro KURITA</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.7.1b</string>
+	<string>1.8b</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleVersion</key>

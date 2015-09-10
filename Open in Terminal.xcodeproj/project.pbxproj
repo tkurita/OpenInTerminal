@@ -12,10 +12,6 @@
 			buildActionMask = 2147483647;
 			contextName = "";
 			files = (
-				25757365072882A0000BE9CA /* Application.applescript in AppleScript */,
-				2CB1DCD310854397007CDBA3 /* MessageDelegate.applescript in AppleScript */,
-				2C3BFE3B1086F9B9004224D8 /* TerminalCommander.applescript in AppleScript */,
-				2C3BFE521086FDDF004224D8 /* FrontAccess.applescript in AppleScript */,
 			);
 			isSharedContext = 0;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -23,17 +19,16 @@
 /* End PBXAppleScriptBuildPhase section */
 
 /* Begin PBXBuildFile section */
-		25757365072882A0000BE9CA /* Application.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = DA458A96036079E503C91932 /* Application.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
+		25757365072882A0000BE9CA /* Application.applescript in Sources */ = {isa = PBXBuildFile; fileRef = DA458A96036079E503C91932 /* Application.applescript */; settings = {ATTRIBUTES = (); }; };
 		2575736A072882A0000BE9CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		2575736C072882A0000BE9CA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		2575736D072882A0000BE9CA /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */; };
-		2C3BFE3B1086F9B9004224D8 /* TerminalCommander.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2C3BFE3A1086F9B9004224D8 /* TerminalCommander.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
-		2C3BFE521086FDDF004224D8 /* FrontAccess.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2C3BFE511086FDDF004224D8 /* FrontAccess.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
-		2C3BFE741086FF68004224D8 /* SmartActivate.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C3BFE711086FF68004224D8 /* SmartActivate.c */; };
-		2C3BFE751086FF68004224D8 /* SmartActivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C3BFE721086FF68004224D8 /* SmartActivate.h */; };
-		2C3BFE761086FF68004224D8 /* SmartActivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3BFE731086FF68004224D8 /* SmartActivate.m */; };
-		2CB1DCD310854397007CDBA3 /* MessageDelegate.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2CB1DCD110854397007CDBA3 /* MessageDelegate.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
+		2C0E8F931BA1E381001E3E05 /* NSRunningApplication+SmartActivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C0E8F911BA1E381001E3E05 /* NSRunningApplication+SmartActivate.h */; };
+		2C0E8F941BA1E381001E3E05 /* NSRunningApplication+SmartActivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0E8F921BA1E381001E3E05 /* NSRunningApplication+SmartActivate.m */; };
+		2C3BFE3B1086F9B9004224D8 /* TerminalCommander.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 2C3BFE3A1086F9B9004224D8 /* TerminalCommander.applescript */; settings = {ATTRIBUTES = (); }; };
+		2C3BFE521086FDDF004224D8 /* FrontAccess.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 2C3BFE511086FDDF004224D8 /* FrontAccess.applescript */; settings = {ATTRIBUTES = (); }; };
+		2CB1DCD310854397007CDBA3 /* MessageDelegate.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1DCD110854397007CDBA3 /* MessageDelegate.applescript */; settings = {ATTRIBUTES = (); }; };
 		2CB1DCD71085480C007CDBA3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CB1DCD41085480C007CDBA3 /* Localizable.strings */; };
+		2CDC0F4F1BA18F8200A4990F /* AppleScriptObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CDC0F4E1BA18F8200A4990F /* AppleScriptObjC.framework */; };
 		2CE5E4AF1078EFD7007EE095 /* OiT_icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2CE5E4AE1078EFD7007EE095 /* OiT_icon.icns */; };
 		2CE6B2E6107227B7005C6B05 /* AppController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CE6B2E4107227B7005C6B05 /* AppController.h */; };
 		2CE6B2E7107227B7005C6B05 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE6B2E5107227B7005C6B05 /* AppController.m */; };
@@ -69,14 +64,14 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		2C0E8F911BA1E381001E3E05 /* NSRunningApplication+SmartActivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSRunningApplication+SmartActivate.h"; sourceTree = "<group>"; };
+		2C0E8F921BA1E381001E3E05 /* NSRunningApplication+SmartActivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSRunningApplication+SmartActivate.m"; sourceTree = "<group>"; };
 		2C3BFE3A1086F9B9004224D8 /* TerminalCommander.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = TerminalCommander.applescript; sourceTree = "<group>"; };
 		2C3BFE511086FDDF004224D8 /* FrontAccess.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; lineEnding = 0; path = FrontAccess.applescript; sourceTree = "<group>"; };
-		2C3BFE711086FF68004224D8 /* SmartActivate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SmartActivate.c; sourceTree = "<group>"; };
-		2C3BFE721086FF68004224D8 /* SmartActivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartActivate.h; sourceTree = "<group>"; };
-		2C3BFE731086FF68004224D8 /* SmartActivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartActivate.m; sourceTree = "<group>"; };
 		2CB1DCD110854397007CDBA3 /* MessageDelegate.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = MessageDelegate.applescript; sourceTree = "<group>"; };
 		2CB1DCD51085480C007CDBA3 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; lineEnding = 0; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2CB1DCFA10854973007CDBA3 /* Japanese */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; lineEnding = 0; name = Japanese; path = Japanese.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2CDC0F4E1BA18F8200A4990F /* AppleScriptObjC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptObjC.framework; path = System/Library/Frameworks/AppleScriptObjC.framework; sourceTree = SDKROOT; };
 		2CE5E4AE1078EFD7007EE095 /* OiT_icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = OiT_icon.icns; sourceTree = "<group>"; };
 		2CE6B2E4107227B7005C6B05 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		2CE6B2E5107227B7005C6B05 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
@@ -90,7 +85,6 @@
 		2CE6B58A10757A46005C6B05 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		60A014E40DBD2B4C0071D9A8 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		653593B5078DD4D900E8BB2F /* AppleScriptKit.sdef */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.sdef; name = AppleScriptKit.sdef; path = /System/Library/Frameworks/AppleScriptKit.framework/Versions/A/Resources/AppleScriptKit.sdef; sourceTree = "<absolute>"; };
-		DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptKit.framework; path = /System/Library/Frameworks/AppleScriptKit.framework; sourceTree = "<absolute>"; };
 		DA458A96036079E503C91932 /* Application.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; lineEnding = 0; path = Application.applescript; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,10 +94,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2575736C072882A0000BE9CA /* Cocoa.framework in Frameworks */,
-				2575736D072882A0000BE9CA /* AppleScriptKit.framework in Frameworks */,
 				2CE6B49A10744546005C6B05 /* OSAKit.framework in Frameworks */,
 				2CE6B4C210744D8E005C6B05 /* DonationReminder.framework in Frameworks */,
 				2CE6B5481074818F005C6B05 /* Sparkle.framework in Frameworks */,
+				2CDC0F4F1BA18F8200A4990F /* AppleScriptObjC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,11 +118,11 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2CDC0F4E1BA18F8200A4990F /* AppleScriptObjC.framework */,
 				2CE6B5471074818F005C6B05 /* Sparkle.framework */,
 				2CE6B4C110744D8E005C6B05 /* DonationReminder.framework */,
 				2CE6B49910744546005C6B05 /* OSAKit.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
-				DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -155,7 +149,6 @@
 			children = (
 				2CE6B34610723CBF005C6B05 /* History.rd */,
 				080E96DDFE201D6D7F000001 /* Scripts */,
-				2C3BFE701086FF68004224D8 /* SmartActivateLib */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -168,6 +161,8 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				2C0E8F911BA1E381001E3E05 /* NSRunningApplication+SmartActivate.h */,
+				2C0E8F921BA1E381001E3E05 /* NSRunningApplication+SmartActivate.m */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 				2CE6B2E4107227B7005C6B05 /* AppController.h */,
 				2CE6B2E5107227B7005C6B05 /* AppController.m */,
@@ -198,16 +193,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2C3BFE701086FF68004224D8 /* SmartActivateLib */ = {
-			isa = PBXGroup;
-			children = (
-				2C3BFE711086FF68004224D8 /* SmartActivate.c */,
-				2C3BFE721086FF68004224D8 /* SmartActivate.h */,
-				2C3BFE731086FF68004224D8 /* SmartActivate.m */,
-			);
-			path = SmartActivateLib;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -216,7 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CE6B2E6107227B7005C6B05 /* AppController.h in Headers */,
-				2C3BFE751086FF68004224D8 /* SmartActivate.h in Headers */,
+				2C0E8F931BA1E381001E3E05 /* NSRunningApplication+SmartActivate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,10 +274,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25757365072882A0000BE9CA /* Application.applescript in Sources */,
+				2CB1DCD310854397007CDBA3 /* MessageDelegate.applescript in Sources */,
+				2C3BFE3B1086F9B9004224D8 /* TerminalCommander.applescript in Sources */,
+				2C3BFE521086FDDF004224D8 /* FrontAccess.applescript in Sources */,
 				2575736A072882A0000BE9CA /* main.m in Sources */,
 				2CE6B2E7107227B7005C6B05 /* AppController.m in Sources */,
-				2C3BFE741086FF68004224D8 /* SmartActivate.c in Sources */,
-				2C3BFE761086FF68004224D8 /* SmartActivate.m in Sources */,
+				2C0E8F941BA1E381001E3E05 /* NSRunningApplication+SmartActivate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +327,7 @@
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_GC = supported;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Info.plist;
@@ -363,6 +352,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/..\"",
 				);
+				GCC_ENABLE_OBJC_GC = supported;
 				GCC_MODEL_TUNING = G5;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /Applications;
@@ -377,7 +367,7 @@
 		4E59BBCC08A816B0001206A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -385,7 +375,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				PRODUCT_NAME = "Open in Terminal";
-				SDKROOT = macosx10.5;
+				SDKROOT = macosx10.6;
 			};
 			name = Debug;
 		};
@@ -399,7 +389,7 @@
 				INFOPLIST_PREPROCESS = NO;
 				PREBINDING = NO;
 				PRODUCT_NAME = "Open in Terminal";
-				SDKROOT = macosx10.5;
+				SDKROOT = macosx10.6;
 			};
 			name = Release;
 		};

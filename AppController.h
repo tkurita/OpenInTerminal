@@ -3,6 +3,7 @@
 
 @interface AppController : NSObject {
 	IBOutlet SUUpdater *updater;
+	IBOutlet id controlScript;
 }
 
 @end

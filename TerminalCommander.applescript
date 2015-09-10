@@ -5,8 +5,9 @@ on buildup()
 		property parent : TerminalCommanderBase
 		
 		on activate_terminal()
-			call method "activateAppOfIdentifier:" of class "SmartActivate" with parameter "com.apple.Terminal"
-			return true
+			tell current application's class "NSRunningApplication"
+				return activateAppOfIdentifier_("com.apple.Terminal") as boolean
+			end tell
 		end activate_terminal
 	end script
 	

@@ -5,8 +5,10 @@ on buildup()
 		property parent : FrontAccessBase
 		
 		on path_from_url(a_url)
-			set url_obj to call method "URLWithString:" of class "NSURL" with parameter a_url
-			return call method "path" of url_obj
+			tell current application's class "NSURL"
+				set a_url to URLWithString_(a_url)
+			end tell
+			return a_url's |path|() as text
 		end path_from_url
 		
 	end script
