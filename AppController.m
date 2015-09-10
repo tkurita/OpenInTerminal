@@ -186,7 +186,7 @@ static BOOL CHECK_UPDATE = NO;
 														  error:&err_info];
 	if (err_info) {
 		NSLog(@"%@", [err_info description]);
-		NSRunAlertPanel(@"Fail to load FinderController.scpt", 
+		NSRunAlertPanel(@"Fail to load Application.scpt", 
 						[err_info objectForKey:OSAScriptErrorMessage], 
 						@"OK", nil, nil);
 		[NSApp terminate:self];
