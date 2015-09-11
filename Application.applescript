@@ -152,7 +152,7 @@ script AppControlScript
 	end submain
 
 	on processForContext()
-		log "start processForContext"
+		--log "start processForContext"
 		try
 			if not setup() then return
 			submain()
@@ -174,7 +174,7 @@ script AppControlScript
 	end open_location
 
 	on process_pathes(a_list)
-		log "start process_pathes"
+		--log "start process_pathes"
 		set a_path to item 1 of a_list
 		set a_list to rest of a_list
 		if a_path is not in a_list then

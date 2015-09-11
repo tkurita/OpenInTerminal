@@ -227,7 +227,7 @@
 						<key>_historyCapacity</key>
 						<integer>20</integer>
 						<key>bookmark</key>
-						<string>2C0E8FE91BA1F657001E3E05</string>
+						<string>2C0E8FF91BA1FF88001E3E05</string>
 						<key>history</key>
 						<array>
 							<string>2CF862661BA1AA280098581A</string>
@@ -334,8 +334,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>3</integer>
-									<integer>2</integer>
+									<integer>32</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -370,14 +369,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>2C60758E1BA18B8B00E2FF68</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Application.applescript</string>
+								<string>Info.plist</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -385,23 +382,25 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>2C60758F1BA18B8B00E2FF68</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Application.applescript</string>
+										<string>Info.plist</string>
 										<key>_historyCapacity</key>
 										<integer>20</integer>
 										<key>bookmark</key>
-										<string>2C0E8FE81BA1F657001E3E05</string>
+										<string>2C0E8FF81BA1FF88001E3E05</string>
 										<key>history</key>
 										<array>
 											<string>2CDC0F9A1BA1959700A4990F</string>
 											<string>2CDC0F9B1BA1959700A4990F</string>
-											<string>2C0E8FB41BA1F43A001E3E05</string>
-											<string>2C0E8FB51BA1F43A001E3E05</string>
 											<string>2C0E8FB61BA1F43A001E3E05</string>
 											<string>2C0E8FB71BA1F43A001E3E05</string>
 											<string>2C0E8FB81BA1F43A001E3E05</string>
 											<string>2C0E8FB91BA1F43A001E3E05</string>
-											<string>2C0E8FC41BA1F4D1001E3E05</string>
-											<string>2C0E8FC51BA1F4D1001E3E05</string>
+											<string>2C0E8FF21BA1FF88001E3E05</string>
+											<string>2C0E8FF31BA1FF88001E3E05</string>
+											<string>2C0E8FF41BA1FF88001E3E05</string>
+											<string>2C0E8FF51BA1FF88001E3E05</string>
+											<string>2C0E8FF61BA1FF88001E3E05</string>
+											<string>2C0E8FF71BA1FF88001E3E05</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
