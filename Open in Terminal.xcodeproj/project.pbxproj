@@ -87,7 +87,6 @@
 		2CE6B57D10749FE4005C6B05 /* FactorySettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FactorySettings.plist; sourceTree = "<group>"; };
 		2CE6B58A10757A46005C6B05 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		60A014E40DBD2B4C0071D9A8 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		653593B5078DD4D900E8BB2F /* AppleScriptKit.sdef */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.sdef; name = AppleScriptKit.sdef; path = /System/Library/Frameworks/AppleScriptKit.framework/Versions/A/Resources/AppleScriptKit.sdef; sourceTree = "<absolute>"; };
 		DA458A96036079E503C91932 /* Application.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; lineEnding = 0; path = Application.applescript; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,7 +180,6 @@
 				2CE5E4AE1078EFD7007EE095 /* OiT_icon.icns */,
 				2CE6B58A10757A46005C6B05 /* dsa_pub.pem */,
 				60A014E30DBD2B4C0071D9A8 /* MainMenu.xib */,
-				653593B5078DD4D900E8BB2F /* AppleScriptKit.sdef */,
 				2CE6B3F61072FA6F005C6B05 /* ServicesMenu.strings */,
 				2CE6B57D10749FE4005C6B05 /* FactorySettings.plist */,
 			);

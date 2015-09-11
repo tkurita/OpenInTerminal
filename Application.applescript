@@ -87,6 +87,7 @@ script AppControlScript
 	end setup
 
 	on location_for_safari()
+        --log "start location_for_safari"
 		set a_url to missing value
 		tell application "Safari"
 			tell front document
@@ -95,7 +96,8 @@ script AppControlScript
 				end if
 			end tell
 		end tell
-		if a_url is missing value then
+		
+        if a_url is missing value then
 			set msg to localized string "No document in Safari."
 			error msg number 1110
 		end if
@@ -108,13 +110,13 @@ script AppControlScript
 			return missing value
 		end if
 		
-		if not (a_path's fileExists()) then
+        if not (a_path's fileExists() as boolean) then
 			set msg to XText's formatted_text(localized string "$1 is not found.", {quoted form of a_path as text})
 			error msg number 1110
 			return missing value
 		end if
-		
-		if not (a_path's isFolder()) then
+        
+		if not (a_path's isFolder() as boolean) then
 			set a_path to a_path's stringByDeletingLastPathComponent()
 		end if
 		
