@@ -26,6 +26,7 @@
 		2C0E8F941BA1E381001E3E05 /* NSRunningApplication+SmartActivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0E8F921BA1E381001E3E05 /* NSRunningApplication+SmartActivate.m */; };
 		2C3BFE3B1086F9B9004224D8 /* TerminalCommander.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 2C3BFE3A1086F9B9004224D8 /* TerminalCommander.applescript */; settings = {ATTRIBUTES = (); }; };
 		2C3BFE521086FDDF004224D8 /* FrontAccess.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 2C3BFE511086FDDF004224D8 /* FrontAccess.applescript */; settings = {ATTRIBUTES = (); }; };
+		2C7BB2C21BA25845005CC0E4 /* PathExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7BB2C01BA25845005CC0E4 /* PathExtra.m */; };
 		2CB1DCD310854397007CDBA3 /* MessageDelegate.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1DCD110854397007CDBA3 /* MessageDelegate.applescript */; settings = {ATTRIBUTES = (); }; };
 		2CB1DCD71085480C007CDBA3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CB1DCD41085480C007CDBA3 /* Localizable.strings */; };
 		2CDC0F4F1BA18F8200A4990F /* AppleScriptObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CDC0F4E1BA18F8200A4990F /* AppleScriptObjC.framework */; };
@@ -68,6 +69,8 @@
 		2C0E8F921BA1E381001E3E05 /* NSRunningApplication+SmartActivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSRunningApplication+SmartActivate.m"; sourceTree = "<group>"; };
 		2C3BFE3A1086F9B9004224D8 /* TerminalCommander.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = TerminalCommander.applescript; sourceTree = "<group>"; };
 		2C3BFE511086FDDF004224D8 /* FrontAccess.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; lineEnding = 0; path = FrontAccess.applescript; sourceTree = "<group>"; };
+		2C7BB2BF1BA25845005CC0E4 /* PathExtra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathExtra.h; sourceTree = "<group>"; };
+		2C7BB2C01BA25845005CC0E4 /* PathExtra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathExtra.m; sourceTree = "<group>"; };
 		2CB1DCD110854397007CDBA3 /* MessageDelegate.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = MessageDelegate.applescript; sourceTree = "<group>"; };
 		2CB1DCD51085480C007CDBA3 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; lineEnding = 0; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2CB1DCFA10854973007CDBA3 /* Japanese */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; lineEnding = 0; name = Japanese; path = Japanese.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -150,6 +153,7 @@
 				2CE6B34610723CBF005C6B05 /* History.rd */,
 				080E96DDFE201D6D7F000001 /* Scripts */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
+				2C7BB2BE1BA25845005CC0E4 /* PathExtra */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
@@ -191,6 +195,15 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2C7BB2BE1BA25845005CC0E4 /* PathExtra */ = {
+			isa = PBXGroup;
+			children = (
+				2C7BB2BF1BA25845005CC0E4 /* PathExtra.h */,
+				2C7BB2C01BA25845005CC0E4 /* PathExtra.m */,
+			);
+			path = PathExtra;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +294,7 @@
 				2575736A072882A0000BE9CA /* main.m in Sources */,
 				2CE6B2E7107227B7005C6B05 /* AppController.m in Sources */,
 				2C0E8F941BA1E381001E3E05 /* NSRunningApplication+SmartActivate.m in Sources */,
+				2C7BB2C21BA25845005CC0E4 /* PathExtra.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,10 +355,7 @@
 		4E59BBCA08A816B0001206A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					"$(ARCHS_STANDARD_32_64_BIT)",
-				);
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CURRENT_PROJECT_VERSION = 13;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
