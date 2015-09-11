@@ -1,13 +1,12 @@
 global TerminalCommanderBase
+global NSRunningApplication
 
 on buildup()
 	script TerminalCommanderExtend
 		property parent : TerminalCommanderBase
 		
 		on activate_terminal()
-			tell current application's class "NSRunningApplication"
-				return activateAppOfIdentifier_("com.apple.Terminal") as boolean
-			end tell
+            NSRunningApplication's activateAppOfIdentifier_("com.apple.Terminal") as boolean
 		end activate_terminal
 	end script
 	

@@ -14,7 +14,10 @@ script AppControlScript
 	property MessageDelegate : missing value
 	
 	property NSURL : class "NSURL"
+    property NSRunningApplication : class "NSRunningApplication"
 	
+    property _sysver : missing value
+    
 	on return_true()
 		return true
 	end return_true
@@ -77,11 +80,11 @@ script AppControlScript
 
 		set MessageDelegate to import_script("MessageDelegate")
 		GUIScriptingChecker's set_delegate(MessageDelegate)
-		set FrontAccess to buildup() of (import_script("FrontAccess"))
-		set TerminalCommander to buildup() of (import_script("TerminalCommander"))
+		set TerminalCommander to import_script("TerminalCommander")'s buildup()
+		set FrontAccess to import_script("FrontAccess")'s buildup()
 		
-		set sysver to system version of (get system info)
-		TerminalCommander's set_use_osax_for_customtitle(is_need_TerminalControl(sysver))
+		set my _sysver to system version of (get system info)
+		TerminalCommander's set_use_osax_for_customtitle(is_need_TerminalControl(my _sysver))
 		set my setup to my return_true
 		return true
 	end setup
@@ -122,11 +125,15 @@ script AppControlScript
 		
 		return a_path as text
 	end location_for_safari
-
+    
 	on submain()
 		set a_front to make FrontAccess
 		set front_app_id to a_front's bundle_identifier()
 		if (("com.apple.finder" is front_app_id) or (a_front's is_current_application())) then
+            if my _sysver starts with "10.8" then -- 10.8's Finder can't obtain new window's insertion location
+                activate
+                activate application "Finder"
+            end if
 			set a_location to do() of InsertionLocator
 			if a_location is missing value then
 				activate
@@ -149,10 +156,10 @@ script AppControlScript
 			end if
 			set a_location to a_location's posix_path()
 		end if
-		
+        
 		return open_location(a_location)
 	end submain
-
+    
 	on processForContext()
 		--log "start processForContext"
 		try
@@ -165,16 +172,15 @@ script AppControlScript
 	end processForContext
 
 	on open_location(a_location)
-		set a_commander to make TerminalCommander
-		tell a_commander
+        --log "start open_location"
+		tell make TerminalCommander
 			set_working_directory(a_location)
 			set a_location to quoted form of a_location
 			do_command for "cd " & a_location with activation
 		end tell
-		
 		return true
 	end open_location
-
+    
 	on process_pathes(a_list)
 		--log "start process_pathes"
 		set a_path to item 1 of a_list
