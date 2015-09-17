@@ -1,0 +1,6 @@
+[submodule "PathExtra"]
+	path = PathExtra
+	url = https://github.com/tkurita/PathExtra.git
+[submodule "DonationReminder"]
+	path = DonationReminder
+	url = https://github.com/tkurita/DonationReminder.git
