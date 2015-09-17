@@ -4,3 +4,27 @@
 [submodule "DonationReminder"]
 	path = DonationReminder
 	url = https://github.com/tkurita/DonationReminder.git
+[submodule "LibraryScripts/FinderSelection.scptd"]
+	path = LibraryScripts/FinderSelection.scptd
+	url = https://github.com/tkurita/FinderSelection.scptd.git
+[submodule "LibraryScripts/FrontAccess.scptd"]
+	path = LibraryScripts/FrontAccess.scptd
+	url = https://github.com/tkurita/FrontAccess.scptd.git
+[submodule "LibraryScripts/GUIScriptingChecker.scptd"]
+	path = LibraryScripts/GUIScriptingChecker.scptd
+	url = https://github.com/tkurita/GUIScriptingChecker.scptd.git
+[submodule "LibraryScripts/XFile.scptd"]
+	path = LibraryScripts/XFile.scptd
+	url = https://github.com/tkurita/XFile.scptd.git
+[submodule "LibraryScripts/XText.scptd"]
+	path = LibraryScripts/XText.scptd
+	url = https://github.com/tkurita/XText.scptd.git
+[submodule "LibraryScripts/XList.scptd"]
+	path = LibraryScripts/XList.scptd
+	url = https://github.com/tkurita/XList.scptd.git
+[submodule "LibraryScripts/TerminalCommander.scptd"]
+	path = LibraryScripts/TerminalCommander.scptd
+	url = https://github.com/tkurita/TerminalCommander.scptd.git
+[submodule "LibraryScripts/InsertionLocator.scptd"]
+	path = LibraryScripts/InsertionLocator.scptd
+	url = https://github.com/tkurita/InsertionLocator.scptd.git
