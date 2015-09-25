@@ -5,16 +5,14 @@ script AppControlScript
 	property TerminalCommanderBase : module "TerminalCommander"
 	property XFile : module
 	property XText : module
-	property FrontAccessBase : module "FrontAccess"
 	property GUIScriptingChecker : module
 	property loader : boot (module loader of application (get "OpenInTerminalLib")) for me
 
-	property FrontAccess : missing value
 	property TerminalCommander : missing value
-	property MessageDelegate : missing value
 	
 	property NSURL : class "NSURL"
     property NSRunningApplication : class "NSRunningApplication"
+    property TXFrontAccess : class "TXFrontAccess"
 	
     property _sysver : missing value
     
@@ -78,10 +76,7 @@ script AppControlScript
 			set_use_gui_scripting(false)
 		end tell
 
-		set MessageDelegate to import_script("MessageDelegate")
-		GUIScriptingChecker's set_delegate(MessageDelegate)
 		set TerminalCommander to import_script("TerminalCommander")'s buildup()
-		set FrontAccess to import_script("FrontAccess")'s buildup()
 		
 		set my _sysver to system version of (get system info)
 		TerminalCommander's set_use_osax_for_customtitle(is_need_TerminalControl(my _sysver))
@@ -126,10 +121,44 @@ script AppControlScript
 		return a_path as text
 	end location_for_safari
     
+    on checkGUIScripting()
+		--log "start checkGUIScripting"
+		tell GUIScriptingChecker
+            considering numeric strings
+                set is_mavericks to (_sysver is greater than or equal to "10.9")
+            end considering
+			if is_mavericks then
+				script MessageProvider109
+                    on ok_button()
+                        return localized string "Open System Preferences"
+                    end ok_button
+            
+                    on cancel_button()
+                        return localized string "Deny"
+                    end cancel_button
+        
+                    on title_message()
+                        set a_format to localized string "need accessibility"
+                        return XText's formatted_text(a_format, {name of current application})
+                    end title_message
+            
+                    on detail_message()
+                        return localized string "Grant access"
+                    end detail_message
+                end script
+                set_delegate(MessageProvider109)
+            else
+                localize_messages()
+            end if
+        end tell
+        --log "will end checkGUIScripting"
+        return GUIScriptingChecker's do()
+    end checkGUIScripting
+
 	on submain()
-		set a_front to make FrontAccess
-		set front_app_id to a_front's bundle_identifier()
-		if (("com.apple.finder" is front_app_id) or (a_front's is_current_application())) then
+        set a_front to TXFrontAccess's frontAccessForFrontmostApp()
+		set front_app_id to a_front's bundleIdentifier() as text
+		if (("com.apple.finder" is front_app_id) or (a_front's isCurrentApplication() as boolean)) then
             if my _sysver starts with "10.8" then -- 10.8's Finder can't obtain new window's insertion location
                 activate
                 activate application "Finder"
@@ -147,10 +176,10 @@ script AppControlScript
 				return false
 			end if
 		else
-			if not do() of GUIScriptingChecker then
+			if not checkGUIScripting() then
 				return
 			end if
-			set a_location to XFile's make_with(a_front's document_alias())
+			set a_location to XFile's make_with(a_front's documentURL()'s |path|() as text)
 			if not a_location's is_folder() or a_location's is_package() then
 				set a_location to a_location's parent_folder()
 			end if

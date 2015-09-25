@@ -31,3 +31,6 @@
 [submodule "LibraryScripts/PathInfo.scptd"]
 	path = LibraryScripts/PathInfo.scptd
 	url = https://github.com/tkurita/PathInfo.scptd.git
+[submodule "TXFrontAccess"]
+	path = TXFrontAccess
+	url = https://github.com/tkurita/TXFrontAccess.git
