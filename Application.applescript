@@ -5,15 +5,17 @@ script AppControlScript
 	property TerminalCommanderBase : module "TerminalCommander"
 	property XFile : module
 	property XText : module
-	property GUIScriptingChecker : module
+	property GUIScriptingCheckerBase : module "GUIScriptingChecker"
 	property loader : boot (module loader of application (get "OpenInTerminalLib")) for me
 
 	property TerminalCommander : missing value
-	
+	property GUIScriptingChecker : missing value
+    
 	property NSURL : class "NSURL"
     property NSRunningApplication : class "NSRunningApplication"
     property TXFrontAccess : class "TXFrontAccess"
 	
+    property _appController : missing value
     property _sysver : missing value
     
 	on return_true()
@@ -21,7 +23,7 @@ script AppControlScript
 	end return_true
 	
 	on import_script(a_name)
-		--log "start import_script"
+		--log "start import_script : "&a_name
 		set a_script to load script (path to resource a_name & ".scpt")
 		return a_script
 	end import_script
@@ -77,7 +79,7 @@ script AppControlScript
 		end tell
 
 		set TerminalCommander to import_script("TerminalCommander")'s buildup()
-		
+		set GUIScriptingChecker to import_script("GUIScriptingChecker")'s buildup()
 		set my _sysver to system version of (get system info)
 		TerminalCommander's set_use_osax_for_customtitle(is_need_TerminalControl(my _sysver))
 		set my setup to my return_true
@@ -122,7 +124,7 @@ script AppControlScript
 	end location_for_safari
     
     on checkGUIScripting()
-		--log "start checkGUIScripting"
+		log "start checkGUIScripting"
 		tell GUIScriptingChecker
             considering numeric strings
                 set is_mavericks to (_sysver is greater than or equal to "10.9")

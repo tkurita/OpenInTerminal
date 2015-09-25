@@ -6,18 +6,6 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAppleScriptBuildPhase section */
-		25757364072882A0000BE9CA /* AppleScript */ = {
-			isa = PBXAppleScriptBuildPhase;
-			buildActionMask = 2147483647;
-			contextName = "";
-			files = (
-			);
-			isSharedContext = 0;
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXAppleScriptBuildPhase section */
-
 /* Begin PBXBuildFile section */
 		25757365072882A0000BE9CA /* Application.applescript in Sources */ = {isa = PBXBuildFile; fileRef = DA458A96036079E503C91932 /* Application.applescript */; settings = {ATTRIBUTES = (); }; };
 		2575736A072882A0000BE9CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -25,6 +13,7 @@
 		2C0E8F931BA1E381001E3E05 /* NSRunningApplication+SmartActivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C0E8F911BA1E381001E3E05 /* NSRunningApplication+SmartActivate.h */; };
 		2C0E8F941BA1E381001E3E05 /* NSRunningApplication+SmartActivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0E8F921BA1E381001E3E05 /* NSRunningApplication+SmartActivate.m */; };
 		2C3BFE3B1086F9B9004224D8 /* TerminalCommander.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 2C3BFE3A1086F9B9004224D8 /* TerminalCommander.applescript */; settings = {ATTRIBUTES = (); }; };
+		2C3FB74E1BB56208000A42EA /* GUIScriptingChecker.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 2C3FB74D1BB56208000A42EA /* GUIScriptingChecker.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
 		2C4FEA1C1BAA554E00F5563C /* DonationReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4FEA191BAA54C800F5563C /* DonationReminder.framework */; };
 		2C4FEA1D1BAA556200F5563C /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C4FEA191BAA54C800F5563C /* DonationReminder.framework */; };
 		2C4FEA211BAA567000F5563C /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4FEA201BAA567000F5563C /* Sparkle.framework */; };
@@ -86,6 +75,7 @@
 		2C0E8F911BA1E381001E3E05 /* NSRunningApplication+SmartActivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSRunningApplication+SmartActivate.h"; sourceTree = "<group>"; };
 		2C0E8F921BA1E381001E3E05 /* NSRunningApplication+SmartActivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSRunningApplication+SmartActivate.m"; sourceTree = "<group>"; };
 		2C3BFE3A1086F9B9004224D8 /* TerminalCommander.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = TerminalCommander.applescript; sourceTree = "<group>"; };
+		2C3FB74D1BB56208000A42EA /* GUIScriptingChecker.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = GUIScriptingChecker.applescript; sourceTree = "<group>"; };
 		2C4FEA141BAA54C700F5563C /* DonationReminder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DonationReminder.xcodeproj; path = DonationReminder/DonationReminder.xcodeproj; sourceTree = "<group>"; };
 		2C4FEA201BAA567000F5563C /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		2C7BB2BF1BA25845005CC0E4 /* PathExtra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathExtra.h; sourceTree = "<group>"; };
@@ -130,6 +120,7 @@
 			children = (
 				DA458A96036079E503C91932 /* Application.applescript */,
 				2C3BFE3A1086F9B9004224D8 /* TerminalCommander.applescript */,
+				2C3FB74D1BB56208000A42EA /* GUIScriptingChecker.applescript */,
 			);
 			name = Scripts;
 			sourceTree = "<group>";
@@ -261,7 +252,6 @@
 			buildConfigurationList = 4E59BBC808A816B0001206A8 /* Build configuration list for PBXNativeTarget "Open in Terminal" */;
 			buildPhases = (
 				25757363072882A0000BE9CA /* Headers */,
-				25757364072882A0000BE9CA /* AppleScript */,
 				25757366072882A0000BE9CA /* Resources */,
 				25757369072882A0000BE9CA /* Sources */,
 				2575736B072882A0000BE9CA /* Frameworks */,
@@ -345,6 +335,7 @@
 			files = (
 				25757365072882A0000BE9CA /* Application.applescript in Sources */,
 				2C3BFE3B1086F9B9004224D8 /* TerminalCommander.applescript in Sources */,
+				2C3FB74E1BB56208000A42EA /* GUIScriptingChecker.applescript in Sources */,
 				2575736A072882A0000BE9CA /* main.m in Sources */,
 				2CE6B2E7107227B7005C6B05 /* AppController.m in Sources */,
 				2C0E8F941BA1E381001E3E05 /* NSRunningApplication+SmartActivate.m in Sources */,
@@ -399,7 +390,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 14;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -421,7 +412,7 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 14;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
