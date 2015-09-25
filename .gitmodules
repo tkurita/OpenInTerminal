@@ -7,9 +7,6 @@
 [submodule "LibraryScripts/FinderSelection.scptd"]
 	path = LibraryScripts/FinderSelection.scptd
 	url = https://github.com/tkurita/FinderSelection.scptd.git
-[submodule "LibraryScripts/FrontAccess.scptd"]
-	path = LibraryScripts/FrontAccess.scptd
-	url = https://github.com/tkurita/FrontAccess.scptd.git
 [submodule "LibraryScripts/GUIScriptingChecker.scptd"]
 	path = LibraryScripts/GUIScriptingChecker.scptd
 	url = https://github.com/tkurita/GUIScriptingChecker.scptd.git
