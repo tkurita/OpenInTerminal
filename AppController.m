@@ -130,7 +130,19 @@ static BOOL CHECK_UPDATE = NO;
 	[self application:NSApp openFiles:filenames];
 	if (CHECK_UPDATE) {
 		[self checkUpdate];
-	}	
+	}
+}
+
+- (void)processForFrontContextFromPasteboard:(NSPasteboard *)pboard userData:(NSString *)data error:(NSString **)error
+{
+#if useLog
+	NSLog(@"start processAtLocationFromPasteboard");
+#endif
+    
+	[self processForLaunched];
+	if (CHECK_UPDATE) {
+		[self checkUpdate];
+	}
 }
 
 - (BOOL)applicationOpenUntitledFile:(NSApplication *)theApplication

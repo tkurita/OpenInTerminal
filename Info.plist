@@ -74,7 +74,7 @@
 			<key>NSMenuItem</key>
 			<dict>
 				<key>default</key>
-				<string>Open in Terminal</string>
+				<string>Open Terminal at Folder</string>
 			</dict>
 			<key>NSMessage</key>
 			<string>processAtLocationFromPasteboard</string>
@@ -90,6 +90,17 @@
 				<string>NSFilenamesPboardType</string>
 				<string>public.plain-text</string>
 			</array>
+		</dict>
+		<dict>
+			<key>NSMenuItem</key>
+			<dict>
+				<key>default</key>
+				<string>Open in Terminal</string>
+			</dict>
+			<key>NSMessage</key>
+			<string>processForFrontContextFromPasteboard</string>
+			<key>NSPortName</key>
+			<string>${BUNDLE_IDENTIFIER}Service</string>
 		</dict>
 	</array>
 </dict>
