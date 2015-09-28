@@ -2,20 +2,39 @@
 #import <OSAKit/OSAScript.h>
 #import "DonationReminder/DonationReminder.h"
 
-#define useLog 0
+#define useLog 1
 
+static BOOL LAUNCH_AS_LOGINITEM = NO;
 static BOOL AUTO_QUIT = YES;
-static BOOL SCRIPT_IS_RUNNING = NO;
 static BOOL CHECK_UPDATE = NO;
 
 @implementation AppController
+
+- (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender
+{
+#if useLog
+	NSLog(@"start applicationShouldTerminate");
+#endif
+/*
+    NSTerminateNow
+    NSTerminateCancel
+    NSTerminateLater
+ */
+    if (!LAUNCH_AS_LOGINITEM) {
+        AUTO_QUIT = [[NSUserDefaults standardUserDefaults] boolForKey:@"AutoQuit"];
+        if (AUTO_QUIT) {
+            return NSTerminateNow;
+        }
+    }
+    return NSTerminateCancel;
+}
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication
 {
 #if useLog
 	NSLog(@"start applicationShouldTerminateAfterLastWindowClosed");
 #endif
-	return (!SCRIPT_IS_RUNNING && AUTO_QUIT);
+	return (!AUTO_QUIT);
 }
 
 - (void)checkUpdate
@@ -65,7 +84,7 @@ static BOOL CHECK_UPDATE = NO;
 {
 #if useLog
 	NSLog(@"applicationDidFinishLaunching");
-#endif
+#endif]
 	
 	NSAppleEventDescriptor *ev = [ [NSAppleEventManager sharedAppleEventManager] currentAppleEvent];
 #if useLog
@@ -91,6 +110,7 @@ static BOOL CHECK_UPDATE = NO;
 				value = [propData typeCodeValue];
 				switch (value) {
 					case keyAELaunchedAsLogInItem:
+                        LAUNCH_AS_LOGINITEM = YES;
 						AUTO_QUIT = NO;
 						break;
 					case keyAELaunchedAsServiceItem:
