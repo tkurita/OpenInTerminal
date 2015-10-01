@@ -5,7 +5,7 @@
 #define useLog 1
 
 static BOOL LAUNCH_AS_LOGINITEM = NO;
-static BOOL AUTO_QUIT = YES;
+static BOOL STAY_RUNNING = YES;
 static BOOL CHECK_UPDATE = NO;
 
 @implementation AppController
@@ -23,8 +23,8 @@ static BOOL CHECK_UPDATE = NO;
     if (!LAUNCH_AS_LOGINITEM) {
         NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
         [user_defaults synchronize];
-        AUTO_QUIT = [user_defaults boolForKey:@"AutoQuit"];
-        if (AUTO_QUIT) {
+        STAY_RUNNING = [user_defaults boolForKey:@"StayRunning"];
+        if (!STAY_RUNNING) {
             return NSTerminateNow;
         }
     }
@@ -36,15 +36,15 @@ static BOOL CHECK_UPDATE = NO;
 #if useLog
 	NSLog(@"start applicationShouldTerminateAfterLastWindowClosed");
 #endif
-	return (!AUTO_QUIT);
+	return (STAY_RUNNING);
 }
 
 - (void)checkUpdate
 {
-	if (AUTO_QUIT) {
-		[updater checkForUpdates:self];
+	if (STAY_RUNNING) {
+        [updater checkForUpdatesInBackground];
 	} else {
-		[updater checkForUpdatesInBackground];
+		[updater checkForUpdates:self];
 	}
 	CHECK_UPDATE = NO;
 }
@@ -56,9 +56,9 @@ static BOOL CHECK_UPDATE = NO;
 		[self checkUpdate];
 	}
 #if useLog	
-	NSLog(@"window count : %d", [[NSApp windows] count]);
+	NSLog(@"window count : %ld", [[NSApp windows] count]);
 #endif	
-	if (AUTO_QUIT && ![[NSApp windows] count]) {
+	if (![[NSApp windows] count]) {
 		[NSApp terminate:self];
 	}
 }
@@ -113,7 +113,6 @@ static BOOL CHECK_UPDATE = NO;
 				switch (value) {
 					case keyAELaunchedAsLogInItem:
                         LAUNCH_AS_LOGINITEM = YES;
-						AUTO_QUIT = NO;
 						break;
 					case keyAELaunchedAsServiceItem:
 						break;
@@ -129,7 +128,7 @@ static BOOL CHECK_UPDATE = NO;
 {
 	[controlScript serviceForPathes:filenames];
 	
-	if (AUTO_QUIT && ![[NSApp windows] count]) {
+	if (![[NSApp windows] count]) {
 		[NSApp terminate:self];
 	}
 }

@@ -4,8 +4,8 @@
 <dict>
 	<key>UpdateIntervalLaunchCounts</key>
 	<integer>20</integer>
-	<key>AutoQuit</key>
-	<false/>
+	<key>StayRunning</key>
+	<true/>
 	<key>CurrentLaunchCount</key>
 	<integer>0</integer>
 </dict>
