@@ -2,7 +2,7 @@
 #import <OSAKit/OSAScript.h>
 #import "DonationReminder/DonationReminder.h"
 
-#define useLog 1
+#define useLog 0
 
 static BOOL LAUNCH_AS_LOGINITEM = NO;
 static BOOL STAY_RUNNING = YES;
@@ -15,11 +15,6 @@ static BOOL CHECK_UPDATE = NO;
 #if useLog
 	NSLog(@"start applicationShouldTerminate");
 #endif
-/*
-    NSTerminateNow
-    NSTerminateCancel
-    NSTerminateLater
- */
     if (!LAUNCH_AS_LOGINITEM) {
         NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
         [user_defaults synchronize];
