@@ -49,18 +49,23 @@ static BOOL CHECK_UPDATE = NO;
 	CHECK_UPDATE = NO;
 }
 
+- (void)tryTerminate
+{
+#if useLog
+	NSLog(@"window count : %ld", [[NSApp windows] count]);
+#endif
+	if (![[NSApp windows] count]) {
+		[NSApp terminate:self];
+	}
+}
+
 - (void)processForLaunched
 {
 	[controlScript processForContext];
 	if (CHECK_UPDATE) {
 		[self checkUpdate];
 	}
-#if useLog	
-	NSLog(@"window count : %ld", [[NSApp windows] count]);
-#endif	
-	if (![[NSApp windows] count]) {
-		[NSApp terminate:self];
-	}
+    [self performSelectorOnMainThread:@selector(tryTerminate) withObject:nil waitUntilDone:NO];
 }
 
 - (void)applicationWillFinishLaunching:(NSNotification *)aNotification
@@ -124,13 +129,12 @@ static BOOL CHECK_UPDATE = NO;
 	}
 }
 
+
+
 - (void)application:(NSApplication *)sender openFiles:(NSArray *)filenames
 {
 	[controlScript serviceForPathes:filenames];
-	
-	if (![[NSApp windows] count]) {
-		[NSApp terminate:self];
-	}
+    [self performSelectorOnMainThread:@selector(tryTerminate) withObject:nil waitUntilDone:NO];
 }
 
 - (void)processAtLocationFromPasteboard:(NSPasteboard *)pboard userData:(NSString *)data error:(NSString **)error
