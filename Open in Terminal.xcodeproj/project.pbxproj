@@ -13,7 +13,7 @@
 		2C0E8F931BA1E381001E3E05 /* NSRunningApplication+SmartActivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C0E8F911BA1E381001E3E05 /* NSRunningApplication+SmartActivate.h */; };
 		2C0E8F941BA1E381001E3E05 /* NSRunningApplication+SmartActivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0E8F921BA1E381001E3E05 /* NSRunningApplication+SmartActivate.m */; };
 		2C3BFE3B1086F9B9004224D8 /* TerminalCommander.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 2C3BFE3A1086F9B9004224D8 /* TerminalCommander.applescript */; settings = {ATTRIBUTES = (); }; };
-		2C3FB74E1BB56208000A42EA /* GUIScriptingChecker.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 2C3FB74D1BB56208000A42EA /* GUIScriptingChecker.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
+		2C3FB74E1BB56208000A42EA /* GUIScriptingChecker.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 2C3FB74D1BB56208000A42EA /* GUIScriptingChecker.applescript */; settings = {ATTRIBUTES = (); }; };
 		2C4FEA1C1BAA554E00F5563C /* DonationReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4FEA191BAA54C800F5563C /* DonationReminder.framework */; };
 		2C4FEA1D1BAA556200F5563C /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C4FEA191BAA54C800F5563C /* DonationReminder.framework */; };
 		2C4FEA211BAA567000F5563C /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4FEA201BAA567000F5563C /* Sparkle.framework */; };

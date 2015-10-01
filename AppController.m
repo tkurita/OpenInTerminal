@@ -21,7 +21,9 @@ static BOOL CHECK_UPDATE = NO;
     NSTerminateLater
  */
     if (!LAUNCH_AS_LOGINITEM) {
-        AUTO_QUIT = [[NSUserDefaults standardUserDefaults] boolForKey:@"AutoQuit"];
+        NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
+        [user_defaults synchronize];
+        AUTO_QUIT = [user_defaults boolForKey:@"AutoQuit"];
         if (AUTO_QUIT) {
             return NSTerminateNow;
         }
@@ -84,7 +86,7 @@ static BOOL CHECK_UPDATE = NO;
 {
 #if useLog
 	NSLog(@"applicationDidFinishLaunching");
-#endif]
+#endif
 	
 	NSAppleEventDescriptor *ev = [ [NSAppleEventManager sharedAppleEventManager] currentAppleEvent];
 #if useLog
