@@ -24,7 +24,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleGetInfoString</key>
-	<string>1.9 copyright 2003-2015, Tetsuro KURITA</string>
+	<string>${PRODUCT_VERSION} $COPYRIGHT}</string>
 	<key>CFBundleIconFile</key>
 	<string>OiT_icon</string>
 	<key>CFBundleIdentifier</key>
@@ -50,7 +50,7 @@
 	<key>NSAppleScriptEnabled</key>
 	<string>YES</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>copyright 2003-2015, Tetsuro KURITA</string>
+	<string>${COPYRIGHT}</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>

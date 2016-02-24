@@ -124,7 +124,7 @@ script AppControlScript
 	end location_for_safari
     
     on checkGUIScripting()
-		log "start checkGUIScripting"
+		--log "start checkGUIScripting"
 		tell GUIScriptingChecker
             considering numeric strings
                 set is_mavericks to (_sysver is greater than or equal to "10.9")
@@ -206,6 +206,7 @@ script AppControlScript
         --log "start open_location"
 		tell make TerminalCommander
 			set_working_directory(a_location)
+            set_shell_required(true)
 			set a_location to quoted form of a_location
 			do_command for "cd " & a_location with activation
 		end tell
