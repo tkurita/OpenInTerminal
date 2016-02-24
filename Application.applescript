@@ -1,20 +1,19 @@
 script AppControlScript
 	property parent : class "NSObject"
-	
+    
 	property InsertionLocator : module
 	property TerminalCommanderBase : module "TerminalCommander"
 	property XFile : module
 	property XText : module
-	property GUIScriptingCheckerBase : module "GUIScriptingChecker"
 	property loader : boot (module loader of application (get "OpenInTerminalLib")) for me
 
 	property TerminalCommander : missing value
-	property GUIScriptingChecker : missing value
     
 	property NSURL : class "NSURL"
     property NSRunningApplication : class "NSRunningApplication"
     property TXFrontAccess : class "TXFrontAccess"
-	
+	property GUIScriptingChecker : class "GUIScriptingChecker"
+    
     property _appController : missing value
     property _sysver : missing value
     
@@ -27,17 +26,6 @@ script AppControlScript
 		set a_script to load script (path to resource a_name & ".scpt")
 		return a_script
 	end import_script
-	
-	on is_need_TerminalControl(sysver)
-		considering numeric strings
-			set a_result to (sysver is greater than or equal to "10.6")
-			if not a_result then
-				set a_result to sysver is less than or equal to "10.5.6"
-			end if
-		end considering
-		
-		return a_result
-	end is_need_TerminalControl
 
 	on is_lion_or_later(sysver)
 		considering numeric strings
@@ -54,7 +42,7 @@ script AppControlScript
 			return false
 		end try
 		
-		set required_ver to "1.3"
+		set required_ver to "1.4"
 		considering numeric strings
 			if term_control_ver is less than required_ver then
 				set ver_info to localized string "The installed version : $1, the required version : $2"
@@ -68,8 +56,8 @@ script AppControlScript
 	end check_osax
 
 	on setup()
+        --log "start setup"
 		if not check_osax() then
-			quit
 			return false
 		end if
 		
@@ -79,10 +67,9 @@ script AppControlScript
 		end tell
 
 		set TerminalCommander to import_script("TerminalCommander")'s buildup()
-		set GUIScriptingChecker to import_script("GUIScriptingChecker")'s buildup()
 		set my _sysver to system version of (get system info)
-		TerminalCommander's set_use_osax_for_customtitle(is_need_TerminalControl(my _sysver))
 		set my setup to my return_true
+        --log "end setup"
 		return true
 	end setup
 
@@ -122,40 +109,6 @@ script AppControlScript
 		
 		return a_path as text
 	end location_for_safari
-    
-    on checkGUIScripting()
-		--log "start checkGUIScripting"
-		tell GUIScriptingChecker
-            considering numeric strings
-                set is_mavericks to (_sysver is greater than or equal to "10.9")
-            end considering
-			if is_mavericks then
-				script MessageProvider109
-                    on ok_button()
-                        return localized string "Open System Preferences"
-                    end ok_button
-            
-                    on cancel_button()
-                        return localized string "Deny"
-                    end cancel_button
-        
-                    on title_message()
-                        set a_format to localized string "need accessibility"
-                        return XText's formatted_text(a_format, {name of current application})
-                    end title_message
-            
-                    on detail_message()
-                        return localized string "Grant access"
-                    end detail_message
-                end script
-                set_delegate(MessageProvider109)
-            else
-                localize_messages()
-            end if
-        end tell
-        --log "will end checkGUIScripting"
-        return GUIScriptingChecker's do()
-    end checkGUIScripting
 
 	on submain()
         set a_front to TXFrontAccess's frontAccessForFrontmostApp()
@@ -178,7 +131,7 @@ script AppControlScript
 				return false
 			end if
 		else
-			if not checkGUIScripting() then
+			if not (GUIScriptingChecker's check() as boolean) then
 				return
 			end if
 			set a_location to XFile's make_with(a_front's documentURL()'s |path|() as text)
@@ -247,7 +200,12 @@ script AppControlScript
 	end service_for_pathes
 	
 	on awakeFromNib()
-		-- log "start awakeFromNib"
-		setup()
+		--log "start awakeFromNib"
+		if not setup() then
+            _appController's setForceQuit_(true)
+            current application's NSApp's terminate()
+        else
+            _appController's setForceQuit_(false)
+        end if
 	end awakeFromNib
 end script

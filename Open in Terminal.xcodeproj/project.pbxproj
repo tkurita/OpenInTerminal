@@ -14,6 +14,12 @@
 		2C3FB74E1BB56208000A42EA /* GUIScriptingChecker.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 2C3FB74D1BB56208000A42EA /* GUIScriptingChecker.applescript */; settings = {ATTRIBUTES = (); }; };
 		2C4958BF1C7DDAF9006427F3 /* NSRunningApplication+SmartActivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C4958BD1C7DDAF9006427F3 /* NSRunningApplication+SmartActivate.h */; };
 		2C4958C01C7DDAF9006427F3 /* NSRunningApplication+SmartActivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4958BE1C7DDAF9006427F3 /* NSRunningApplication+SmartActivate.m */; };
+		2C4958C91C7DDBF5006427F3 /* GUIScriptingChecker_Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C4958C21C7DDBF5006427F3 /* GUIScriptingChecker_Localizable.strings */; };
+		2C4958CA1C7DDBF5006427F3 /* GUIScriptingChecker.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C4958C41C7DDBF5006427F3 /* GUIScriptingChecker.h */; };
+		2C4958CB1C7DDBF5006427F3 /* GUIScriptingChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4958C51C7DDBF5006427F3 /* GUIScriptingChecker.m */; };
+		2C4958CC1C7DDBF5006427F3 /* SystemEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C4958C71C7DDBF5006427F3 /* SystemEvents.h */; };
+		2C4958CD1C7DDBF5006427F3 /* SystemPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C4958C81C7DDBF5006427F3 /* SystemPreferences.h */; };
+		2C4958D01C7DDD85006427F3 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4958CF1C7DDD85006427F3 /* ScriptingBridge.framework */; };
 		2C4FEA1C1BAA554E00F5563C /* DonationReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4FEA191BAA54C800F5563C /* DonationReminder.framework */; };
 		2C4FEA1D1BAA556200F5563C /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C4FEA191BAA54C800F5563C /* DonationReminder.framework */; };
 		2C4FEA211BAA567000F5563C /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4FEA201BAA567000F5563C /* Sparkle.framework */; };
@@ -28,7 +34,6 @@
 		2CE6B2E6107227B7005C6B05 /* AppController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CE6B2E4107227B7005C6B05 /* AppController.h */; };
 		2CE6B2E7107227B7005C6B05 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE6B2E5107227B7005C6B05 /* AppController.m */; };
 		2CE6B3F71072FA6F005C6B05 /* ServicesMenu.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CE6B3F61072FA6F005C6B05 /* ServicesMenu.strings */; };
-		2CE6B49A10744546005C6B05 /* OSAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE6B49910744546005C6B05 /* OSAKit.framework */; };
 		2CE6B57E10749FE4005C6B05 /* FactorySettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CE6B57D10749FE4005C6B05 /* FactorySettings.plist */; };
 		2CE6B58B10757A46005C6B05 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 2CE6B58A10757A46005C6B05 /* dsa_pub.pem */; };
 		60A014E50DBD2B4C0071D9A8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60A014E30DBD2B4C0071D9A8 /* MainMenu.xib */; };
@@ -76,6 +81,13 @@
 		2C3FB74D1BB56208000A42EA /* GUIScriptingChecker.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = GUIScriptingChecker.applescript; sourceTree = "<group>"; };
 		2C4958BD1C7DDAF9006427F3 /* NSRunningApplication+SmartActivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSRunningApplication+SmartActivate.h"; sourceTree = "<group>"; };
 		2C4958BE1C7DDAF9006427F3 /* NSRunningApplication+SmartActivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSRunningApplication+SmartActivate.m"; sourceTree = "<group>"; };
+		2C4958C31C7DDBF5006427F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/GUIScriptingChecker_Localizable.strings; sourceTree = "<group>"; };
+		2C4958C41C7DDBF5006427F3 /* GUIScriptingChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUIScriptingChecker.h; sourceTree = "<group>"; };
+		2C4958C51C7DDBF5006427F3 /* GUIScriptingChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUIScriptingChecker.m; sourceTree = "<group>"; };
+		2C4958C61C7DDBF5006427F3 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/GUIScriptingChecker_Localizable.strings; sourceTree = "<group>"; };
+		2C4958C71C7DDBF5006427F3 /* SystemEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemEvents.h; sourceTree = "<group>"; };
+		2C4958C81C7DDBF5006427F3 /* SystemPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemPreferences.h; sourceTree = "<group>"; };
+		2C4958CF1C7DDD85006427F3 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
 		2C4FEA141BAA54C700F5563C /* DonationReminder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DonationReminder.xcodeproj; path = DonationReminder/DonationReminder.xcodeproj; sourceTree = "<group>"; };
 		2C4FEA201BAA567000F5563C /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		2C7BB2BF1BA25845005CC0E4 /* PathExtra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathExtra.h; sourceTree = "<group>"; };
@@ -104,9 +116,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C4958D01C7DDD85006427F3 /* ScriptingBridge.framework in Frameworks */,
 				2C4FEA1C1BAA554E00F5563C /* DonationReminder.framework in Frameworks */,
 				2575736C072882A0000BE9CA /* Cocoa.framework in Frameworks */,
-				2CE6B49A10744546005C6B05 /* OSAKit.framework in Frameworks */,
 				2CDC0F4F1BA18F8200A4990F /* AppleScriptObjC.framework in Frameworks */,
 				2C4FEA211BAA567000F5563C /* Sparkle.framework in Frameworks */,
 			);
@@ -157,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				2CE6B34610723CBF005C6B05 /* History.rd */,
+				2C4958C11C7DDBF5006427F3 /* GUIScriptingChecker */,
 				2CAB48741BB51807009F0B09 /* TXFrontAccess */,
 				2C4958BC1C7DDAF9006427F3 /* NSRunningApplication-SmartActivate */,
 				080E96DDFE201D6D7F000001 /* Scripts */,
@@ -197,6 +210,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C4958CF1C7DDD85006427F3 /* ScriptingBridge.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
@@ -210,6 +224,18 @@
 				2C4958BE1C7DDAF9006427F3 /* NSRunningApplication+SmartActivate.m */,
 			);
 			path = "NSRunningApplication-SmartActivate";
+			sourceTree = "<group>";
+		};
+		2C4958C11C7DDBF5006427F3 /* GUIScriptingChecker */ = {
+			isa = PBXGroup;
+			children = (
+				2C4958C21C7DDBF5006427F3 /* GUIScriptingChecker_Localizable.strings */,
+				2C4958C41C7DDBF5006427F3 /* GUIScriptingChecker.h */,
+				2C4958C51C7DDBF5006427F3 /* GUIScriptingChecker.m */,
+				2C4958C71C7DDBF5006427F3 /* SystemEvents.h */,
+				2C4958C81C7DDBF5006427F3 /* SystemPreferences.h */,
+			);
+			path = GUIScriptingChecker;
 			sourceTree = "<group>";
 		};
 		2C4FEA151BAA54C700F5563C /* Products */ = {
@@ -249,6 +275,9 @@
 				2CE6B2E6107227B7005C6B05 /* AppController.h in Headers */,
 				2CAB48781BB51807009F0B09 /* TXFrontAccess.h in Headers */,
 				2C4958BF1C7DDAF9006427F3 /* NSRunningApplication+SmartActivate.h in Headers */,
+				2C4958CA1C7DDBF5006427F3 /* GUIScriptingChecker.h in Headers */,
+				2C4958CC1C7DDBF5006427F3 /* SystemEvents.h in Headers */,
+				2C4958CD1C7DDBF5006427F3 /* SystemPreferences.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +322,8 @@
 				Japanese,
 				French,
 				German,
+				en,
+				ja,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* Open in Terminal */;
 			projectDirPath = "";
@@ -331,6 +362,7 @@
 				2CE5E4AF1078EFD7007EE095 /* OiT_icon.icns in Resources */,
 				2CB1DCD71085480C007CDBA3 /* Localizable.strings in Resources */,
 				2CAB487A1BB51807009F0B09 /* TXFrontAccessLocalizedStrings.strings in Resources */,
+				2C4958C91C7DDBF5006427F3 /* GUIScriptingChecker_Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +381,7 @@
 				2C7BB2C21BA25845005CC0E4 /* PathExtra.m in Sources */,
 				2CAB48791BB51807009F0B09 /* TXFrontAccess.m in Sources */,
 				2C4958C01C7DDAF9006427F3 /* NSRunningApplication+SmartActivate.m in Sources */,
+				2C4958CB1C7DDBF5006427F3 /* GUIScriptingChecker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +396,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		2C4958C21C7DDBF5006427F3 /* GUIScriptingChecker_Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C4958C31C7DDBF5006427F3 /* en */,
+				2C4958C61C7DDBF5006427F3 /* ja */,
+			);
+			name = GUIScriptingChecker_Localizable.strings;
+			sourceTree = "<group>";
+		};
 		2CB1DCD41085480C007CDBA3 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

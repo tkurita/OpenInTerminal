@@ -1,5 +1,4 @@
 #import "AppController.h"
-#import <OSAKit/OSAScript.h>
 #import "DonationReminder/DonationReminder.h"
 
 #define useLog 0
@@ -15,6 +14,8 @@ static BOOL CHECK_UPDATE = NO;
 #if useLog
 	NSLog(@"start applicationShouldTerminate");
 #endif
+    if (_forceQuit) {return NSTerminateNow;}
+    
     if (!LAUNCH_AS_LOGINITEM) {
         NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
         [user_defaults synchronize];

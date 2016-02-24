@@ -11,5 +11,6 @@
 	IBOutlet SUUpdater *updater;
 	IBOutlet AppControlScript *controlScript;
 }
+@property(assign) BOOL forceQuit;
 
 @end
