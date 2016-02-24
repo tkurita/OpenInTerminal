@@ -31,3 +31,6 @@
 [submodule "TXFrontAccess"]
 	path = TXFrontAccess
 	url = https://github.com/tkurita/TXFrontAccess.git
+[submodule "NSRunningApplication-SmartActivate"]
+	path = NSRunningApplication-SmartActivate
+	url = http://github.com/tkurita/NSRunningApplication-SmartActivate.git
