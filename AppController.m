@@ -192,9 +192,4 @@ static BOOL CHECK_UPDATE = NO;
 	[NSApp setServicesProvider:self];
 }
 
-- (BOOL)GUIScriptingAllowed
-{
-    return AXIsProcessTrusted();
-}
-
 @end
