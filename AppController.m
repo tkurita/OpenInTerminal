@@ -194,7 +194,7 @@ static BOOL CHECK_UPDATE = NO;
 
 - (BOOL)GUIScriptingAllowed
 {
-    return AXIsProcessTrusted() || AXAPIEnabled();
+    return AXIsProcessTrusted();
 }
 
 @end

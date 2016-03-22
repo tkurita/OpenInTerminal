@@ -28,7 +28,7 @@
 	<key>CFBundleIconFile</key>
 	<string>OiT_icon</string>
 	<key>CFBundleIdentifier</key>
-	<string>Scriptfactory.OpenInTerminal</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

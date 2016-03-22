@@ -27,40 +27,9 @@ script AppControlScript
 		return a_script
 	end import_script
 
-	on is_lion_or_later(sysver)
-		considering numeric strings
-			return sysver is greater than or equal to "10.7"
-		end considering
-	end is_lion_or_later
-
-	on check_osax()
-		try
-			set term_control_ver to TerminalControl version
-		on error
-			activate
-			display alert (localized string "Install TerminalControl.osax")
-			return false
-		end try
-		
-		set required_ver to "1.4"
-		considering numeric strings
-			if term_control_ver is less than required_ver then
-				set ver_info to localized string "The installed version : $1, the required version : $2"
-				set msg to XText's formatted_text(ver_info, {term_control_ver, required_ver})
-				activate
-				display alert (localized string "Upgrade of TerminalControl.osax is required") message msg
-				return false
-			end if
-		end considering
-		return true
-	end check_osax
-
 	on setup()
         --log "start setup"
-		if not check_osax() then
-			return false
-		end if
-		
+        
 		tell InsertionLocator
 			set_allow_package_contents(true)
 			set_use_gui_scripting(false)
