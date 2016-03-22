@@ -11,7 +11,6 @@
 		2575736A072882A0000BE9CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		2575736C072882A0000BE9CA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		2C3BFE3B1086F9B9004224D8 /* TerminalCommander.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 2C3BFE3A1086F9B9004224D8 /* TerminalCommander.applescript */; settings = {ATTRIBUTES = (); }; };
-		2C3FB74E1BB56208000A42EA /* GUIScriptingChecker.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 2C3FB74D1BB56208000A42EA /* GUIScriptingChecker.applescript */; settings = {ATTRIBUTES = (); }; };
 		2C4958BF1C7DDAF9006427F3 /* NSRunningApplication+SmartActivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C4958BD1C7DDAF9006427F3 /* NSRunningApplication+SmartActivate.h */; };
 		2C4958C01C7DDAF9006427F3 /* NSRunningApplication+SmartActivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4958BE1C7DDAF9006427F3 /* NSRunningApplication+SmartActivate.m */; };
 		2C4958C91C7DDBF5006427F3 /* GUIScriptingChecker_Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C4958C21C7DDBF5006427F3 /* GUIScriptingChecker_Localizable.strings */; };
@@ -85,7 +84,6 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		2C3BFE3A1086F9B9004224D8 /* TerminalCommander.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = TerminalCommander.applescript; sourceTree = "<group>"; };
-		2C3FB74D1BB56208000A42EA /* GUIScriptingChecker.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = GUIScriptingChecker.applescript; sourceTree = "<group>"; };
 		2C4958BD1C7DDAF9006427F3 /* NSRunningApplication+SmartActivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSRunningApplication+SmartActivate.h"; sourceTree = "<group>"; };
 		2C4958BE1C7DDAF9006427F3 /* NSRunningApplication+SmartActivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSRunningApplication+SmartActivate.m"; sourceTree = "<group>"; };
 		2C4958C31C7DDBF5006427F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/GUIScriptingChecker_Localizable.strings; sourceTree = "<group>"; };
@@ -141,7 +139,6 @@
 			children = (
 				DA458A96036079E503C91932 /* Application.applescript */,
 				2C3BFE3A1086F9B9004224D8 /* TerminalCommander.applescript */,
-				2C3FB74D1BB56208000A42EA /* GUIScriptingChecker.applescript */,
 			);
 			name = Scripts;
 			sourceTree = "<group>";
@@ -405,7 +402,6 @@
 			files = (
 				25757365072882A0000BE9CA /* Application.applescript in Sources */,
 				2C3BFE3B1086F9B9004224D8 /* TerminalCommander.applescript in Sources */,
-				2C3FB74E1BB56208000A42EA /* GUIScriptingChecker.applescript in Sources */,
 				2575736A072882A0000BE9CA /* main.m in Sources */,
 				2CE6B2E7107227B7005C6B05 /* AppController.m in Sources */,
 				2C7BB2C21BA25845005CC0E4 /* PathExtra.m in Sources */,
