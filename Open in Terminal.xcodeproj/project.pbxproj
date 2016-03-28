@@ -336,7 +336,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0730;
 			};
 			buildConfigurationList = 4E59BBCB08A816B0001206A8 /* Build configuration list for PBXProject "Open in Terminal" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -579,14 +579,13 @@
 		4E59BBCC08A816B0001206A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPYRIGHT = "Copyright 2003-2016, Tetsuro KURITA";
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_PREPROCESS = NO;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "Open in Terminal";
 				PRODUCT_VERSION = 2.0;
@@ -597,13 +596,12 @@
 		4E59BBCD08A816B0001206A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPYRIGHT = "Copyright 2003-2016, Tetsuro KURITA";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_PREPROCESS = NO;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "Open in Terminal";
 				PRODUCT_VERSION = 2.0;
 				SDKROOT = macosx;
