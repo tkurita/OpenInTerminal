@@ -26,6 +26,7 @@
 		2C4FEA1C1BAA554E00F5563C /* DonationReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4FEA191BAA54C800F5563C /* DonationReminder.framework */; };
 		2C4FEA1D1BAA556200F5563C /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C4FEA191BAA54C800F5563C /* DonationReminder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2C4FEA211BAA567000F5563C /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4FEA201BAA567000F5563C /* Sparkle.framework */; };
+		2C7B19251CAA2A2000B36ED9 /* cwd-tty.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2C7B19241CAA2A2000B36ED9 /* cwd-tty.sh */; };
 		2C7BB2C21BA25845005CC0E4 /* PathExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7BB2C01BA25845005CC0E4 /* PathExtra.m */; };
 		2CAB48781BB51807009F0B09 /* TXFrontAccess.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CAB48751BB51807009F0B09 /* TXFrontAccess.h */; };
 		2CAB48791BB51807009F0B09 /* TXFrontAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB48761BB51807009F0B09 /* TXFrontAccess.m */; };
@@ -102,6 +103,7 @@
 		2C4958E21C7E0001006427F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/TXFrontAccessLocalizedStrings.strings; sourceTree = "<group>"; };
 		2C4FEA141BAA54C700F5563C /* DonationReminder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DonationReminder.xcodeproj; path = DonationReminder/DonationReminder.xcodeproj; sourceTree = "<group>"; };
 		2C4FEA201BAA567000F5563C /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		2C7B19241CAA2A2000B36ED9 /* cwd-tty.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "cwd-tty.sh"; sourceTree = "<group>"; };
 		2C7BB2BF1BA25845005CC0E4 /* PathExtra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathExtra.h; sourceTree = "<group>"; };
 		2C7BB2C01BA25845005CC0E4 /* PathExtra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathExtra.m; sourceTree = "<group>"; };
 		2CAB48751BB51807009F0B09 /* TXFrontAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXFrontAccess.h; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				2CE6B58A10757A46005C6B05 /* dsa_pub.pem */,
 				2CE6B57D10749FE4005C6B05 /* FactorySettings.plist */,
 				2CBB6CC61C84354D00848E25 /* pre-action.mk */,
+				2C7B19241CAA2A2000B36ED9 /* cwd-tty.sh */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				2CE6B57E10749FE4005C6B05 /* FactorySettings.plist in Resources */,
 				2CE6B58B10757A46005C6B05 /* dsa_pub.pem in Resources */,
 				2CE5E4AF1078EFD7007EE095 /* OiT_icon.icns in Resources */,
+				2C7B19251CAA2A2000B36ED9 /* cwd-tty.sh in Resources */,
 				2C4958DF1C7DFFAF006427F3 /* TXFrontAccessLocalizedStrings.strings in Resources */,
 				2C4958C91C7DDBF5006427F3 /* GUIScriptingChecker_Localizable.strings in Resources */,
 				2C4958D81C7DE6FA006427F3 /* Localizable.strings in Resources */,
