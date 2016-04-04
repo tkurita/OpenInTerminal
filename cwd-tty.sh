@@ -13,8 +13,12 @@ if [ "$TERM_PROGRAM" = 'Apple_Terminal' ] && [ -z "$INSIDE_EMACS" ]; then
             LINE=($LINE)
             unset IFS
             if [[ ${LINE[0]} = $ttyname ]]; then
-                out+=("${LINE[0]}	${PWD}")
-                matched=1
+                if [[ ${LINE[1]} = ${PWD} ]]; then
+                    return
+                else
+                    out+=("${LINE[0]}	${PWD}")
+                    matched=1
+                fi
             else
                 out+=("${LINE[0]}	${LINE[1]}")
             fi
