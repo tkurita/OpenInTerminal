@@ -129,8 +129,11 @@ script AppControlScript
 		tell make TerminalCommander
 			set_working_directory(a_location)
             set_shell_required(true)
-			set a_location to quoted form of a_location
-			do("cd " & a_location)
+            if resolve_terminal without allowing_busy then
+                activate_terminal()
+            else
+                do_in_new_term({command:"cd " & a_location's quoted form, with_activation:true})
+            end if
 		end tell
 		return true
 	end open_location
