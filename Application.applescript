@@ -130,7 +130,7 @@ script AppControlScript
 			set_working_directory(a_location)
             set_shell_required(true)
 			set a_location to quoted form of a_location
-			do_command for "cd " & a_location with activation
+			do("cd " & a_location)
 		end tell
 		return true
 	end open_location
