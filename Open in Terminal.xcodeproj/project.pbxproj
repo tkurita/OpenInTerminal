@@ -548,7 +548,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /Applications;
-				PRODUCT_BUNDLE_IDENTIFIER = Scriptfactory.OpenInTerminal;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.script-factory.OpenInTerminal";
 				PRODUCT_NAME = "Open in Terminal";
 				SDKROOT = macosx;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -569,7 +569,7 @@
 				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /Applications;
-				PRODUCT_BUNDLE_IDENTIFIER = Scriptfactory.OpenInTerminal;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.script-factory.OpenInTerminal";
 				PRODUCT_NAME = "Open in Terminal";
 				SDKROOT = macosx;
 				VERSIONING_SYSTEM = "apple-generic";
