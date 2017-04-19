@@ -73,8 +73,8 @@ static BOOL CHECK_UPDATE = NO;
 	[DonationReminder remindDonation];
 	
 	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
-	int interval_count = [user_defaults integerForKey:@"UpdateIntervalLaunchCounts"];
-	int current_count = [user_defaults integerForKey:@"CurrentLaunchCount"];
+	NSInteger interval_count = [user_defaults integerForKey:@"UpdateIntervalLaunchCounts"];
+	NSInteger current_count = [user_defaults integerForKey:@"CurrentLaunchCount"];
 	if (current_count >= interval_count) {
 		CHECK_UPDATE = YES;
 		[user_defaults setInteger:0 forKey:@"CurrentLaunchCount"];
