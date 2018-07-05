@@ -40,7 +40,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>19</string>
+	<string>20</string>
 	<key>DonationURL</key>
 	<string>http://www.script-factory.net/donationproxy.html</string>
 	<key>LSMinimumSystemVersion</key>
@@ -71,7 +71,7 @@
 			<key>NSMessage</key>
 			<string>processAtLocationFromPasteboard</string>
 			<key>NSPortName</key>
-			<string>${BUNDLE_IDENTIFIER}Service</string>
+			<string>${PRODUCT_NAME}</string>
 			<key>NSRequiredContext</key>
 			<dict>
 				<key>NSTextContent</key>
@@ -104,7 +104,7 @@
 			<key>NSMessage</key>
 			<string>processForFrontContextFromPasteboard</string>
 			<key>NSPortName</key>
-			<string>${BUNDLE_IDENTIFIER}Service</string>
+			<string>${PRODUCT_NAME}</string>
 		</dict>
 	</array>
 	<key>SUEnableAutomaticChecks</key>
