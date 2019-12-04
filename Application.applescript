@@ -1,11 +1,12 @@
 script AppControlScript
 	property parent : class "NSObject"
     
-	property InsertionLocator : module
-	property TerminalCommanderBase : module "TerminalCommander"
-	property XFile : module
-	property XText : module
-	property loader : boot (module loader of application (get "OpenInTerminalLib")) for me
+	property InsertionLocator : "@module"
+	property TerminalCommanderBase : "@module TerminalCommander"
+	property XFile : "@module"
+	property XText : "@module"
+    property _only_local_ : true
+	property loader : application (get "OpenInTerminalLib")'s loader()'s setup(me)
 
 	property TerminalCommander : missing value
     
@@ -79,18 +80,22 @@ script AppControlScript
 		return a_path as text
 	end location_for_safari
 
+    on console_log(a_message)
+        do shell script "logger -p user.warning  -t " & "OpenInTerminal" & " -s " & quoted form of a_message
+    end console_log
+
 	on submain()
         set a_front to TXFrontAccess's frontAccessForFrontmostApp()
 		set front_app_id to a_front's bundleIdentifier() as text
+        -- console_log("front app id : " & front_app_id)
 		if (("com.apple.finder" is front_app_id) or (a_front's isCurrentApplication() as boolean)) then
             if my _sysver starts with "10.8" then -- 10.8's Finder can't obtain new window's insertion location
-                activate
                 activate application "Finder"
             end if
 			set a_location to do() of InsertionLocator
 			if a_location is missing value then
-				activate
-				display alert "Can't get selected location in Finder."
+                set msg to localized string "Can't get selected location in Finder."
+				error msg number 1111
 				return false
 			end if
 			set a_location to POSIX path of a_location
@@ -103,7 +108,13 @@ script AppControlScript
 			if not (GUIScriptingChecker's check() as boolean) then
 				return
 			end if
-			set a_location to XFile's make_with(a_front's documentURL()'s |path|() as text)
+            set a_frontdoc to a_front's documentURL()
+            if a_frontdoc is missing value then
+                set msg to XText's formatted_text(localized string "Can't obtain frontmost document in application $1.", {quoted form of (a_front's localizedName() as text)})
+                error msg number 1112
+            else
+                set a_location to XFile's make_with(a_frontdoc's |path|() as text)
+            end if
 			if not a_location's is_folder() or a_location's is_package() then
 				set a_location to a_location's parent_folder()
 			end if
@@ -114,14 +125,13 @@ script AppControlScript
 	end submain
     
 	on processForContext()
-		--log "start processForContext"
 		try
 			if not setup() then return
 			submain()
 		on error msg number errno
-			activate
-			display alert msg message "Error Number : " & errno
+            return {|message| : msg, |number| : errno}
 		end try
+        return {message : "", number : 0}
 	end processForContext
 
 	on open_location(a_location)
@@ -165,11 +175,11 @@ script AppControlScript
 				set end of pathlist to a_xfile's posix_path()
 			end repeat
 			return process_pathes(pathlist)
-		on error errMsg
-			activate
-			display alert errMsg
+		on error msg number errno
+            return {|message|:msg, |number|:errno}
 		end try
-	end service_for_pathes
+        return {|message|:"", |number|:0}
+	end serviceForPathes_
 	
 	on awakeFromNib()
 		--log "start awakeFromNib"

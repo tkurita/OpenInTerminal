@@ -1,5 +1,6 @@
 #import "AppController.h"
 #import "DonationReminder/DonationReminder.h"
+#import "TXFrontAccess.h"
 
 #define useLog 0
 
@@ -16,6 +17,15 @@ static BOOL CHECK_UPDATE = NO;
 #endif
     if (_forceQuit) {return NSTerminateNow;}
     
+    NSAppleEventDescriptor *ev = [ [NSAppleEventManager sharedAppleEventManager] currentAppleEvent];
+    #if useLog
+        NSLog(@"%@", [ev description]);
+    #endif
+    if (ev) { // quit event of AppleEvent
+        if (kAEQuitApplication ==  [ev eventID] ) {
+            return NSTerminateNow;
+        }
+    }
     if (!LAUNCH_AS_LOGINITEM) {
         NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
         [user_defaults synchronize];
@@ -37,7 +47,10 @@ static BOOL CHECK_UPDATE = NO;
 
 - (void)checkUpdate
 {
-	if (STAY_RUNNING) {
+    #if useLog
+        NSLog(@"%@", @"start checkUpdate");
+    #endif
+    if (STAY_RUNNING) {
         [updater checkForUpdatesInBackground];
 	} else {
 		[updater checkForUpdates:self];
@@ -55,9 +68,24 @@ static BOOL CHECK_UPDATE = NO;
 	}
 }
 
+void displayErrorDict(NSDictionary *errdict)
+{
+    int error_no = [(NSNumber *)errdict[@"number"] intValue];
+    if (error_no) {
+        [[NSAlert alertWithError:[NSError errorWithDomain:@"OpenInTerminalErrorDomain"
+                                                     code:errno
+                                                 userInfo:@{NSLocalizedDescriptionKey:errdict[@"message"]}]]
+         runModal];
+    }
+}
+
 - (void)processForLaunched
 {
-	[controlScript processForContext];
+    #if useLog
+        NSLog(@"%@", @"start processForLaunched");
+    #endif
+	NSDictionary *errdict = [controlScript processForContext];
+    displayErrorDict(errdict);
 	if (CHECK_UPDATE) {
 		[self checkUpdate];
 	}
@@ -87,6 +115,7 @@ static BOOL CHECK_UPDATE = NO;
 {
 #if useLog
 	NSLog(@"applicationDidFinishLaunching");
+    NSLog(@"front app id : %@ in applicationDidFinishLaunching", [[TXFrontAccess frontAccessForFrontmostApp] bundleIdentifier]);
 #endif
 	
 	NSAppleEventDescriptor *ev = [ [NSAppleEventManager sharedAppleEventManager] currentAppleEvent];
@@ -125,11 +154,10 @@ static BOOL CHECK_UPDATE = NO;
 	}
 }
 
-
-
 - (void)application:(NSApplication *)sender openFiles:(NSArray *)filenames
 {
-	[controlScript serviceForPathes:filenames];
+	NSDictionary *errdict = [controlScript serviceForPathes:filenames];
+    displayErrorDict(errdict);
     [self performSelectorOnMainThread:@selector(tryTerminate) withObject:nil waitUntilDone:NO];
 }
 
@@ -159,7 +187,11 @@ static BOOL CHECK_UPDATE = NO;
 #if useLog
 	NSLog(@"start processAtLocationFromPasteboard");
 #endif
-    
+    [NSApp deactivate]; // does not work
+    [[NSRunningApplication currentApplication] hide];
+#if useLog
+    NSLog(@"front app id : %@ in processForFrontContextFromPasteboard", [[TXFrontAccess frontAccessForFrontmostApp] bundleIdentifier]);
+#endif
 	[self processForLaunched];
 	if (CHECK_UPDATE) {
 		[self checkUpdate];
@@ -170,6 +202,7 @@ static BOOL CHECK_UPDATE = NO;
 {
 #if useLog
 	NSLog(@"applicationOpenUntitledFile");
+    NSLog(@"front app id : %@ in applicationOpenUntitledFile", [[TXFrontAccess frontAccessForFrontmostApp] bundleIdentifier]);
 #endif	
 	[self processForLaunched];
 	return YES;
@@ -179,7 +212,8 @@ static BOOL CHECK_UPDATE = NO;
 {
 #if useLog
 	NSLog(@"awakeFromNib");
-#endif	
+    NSLog(@"front app id : %@ in awakeFromNib", [[TXFrontAccess frontAccessForFrontmostApp] bundleIdentifier]);
+#endif
 	/* Setup User Defaults */
 	NSString *defaults_plist = [[NSBundle mainBundle] pathForResource:@"FactorySettings"
 															   ofType:@"plist"];

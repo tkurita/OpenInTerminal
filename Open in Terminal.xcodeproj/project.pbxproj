@@ -116,7 +116,7 @@
 		2CE6B57D10749FE4005C6B05 /* FactorySettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FactorySettings.plist; sourceTree = "<group>"; };
 		2CE6B58A10757A46005C6B05 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		3651F667C0AAAEBC46B03BFE /* Pods-Open in Terminal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Open in Terminal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Open in Terminal/Pods-Open in Terminal.debug.xcconfig"; sourceTree = "<group>"; };
-		DA458A96036079E503C91932 /* Application.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; lineEnding = 0; path = Application.applescript; sourceTree = "<group>"; };
+		DA458A96036079E503C91932 /* Application.applescript */ = {isa = PBXFileReference; explicitFileType = sourcecode.applescript; fileEncoding = 4; lineEnding = 0; path = Application.applescript; sourceTree = "<group>"; };
 		F0918DDCE0D8F5D59ADCCC6F /* Pods-Open in Terminal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Open in Terminal.release.xcconfig"; path = "Pods/Target Support Files/Pods-Open in Terminal/Pods-Open in Terminal.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -366,9 +366,6 @@
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
-				Japanese,
-				French,
-				German,
 				en,
 				ja,
 				Base,
@@ -609,7 +606,7 @@
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = 5VBC6385DN;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Info.plist;
@@ -630,7 +627,7 @@
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = 5VBC6385DN;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /Applications;
@@ -657,7 +654,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPYRIGHT = "Copyright 2003-2018, Tetsuro KURITA";
+				COPYRIGHT = "Copyright 2003-2019, Tetsuro KURITA";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
@@ -672,7 +669,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "Open in Terminal";
-				PRODUCT_VERSION = 2.0.2;
+				PRODUCT_VERSION = 2.1;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -691,7 +688,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPYRIGHT = "Copyright 2003-2018, Tetsuro KURITA";
+				COPYRIGHT = "Copyright 2003-2019, Tetsuro KURITA";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -704,7 +701,7 @@
 				INFOPLIST_PREPROCESS = NO;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "Open in Terminal";
-				PRODUCT_VERSION = 2.0.2;
+				PRODUCT_VERSION = 2.1;
 				SDKROOT = macosx;
 			};
 			name = Release;

@@ -3,8 +3,8 @@
 
 @interface AppControlScript : NSObject
 - (void)setup;
-- (void)processForContext;
-- (id)serviceForPathes:(NSArray *)array;
+- (NSDictionary *)processForContext;
+- (NSDictionary *)serviceForPathes:(NSArray *)array;
 @end
 
 @interface AppController : NSObject {
