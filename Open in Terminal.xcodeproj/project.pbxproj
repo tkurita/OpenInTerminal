@@ -101,6 +101,7 @@
 		2C4958E01C7DFFAF006427F3 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/TXFrontAccessLocalizedStrings.strings; sourceTree = "<group>"; };
 		2C4958E21C7E0001006427F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/TXFrontAccessLocalizedStrings.strings; sourceTree = "<group>"; };
 		2C4FEA141BAA54C700F5563C /* DonationReminder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DonationReminder.xcodeproj; path = DonationReminder/DonationReminder.xcodeproj; sourceTree = "<group>"; };
+		2C684665239AB04B00FF1691 /* Open in Terminal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Open in Terminal.entitlements"; sourceTree = "<group>"; };
 		2C7B19241CAA2A2000B36ED9 /* cwd-tty.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "cwd-tty.sh"; sourceTree = "<group>"; };
 		2C7BB2BF1BA25845005CC0E4 /* PathExtra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathExtra.h; sourceTree = "<group>"; };
 		2C7BB2C01BA25845005CC0E4 /* PathExtra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathExtra.m; sourceTree = "<group>"; };
@@ -175,6 +176,7 @@
 		29B97314FDCFA39411CA2CEA /* Open in Terminal */ = {
 			isa = PBXGroup;
 			children = (
+				2C684665239AB04B00FF1691 /* Open in Terminal.entitlements */,
 				2CE6B34610723CBF005C6B05 /* History.rd */,
 				2C4958C11C7DDBF5006427F3 /* GUIScriptingChecker */,
 				2CAB48741BB51807009F0B09 /* TXFrontAccess */,
@@ -355,7 +357,7 @@
 				TargetAttributes = {
 					25757362072882A0000BE9CA = {
 						DevelopmentTeam = 5VBC6385DN;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -594,17 +596,20 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3651F667C0AAAEBC46B03BFE /* Pods-Open in Terminal.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Open in Terminal.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 21;
-				DEVELOPMENT_TEAM = 5VBC6385DN;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /Applications;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.script-factory.OpenInTerminal";
 				PRODUCT_NAME = "Open in Terminal";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_SUFFIX = "";
@@ -616,16 +621,19 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F0918DDCE0D8F5D59ADCCC6F /* Pods-Open in Terminal.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Open in Terminal.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 21;
-				DEVELOPMENT_TEAM = 5VBC6385DN;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /Applications;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.script-factory.OpenInTerminal";
 				PRODUCT_NAME = "Open in Terminal";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_SUFFIX = "";

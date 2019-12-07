@@ -43,10 +43,12 @@
 	<string>21</string>
 	<key>DonationURL</key>
 	<string>https://www.script-factory.net/donationproxy.html</string>
-	<key>LSMinimumSystemVersion</key>
-	<string>10.8</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.utilities</string>
 	<key>LSBackgroundOnly</key>
 	<true/>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.8</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
