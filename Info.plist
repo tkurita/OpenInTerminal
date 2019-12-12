@@ -45,7 +45,7 @@
 	<string>https://www.script-factory.net/donationproxy.html</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.utilities</string>
-	<key>LSBackgroundOnly</key>
+	<key>LSUIElement</key>
 	<true/>
 	<key>LSMinimumSystemVersion</key>
 	<string>10.8</string>
@@ -92,28 +92,16 @@
 				<string>public.plain-text</string>
 			</array>
 		</dict>
-		<dict>
-			<key>NSKeyEquivalent</key>
-			<dict>
-				<key>default</key>
-				<string>`</string>
-			</dict>
-			<key>NSMenuItem</key>
-			<dict>
-				<key>default</key>
-				<string>Open in Terminal</string>
-			</dict>
-			<key>NSMessage</key>
-			<string>processForFrontContextFromPasteboard</string>
-			<key>NSPortName</key>
-			<string>${PRODUCT_NAME}</string>
-		</dict>
 	</array>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedURL</key>
 	<string>https://www.script-factory.net/appcast/OpenInTerminal.xml</string>
+	<key>NSSupportsAutomaticTermination</key>
+	<false/>
 	<key>SUPublicDSAKeyFile</key>
 	<string>dsa_pub.pem</string>
+	<key>NSAppleEventsUsageDescription</key>
+	<string>Open in Terminal require to control Finder and Terminal via AppleScript to run.</string>
 </dict>
 </plist>

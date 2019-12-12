@@ -1,8 +1,12 @@
 #import "AppController.h"
 #import "DonationReminder/DonationReminder.h"
 #import "TXFrontAccess.h"
+#import "GUIScriptingChecker.h"
+#import "PreferencesWindowController.h"
+#import "MASShortcut.h"
+#import "MASShortcutBinder.h"
 
-#define useLog 0
+#define useLog 1
 
 static BOOL LAUNCH_AS_LOGINITEM = NO;
 static BOOL STAY_RUNNING = YES;
@@ -25,7 +29,10 @@ static BOOL CHECK_UPDATE = NO;
         if (kAEQuitApplication ==  [ev eventID] ) {
             return NSTerminateNow;
         }
+    } else {
+        return NSTerminateNow;
     }
+    
     if (!LAUNCH_AS_LOGINITEM) {
         NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
         [user_defaults synchronize];
@@ -42,7 +49,8 @@ static BOOL CHECK_UPDATE = NO;
 #if useLog
 	NSLog(@"start applicationShouldTerminateAfterLastWindowClosed");
 #endif
-	return (STAY_RUNNING);
+	//return (STAY_RUNNING);
+    return NO;
 }
 
 - (void)checkUpdate
@@ -117,7 +125,19 @@ void displayErrorDict(NSDictionary *errdict)
 	NSLog(@"applicationDidFinishLaunching");
     NSLog(@"front app id : %@ in applicationDidFinishLaunching", [[TXFrontAccess frontAccessForFrontmostApp] bundleIdentifier]);
 #endif
-	
+    
+    [[MASShortcutBinder sharedBinder]
+        bindShortcutWithDefaultsKey:kPreferenceGlobalShortcut
+        toAction:^{
+        if (!self.inhibitAction) {
+            [self processForLaunched];
+            /*
+         [[NSAlert alertWithMessageText:NSLocalizedString(@"Global hotkey has been pressed.", @"Alert message for custom shortcut")
+           defaultButton:NSLocalizedString(@"OK", @"Default button for the alert on custom shortcut")
+                        alternateButton:nil otherButton:nil informativeTextWithFormat:@""] runModal];*/
+        }
+    }];
+    
 	NSAppleEventDescriptor *ev = [ [NSAppleEventManager sharedAppleEventManager] currentAppleEvent];
 #if useLog
 	NSLog(@"%@", [ev description]);
@@ -203,8 +223,9 @@ void displayErrorDict(NSDictionary *errdict)
 #if useLog
 	NSLog(@"applicationOpenUntitledFile");
     NSLog(@"front app id : %@ in applicationOpenUntitledFile", [[TXFrontAccess frontAccessForFrontmostApp] bundleIdentifier]);
-#endif	
-	[self processForLaunched];
+#endif
+    PreferencesWindowController *prefwin = [PreferencesWindowController sharedPreferencesWindow];
+    [prefwin showWindow:self];
 	return YES;
 }
 
@@ -221,9 +242,39 @@ void displayErrorDict(NSDictionary *errdict)
 	
 	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
 	[user_defaults registerDefaults:factory_defaults];
-	
+    self.inhibitAction = NO;
 	/* Setup Services Menu */
 	[NSApp setServicesProvider:self];
+}
+
+//MARK: methods for singleton
+static AppController *sharedInstance = nil;
+
++ (AppController *)sharedAppController
+{
+    static dispatch_once_t once;
+    dispatch_once(&once, ^{
+        (void)[[AppController alloc] init];
+    });
+    return sharedInstance;
+}
+
++ (id)allocWithZone:(NSZone *)zone {
+    
+    __block id ret = nil;
+    
+    static dispatch_once_t once;
+    dispatch_once(&once, ^{
+        sharedInstance = [super allocWithZone:zone];
+        ret = sharedInstance;
+    });
+    
+    return  ret;
+}
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    return self;
 }
 
 @end

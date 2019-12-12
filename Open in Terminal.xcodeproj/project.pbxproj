@@ -25,6 +25,10 @@
 		2C4958DF1C7DFFAF006427F3 /* TXFrontAccessLocalizedStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C4958E11C7DFFAF006427F3 /* TXFrontAccessLocalizedStrings.strings */; };
 		2C4FEA1C1BAA554E00F5563C /* DonationReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4FEA191BAA54C800F5563C /* DonationReminder.framework */; };
 		2C4FEA1D1BAA556200F5563C /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C4FEA191BAA54C800F5563C /* DonationReminder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2C78D79C23A0854300821769 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C78D79B23A0854300821769 /* Carbon.framework */; };
+		2C78D79E23A0859500821769 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C78D79D23A0859500821769 /* PreferencesWindow.xib */; };
+		2C78D7A123A0882300821769 /* PreferencesWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C78D79F23A0882300821769 /* PreferencesWindowController.h */; };
+		2C78D7A223A0882300821769 /* PreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C78D7A023A0882300821769 /* PreferencesWindowController.m */; };
 		2C7B19251CAA2A2000B36ED9 /* cwd-tty.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2C7B19241CAA2A2000B36ED9 /* cwd-tty.sh */; };
 		2C7BB2C21BA25845005CC0E4 /* PathExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7BB2C01BA25845005CC0E4 /* PathExtra.m */; };
 		2CAB48781BB51807009F0B09 /* TXFrontAccess.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CAB48751BB51807009F0B09 /* TXFrontAccess.h */; };
@@ -102,6 +106,10 @@
 		2C4958E21C7E0001006427F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/TXFrontAccessLocalizedStrings.strings; sourceTree = "<group>"; };
 		2C4FEA141BAA54C700F5563C /* DonationReminder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DonationReminder.xcodeproj; path = DonationReminder/DonationReminder.xcodeproj; sourceTree = "<group>"; };
 		2C684665239AB04B00FF1691 /* Open in Terminal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Open in Terminal.entitlements"; sourceTree = "<group>"; };
+		2C78D79B23A0854300821769 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		2C78D79D23A0859500821769 /* PreferencesWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreferencesWindow.xib; sourceTree = "<group>"; };
+		2C78D79F23A0882300821769 /* PreferencesWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreferencesWindowController.h; sourceTree = "<group>"; };
+		2C78D7A023A0882300821769 /* PreferencesWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreferencesWindowController.m; sourceTree = "<group>"; };
 		2C7B19241CAA2A2000B36ED9 /* cwd-tty.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "cwd-tty.sh"; sourceTree = "<group>"; };
 		2C7BB2BF1BA25845005CC0E4 /* PathExtra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathExtra.h; sourceTree = "<group>"; };
 		2C7BB2C01BA25845005CC0E4 /* PathExtra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathExtra.m; sourceTree = "<group>"; };
@@ -127,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C4958D01C7DDD85006427F3 /* ScriptingBridge.framework in Frameworks */,
+				2C78D79C23A0854300821769 /* Carbon.framework in Frameworks */,
 				2C4FEA1C1BAA554E00F5563C /* DonationReminder.framework in Frameworks */,
 				2575736C072882A0000BE9CA /* Cocoa.framework in Frameworks */,
 				2CDC0F4F1BA18F8200A4990F /* AppleScriptObjC.framework in Frameworks */,
@@ -197,6 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				29B97316FDCFA39411CA2CEA /* main.m */,
+				2C78D79F23A0882300821769 /* PreferencesWindowController.h */,
+				2C78D7A023A0882300821769 /* PreferencesWindowController.m */,
 				2CE6B2E4107227B7005C6B05 /* AppController.h */,
 				2CE6B2E5107227B7005C6B05 /* AppController.m */,
 			);
@@ -208,6 +219,7 @@
 			children = (
 				2C4958D21C7DE6FA006427F3 /* Localizable.strings */,
 				2C4958D41C7DE6FA006427F3 /* MainMenu.xib */,
+				2C78D79D23A0859500821769 /* PreferencesWindow.xib */,
 				2C4958D61C7DE6FA006427F3 /* ServicesMenu.strings */,
 				25757375072882A0000BE9CA /* Info.plist */,
 				2CE5E4AE1078EFD7007EE095 /* OiT_icon.icns */,
@@ -222,6 +234,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C78D79B23A0854300821769 /* Carbon.framework */,
 				2C4958CF1C7DDD85006427F3 /* ScriptingBridge.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
@@ -300,6 +313,7 @@
 				2C4958CA1C7DDBF5006427F3 /* GUIScriptingChecker.h in Headers */,
 				2C4958CC1C7DDBF5006427F3 /* SystemEvents.h in Headers */,
 				2C4958CD1C7DDBF5006427F3 /* SystemPreferences.h in Headers */,
+				2C78D7A123A0882300821769 /* PreferencesWindowController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +348,7 @@
 				2575736B072882A0000BE9CA /* Frameworks */,
 				2CE6B4C810744DD3005C6B05 /* CopyFiles */,
 				14D3C13EFE3A6507ED444F71 /* [CP] Embed Pods Frameworks */,
+				98C6260382124F3C409370F0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -408,6 +423,7 @@
 				2C7B19251CAA2A2000B36ED9 /* cwd-tty.sh in Resources */,
 				2C4958DF1C7DFFAF006427F3 /* TXFrontAccessLocalizedStrings.strings in Resources */,
 				2C4958C91C7DDBF5006427F3 /* GUIScriptingChecker_Localizable.strings in Resources */,
+				2C78D79E23A0859500821769 /* PreferencesWindow.xib in Resources */,
 				2C4958D81C7DE6FA006427F3 /* Localizable.strings in Resources */,
 				2C4958D91C7DE6FA006427F3 /* MainMenu.xib in Resources */,
 				2C4958DA1C7DE6FA006427F3 /* ServicesMenu.strings in Resources */,
@@ -435,6 +451,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Open in Terminal/Pods-Open in Terminal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98C6260382124F3C409370F0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Open in Terminal/Pods-Open in Terminal-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/MASShortcut/MASShortcut.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MASShortcut.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Open in Terminal/Pods-Open in Terminal-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BCE5533B2292A851509E37EA /* [CP] Check Pods Manifest.lock */ = {
@@ -469,6 +503,7 @@
 				2C7BB2C21BA25845005CC0E4 /* PathExtra.m in Sources */,
 				2CAB48791BB51807009F0B09 /* TXFrontAccess.m in Sources */,
 				2C4958C01C7DDAF9006427F3 /* NSRunningApplication+SmartActivate.m in Sources */,
+				2C78D7A223A0882300821769 /* PreferencesWindowController.m in Sources */,
 				2C4958CB1C7DDBF5006427F3 /* GUIScriptingChecker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -676,10 +711,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_PREPROCESS = NO;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "Open in Terminal";
-				PRODUCT_VERSION = 2.0.2;
+				PRODUCT_VERSION = 3.0;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -718,9 +753,9 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_PREPROCESS = NO;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "Open in Terminal";
-				PRODUCT_VERSION = 2.0.2;
+				PRODUCT_VERSION = 3.0;
 				SDKROOT = macosx;
 			};
 			name = Release;

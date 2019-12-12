@@ -81,13 +81,13 @@ script AppControlScript
 	end location_for_safari
 
     on console_log(a_message)
-        do shell script "logger -p user.warning  -t " & "OpenInTerminal" & " -s " & quoted form of a_message
+        do shell script "logger -p user.warning  -t " & "'Open in Terminal'" & " -s " & quoted form of a_message
     end console_log
 
 	on submain()
         set a_front to TXFrontAccess's frontAccessForFrontmostApp()
 		set front_app_id to a_front's bundleIdentifier() as text
-        -- console_log("front app id : " & front_app_id)
+        console_log("front app id : " & front_app_id)
 		if (("com.apple.finder" is front_app_id) or (a_front's isCurrentApplication() as boolean)) then
             if my _sysver starts with "10.8" then -- 10.8's Finder can't obtain new window's insertion location
                 activate application "Finder"
@@ -105,9 +105,12 @@ script AppControlScript
 				return false
 			end if
 		else
+            console_log("befor GUIScriptingChecker")
 			if not (GUIScriptingChecker's check() as boolean) then
+                console_log("GUIScriptingChecker is not enabled")
 				return
 			end if
+            console_log("after GUIScriptingChecker")
             set a_frontdoc to a_front's documentURL()
             if a_frontdoc is missing value then
                 set msg to XText's formatted_text(localized string "Can't obtain frontmost document in application $1.", {quoted form of (a_front's localizedName() as text)})

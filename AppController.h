@@ -12,5 +12,7 @@
 	IBOutlet AppControlScript *controlScript;
 }
 @property(assign) BOOL forceQuit;
+@property(assign) BOOL inhibitAction;
++ (AppController *)sharedAppController;
 
 @end
