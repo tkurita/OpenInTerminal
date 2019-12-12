@@ -10,6 +10,10 @@
 		25757365072882A0000BE9CA /* Application.applescript in Sources */ = {isa = PBXBuildFile; fileRef = DA458A96036079E503C91932 /* Application.applescript */; settings = {ATTRIBUTES = (); }; };
 		2575736A072882A0000BE9CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		2575736C072882A0000BE9CA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		2C15D0F723A2092500586891 /* LLManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C15D0F423A2092400586891 /* LLManager.h */; };
+		2C15D0F823A2092500586891 /* LLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C15D0F523A2092500586891 /* LLManager.m */; };
+		2C15D0F923A2092500586891 /* LLStrings.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C15D0F623A2092500586891 /* LLStrings.h */; };
+		2C15D0FF23A20B4300586891 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C15D0FE23A20B4200586891 /* ServiceManagement.framework */; };
 		2C3BFE3B1086F9B9004224D8 /* TerminalCommander.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 2C3BFE3A1086F9B9004224D8 /* TerminalCommander.applescript */; settings = {ATTRIBUTES = (); }; };
 		2C4958BF1C7DDAF9006427F3 /* NSRunningApplication+SmartActivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C4958BD1C7DDAF9006427F3 /* NSRunningApplication+SmartActivate.h */; };
 		2C4958C01C7DDAF9006427F3 /* NSRunningApplication+SmartActivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4958BE1C7DDAF9006427F3 /* NSRunningApplication+SmartActivate.m */; };
@@ -31,6 +35,7 @@
 		2C78D7A223A0882300821769 /* PreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C78D7A023A0882300821769 /* PreferencesWindowController.m */; };
 		2C7B19251CAA2A2000B36ED9 /* cwd-tty.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2C7B19241CAA2A2000B36ED9 /* cwd-tty.sh */; };
 		2C7BB2C21BA25845005CC0E4 /* PathExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7BB2C01BA25845005CC0E4 /* PathExtra.m */; };
+		2C81091B23A23D8100E8A0F4 /* LaunchAtLoginHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C81091A23A23D4F00E8A0F4 /* LaunchAtLoginHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2CAB48781BB51807009F0B09 /* TXFrontAccess.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CAB48751BB51807009F0B09 /* TXFrontAccess.h */; };
 		2CAB48791BB51807009F0B09 /* TXFrontAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB48761BB51807009F0B09 /* TXFrontAccess.m */; };
 		2CDC0F4F1BA18F8200A4990F /* AppleScriptObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CDC0F4E1BA18F8200A4990F /* AppleScriptObjC.framework */; };
@@ -43,6 +48,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2C15D0E323A2044300586891 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C15D0DF23A2044200586891 /* LaunchAtLoginHelper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 734C379415414CE200994189;
+			remoteInfo = LaunchAtLoginHelper;
+		};
 		2C4FEA181BAA54C800F5563C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2C4FEA141BAA54C700F5563C /* DonationReminder.xcodeproj */;
@@ -57,6 +69,20 @@
 			remoteGlobalIDString = 2C4A363119E61FC40031E521;
 			remoteInfo = DonationReminder;
 		};
+		2C81091923A23D4F00E8A0F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C81091523A23D4F00E8A0F4 /* LaunchAtLoginHelper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 734C379415414CE200994189;
+			remoteInfo = LaunchAtLoginHelper;
+		};
+		2C81091C23A23DA400E8A0F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C81091523A23D4F00E8A0F4 /* LaunchAtLoginHelper.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 734C379315414CE200994189;
+			remoteInfo = LaunchAtLoginHelper;
+		};
 		2CBB6CC71C84362F00848E25 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
@@ -67,6 +93,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		2C15D0ED23A2072300586891 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				2C81091B23A23D8100E8A0F4 /* LaunchAtLoginHelper.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2CE6B4C810744DD3005C6B05 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -87,6 +123,11 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		2A2A72B36B278A5EC023B617 /* libPods-Open in Terminal.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Open in Terminal.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C15D0DF23A2044200586891 /* LaunchAtLoginHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LaunchAtLoginHelper.xcodeproj; path = LauchAtLoginHelper/LaunchAtLoginHelper.xcodeproj; sourceTree = "<group>"; };
+		2C15D0F423A2092400586891 /* LLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLManager.h; path = LaunchAtLoginHelper/LLManager.h; sourceTree = SOURCE_ROOT; };
+		2C15D0F523A2092500586891 /* LLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLManager.m; path = LaunchAtLoginHelper/LLManager.m; sourceTree = SOURCE_ROOT; };
+		2C15D0F623A2092500586891 /* LLStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLStrings.h; path = LaunchAtLoginHelper/LLStrings.h; sourceTree = SOURCE_ROOT; };
+		2C15D0FE23A20B4200586891 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		2C3BFE3A1086F9B9004224D8 /* TerminalCommander.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = TerminalCommander.applescript; sourceTree = "<group>"; };
 		2C4958BD1C7DDAF9006427F3 /* NSRunningApplication+SmartActivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSRunningApplication+SmartActivate.h"; sourceTree = "<group>"; };
 		2C4958BE1C7DDAF9006427F3 /* NSRunningApplication+SmartActivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSRunningApplication+SmartActivate.m"; sourceTree = "<group>"; };
@@ -113,6 +154,7 @@
 		2C7B19241CAA2A2000B36ED9 /* cwd-tty.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "cwd-tty.sh"; sourceTree = "<group>"; };
 		2C7BB2BF1BA25845005CC0E4 /* PathExtra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathExtra.h; sourceTree = "<group>"; };
 		2C7BB2C01BA25845005CC0E4 /* PathExtra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathExtra.m; sourceTree = "<group>"; };
+		2C81091523A23D4F00E8A0F4 /* LaunchAtLoginHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LaunchAtLoginHelper.xcodeproj; path = LaunchAtLoginHelper/LaunchAtLoginHelper.xcodeproj; sourceTree = "<group>"; };
 		2CAB48751BB51807009F0B09 /* TXFrontAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXFrontAccess.h; sourceTree = "<group>"; };
 		2CAB48761BB51807009F0B09 /* TXFrontAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXFrontAccess.m; sourceTree = "<group>"; };
 		2CBB6CC61C84354D00848E25 /* pre-action.mk */ = {isa = PBXFileReference; lastKnownFileType = text; path = "pre-action.mk"; sourceTree = "<group>"; };
@@ -136,6 +178,7 @@
 			files = (
 				2C4958D01C7DDD85006427F3 /* ScriptingBridge.framework in Frameworks */,
 				2C78D79C23A0854300821769 /* Carbon.framework in Frameworks */,
+				2C15D0FF23A20B4300586891 /* ServiceManagement.framework in Frameworks */,
 				2C4FEA1C1BAA554E00F5563C /* DonationReminder.framework in Frameworks */,
 				2575736C072882A0000BE9CA /* Cocoa.framework in Frameworks */,
 				2CDC0F4F1BA18F8200A4990F /* AppleScriptObjC.framework in Frameworks */,
@@ -149,6 +192,7 @@
 		080E96DDFE201D6D7F000001 /* Scripts */ = {
 			isa = PBXGroup;
 			children = (
+				2C15D0DF23A2044200586891 /* LaunchAtLoginHelper.xcodeproj */,
 				DA458A96036079E503C91932 /* Application.applescript */,
 				2C3BFE3A1086F9B9004224D8 /* TerminalCommander.applescript */,
 			);
@@ -193,10 +237,12 @@
 				080E96DDFE201D6D7F000001 /* Scripts */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				2C7BB2BE1BA25845005CC0E4 /* PathExtra */,
+				2C15D0F223A208E100586891 /* LLManager */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				2C4FEA141BAA54C700F5563C /* DonationReminder.xcodeproj */,
+				2C81091523A23D4F00E8A0F4 /* LaunchAtLoginHelper.xcodeproj */,
 				7E0C9204006FA82F9DAB9729 /* Pods */,
 			);
 			name = "Open in Terminal";
@@ -234,6 +280,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C15D0FE23A20B4200586891 /* ServiceManagement.framework */,
 				2C78D79B23A0854300821769 /* Carbon.framework */,
 				2C4958CF1C7DDD85006427F3 /* ScriptingBridge.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
@@ -241,6 +288,24 @@
 				2A2A72B36B278A5EC023B617 /* libPods-Open in Terminal.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2C15D0E023A2044200586891 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C15D0E423A2044300586891 /* LaunchAtLoginHelper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C15D0F223A208E100586891 /* LLManager */ = {
+			isa = PBXGroup;
+			children = (
+				2C15D0F423A2092400586891 /* LLManager.h */,
+				2C15D0F523A2092500586891 /* LLManager.m */,
+				2C15D0F623A2092500586891 /* LLStrings.h */,
+			);
+			name = LLManager;
 			sourceTree = "<group>";
 		};
 		2C4958BC1C7DDAF9006427F3 /* NSRunningApplication-SmartActivate */ = {
@@ -281,6 +346,14 @@
 			path = PathExtra;
 			sourceTree = "<group>";
 		};
+		2C81091623A23D4F00E8A0F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C81091A23A23D4F00E8A0F4 /* LaunchAtLoginHelper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		2CAB48741BB51807009F0B09 /* TXFrontAccess */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,9 +384,11 @@
 				2CAB48781BB51807009F0B09 /* TXFrontAccess.h in Headers */,
 				2C4958BF1C7DDAF9006427F3 /* NSRunningApplication+SmartActivate.h in Headers */,
 				2C4958CA1C7DDBF5006427F3 /* GUIScriptingChecker.h in Headers */,
+				2C15D0F723A2092500586891 /* LLManager.h in Headers */,
 				2C4958CC1C7DDBF5006427F3 /* SystemEvents.h in Headers */,
 				2C4958CD1C7DDBF5006427F3 /* SystemPreferences.h in Headers */,
 				2C78D7A123A0882300821769 /* PreferencesWindowController.h in Headers */,
+				2C15D0F923A2092500586891 /* LLStrings.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,10 +424,12 @@
 				2CE6B4C810744DD3005C6B05 /* CopyFiles */,
 				14D3C13EFE3A6507ED444F71 /* [CP] Embed Pods Frameworks */,
 				98C6260382124F3C409370F0 /* [CP] Copy Pods Resources */,
+				2C15D0ED23A2072300586891 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2C81091D23A23DA400E8A0F4 /* PBXTargetDependency */,
 				2CBB6CC81C84362F00848E25 /* PBXTargetDependency */,
 				2C4FEA1B1BAA552E00F5563C /* PBXTargetDependency */,
 			);
@@ -393,6 +470,14 @@
 					ProductGroup = 2C4FEA151BAA54C700F5563C /* Products */;
 					ProjectRef = 2C4FEA141BAA54C700F5563C /* DonationReminder.xcodeproj */;
 				},
+				{
+					ProductGroup = 2C81091623A23D4F00E8A0F4 /* Products */;
+					ProjectRef = 2C81091523A23D4F00E8A0F4 /* LaunchAtLoginHelper.xcodeproj */;
+				},
+				{
+					ProductGroup = 2C15D0E023A2044200586891 /* Products */;
+					ProjectRef = 2C15D0DF23A2044200586891 /* LaunchAtLoginHelper.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -403,11 +488,25 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		2C15D0E423A2044300586891 /* LaunchAtLoginHelper.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = LaunchAtLoginHelper.app;
+			remoteRef = 2C15D0E323A2044300586891 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		2C4FEA191BAA54C800F5563C /* DonationReminder.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = DonationReminder.framework;
 			remoteRef = 2C4FEA181BAA54C800F5563C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2C81091A23A23D4F00E8A0F4 /* LaunchAtLoginHelper.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = LaunchAtLoginHelper.app;
+			remoteRef = 2C81091923A23D4F00E8A0F4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -501,6 +600,7 @@
 				2575736A072882A0000BE9CA /* main.m in Sources */,
 				2CE6B2E7107227B7005C6B05 /* AppController.m in Sources */,
 				2C7BB2C21BA25845005CC0E4 /* PathExtra.m in Sources */,
+				2C15D0F823A2092500586891 /* LLManager.m in Sources */,
 				2CAB48791BB51807009F0B09 /* TXFrontAccess.m in Sources */,
 				2C4958C01C7DDAF9006427F3 /* NSRunningApplication+SmartActivate.m in Sources */,
 				2C78D7A223A0882300821769 /* PreferencesWindowController.m in Sources */,
@@ -515,6 +615,11 @@
 			isa = PBXTargetDependency;
 			name = DonationReminder;
 			targetProxy = 2C4FEA1A1BAA552E00F5563C /* PBXContainerItemProxy */;
+		};
+		2C81091D23A23DA400E8A0F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LaunchAtLoginHelper;
+			targetProxy = 2C81091C23A23DA400E8A0F4 /* PBXContainerItemProxy */;
 		};
 		2CBB6CC81C84362F00848E25 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

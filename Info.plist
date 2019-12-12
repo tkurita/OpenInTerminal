@@ -39,21 +39,36 @@
 	<string>${PRODUCT_VERSION}</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>CFBundleURLName</key>
+			<string>net.script-factory.OpenInTerminal</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>openinterminal</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>21</string>
 	<key>DonationURL</key>
 	<string>https://www.script-factory.net/donationproxy.html</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.utilities</string>
-	<key>LSUIElement</key>
-	<true/>
 	<key>LSMinimumSystemVersion</key>
 	<string>10.8</string>
+	<key>LSUIElement</key>
+	<true/>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSAppleEventsUsageDescription</key>
+	<string>Open in Terminal require to control Finder and Terminal via AppleScript to run.</string>
 	<key>NSAppleScriptEnabled</key>
 	<string>YES</string>
 	<key>NSHumanReadableCopyright</key>
@@ -93,15 +108,13 @@
 			</array>
 		</dict>
 	</array>
+	<key>NSSupportsAutomaticTermination</key>
+	<false/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedURL</key>
 	<string>https://www.script-factory.net/appcast/OpenInTerminal.xml</string>
-	<key>NSSupportsAutomaticTermination</key>
-	<false/>
 	<key>SUPublicDSAKeyFile</key>
 	<string>dsa_pub.pem</string>
-	<key>NSAppleEventsUsageDescription</key>
-	<string>Open in Terminal require to control Finder and Terminal via AppleScript to run.</string>
 </dict>
 </plist>

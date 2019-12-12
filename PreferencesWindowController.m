@@ -9,6 +9,7 @@
 #import "MASShortcutBinder.h"
 #import "MASShortcutView+Bindings.h"
 #import "AppController.h"
+#import "LLManager.h"
 
 @interface PreferencesWindowController ()
 
@@ -24,7 +25,24 @@ NSString *const kPreferenceGlobalShortcut = @"GlobalShortcut";
     self.shortcutView.associatedUserDefaultsKey = kPreferenceGlobalShortcut;
     [self.shortcutView addObserver:self forKeyPath:@"recording"
                            options:NSKeyValueObservingOptionNew context:@""];
-    //[self bind:@"recording" toObject:self.shortcutView withKeyPath:@"recording" options:nil];
+}
+
+- (BOOL)launchAtLogin
+{
+    BOOL result = [LLManager launchAtLogin];
+    return result;
+}
+
+- (void)setLaunchAtLogin:(BOOL)state
+{
+    [LLManager setLaunchAtLogin:state];
+}
+
+- (IBAction)launchAtLoginCheckboxAction:(NSButton *)launchAtLoginCheckbox {
+    switch (launchAtLoginCheckbox.state) {
+        case NSOnState:     [LLManager setLaunchAtLogin:YES]; break;
+        case NSOffState:    [LLManager setLaunchAtLogin:NO]; break;
+    }
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey, id> *)change context:(void *)context
