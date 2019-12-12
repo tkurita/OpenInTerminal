@@ -8,12 +8,11 @@
 
 #define useLog 1
 
-static BOOL LAUNCH_AS_LOGINITEM = NO;
-static BOOL STAY_RUNNING = YES;
 static BOOL CHECK_UPDATE = NO;
 
 @implementation AppController
 
+/*
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender
 {
 #if useLog
@@ -33,23 +32,15 @@ static BOOL CHECK_UPDATE = NO;
         return NSTerminateNow;
     }
     
-    if (!LAUNCH_AS_LOGINITEM) {
-        NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
-        [user_defaults synchronize];
-        STAY_RUNNING = [user_defaults boolForKey:@"StayRunning"];
-        if (!STAY_RUNNING) {
-            return NSTerminateNow;
-        }
-    }
     return NSTerminateCancel;
 }
+*/
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication
 {
 #if useLog
 	NSLog(@"start applicationShouldTerminateAfterLastWindowClosed");
 #endif
-	//return (STAY_RUNNING);
     return NO;
 }
 
@@ -58,11 +49,14 @@ static BOOL CHECK_UPDATE = NO;
     #if useLog
         NSLog(@"%@", @"start checkUpdate");
     #endif
+    [updater checkForUpdatesInBackground];
+    /*
     if (STAY_RUNNING) {
         [updater checkForUpdatesInBackground];
 	} else {
 		[updater checkForUpdates:self];
 	}
+     */
 	CHECK_UPDATE = NO;
 }
 
@@ -131,10 +125,6 @@ void displayErrorDict(NSDictionary *errdict)
         toAction:^{
         if (!self.inhibitAction) {
             [self processForLaunched];
-            /*
-         [[NSAlert alertWithMessageText:NSLocalizedString(@"Global hotkey has been pressed.", @"Alert message for custom shortcut")
-           defaultButton:NSLocalizedString(@"OK", @"Default button for the alert on custom shortcut")
-                        alternateButton:nil otherButton:nil informativeTextWithFormat:@""] runModal];*/
         }
     }];
     
@@ -162,7 +152,6 @@ void displayErrorDict(NSDictionary *errdict)
 				value = [propData typeCodeValue];
 				switch (value) {
 					case keyAELaunchedAsLogInItem:
-                        LAUNCH_AS_LOGINITEM = YES;
 						break;
 					case keyAELaunchedAsServiceItem:
 						break;
