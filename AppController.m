@@ -8,6 +8,7 @@
 
 #define useLog 1
 
+static BOOL LAUNCH_AS_LOGINITEM = NO;
 static BOOL CHECK_UPDATE = NO;
 
 @implementation AppController
@@ -60,7 +61,7 @@ static BOOL CHECK_UPDATE = NO;
 	CHECK_UPDATE = NO;
 }
 
-- (void)tryTerminate
+- (void)tryTerminate // deprecated
 {
 #if useLog
 	NSLog(@"window count : %ld", [[NSApp windows] count]);
@@ -91,7 +92,9 @@ void displayErrorDict(NSDictionary *errdict)
 	if (CHECK_UPDATE) {
 		[self checkUpdate];
 	}
+    /*
     [self performSelectorOnMainThread:@selector(tryTerminate) withObject:nil waitUntilDone:NO];
+     */
 }
 
 - (void)applicationWillFinishLaunching:(NSNotification *)aNotification
@@ -152,6 +155,7 @@ void displayErrorDict(NSDictionary *errdict)
 				value = [propData typeCodeValue];
 				switch (value) {
 					case keyAELaunchedAsLogInItem:
+                        LAUNCH_AS_LOGINITEM = YES;
 						break;
 					case keyAELaunchedAsServiceItem:
 						break;
@@ -191,6 +195,7 @@ void displayErrorDict(NSDictionary *errdict)
 	}
 }
 
+/* depredated
 - (void)processForFrontContextFromPasteboard:(NSPasteboard *)pboard userData:(NSString *)data error:(NSString **)error
 {
 #if useLog
@@ -206,6 +211,7 @@ void displayErrorDict(NSDictionary *errdict)
 		[self checkUpdate];
 	}
 }
+*/
 
 - (BOOL)applicationOpenUntitledFile:(NSApplication *)theApplication
 {
@@ -213,8 +219,12 @@ void displayErrorDict(NSDictionary *errdict)
 	NSLog(@"applicationOpenUntitledFile");
     NSLog(@"front app id : %@ in applicationOpenUntitledFile", [[TXFrontAccess frontAccessForFrontmostApp] bundleIdentifier]);
 #endif
-    PreferencesWindowController *prefwin = [PreferencesWindowController sharedPreferencesWindow];
-    [prefwin showWindow:self];
+    if (LAUNCH_AS_LOGINITEM) {
+        LAUNCH_AS_LOGINITEM = NO;
+    } else {
+        PreferencesWindowController *prefwin = [PreferencesWindowController sharedPreferencesWindow];
+        [prefwin showWindow:self];
+    }
 	return YES;
 }
 
