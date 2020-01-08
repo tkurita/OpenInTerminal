@@ -11,6 +11,7 @@
 #import "AppController.h"
 #import "LLManager.h"
 #import "DateStringTransformer.h"
+#import "CheckIntervalTransformer.h"
 
 @interface PreferencesWindowController ()
 
@@ -25,6 +26,7 @@ NSString *const kPreferenceGlobalShortcut = @"GlobalShortcut";
 {
     if ([PreferencesWindowController class] == self) {
         [NSValueTransformer setValueTransformer:[DateStringTransformer new] forName:@"DateStringTrasformer"];
+        [NSValueTransformer setValueTransformer:[CheckIntervalTransformer new] forName:@"CheckIntervalTrasformer"];
     }
 }
 
