@@ -1,7 +1,6 @@
 #import "AppController.h"
 #import "DonationReminder/DonationReminder.h"
-#import "TXFrontAccess.h"
-#import "GUIScriptingChecker.h"
+#import "TXFrontAccess/TXFrontAccess.h"
 #import "PreferencesWindowController.h"
 #import "MASShortcut.h"
 #import "MASShortcutBinder.h"
@@ -22,19 +21,18 @@ static BOOL CHECK_UPDATE = NO;
     return NO;
 }
 
+- (BOOL)checkGUIScripting
+{
+    NSDictionary *opts = @{(__bridge id) kAXTrustedCheckOptionPrompt : @YES};
+    return AXIsProcessTrustedWithOptions((__bridge CFDictionaryRef)opts);
+}
+
 - (void)checkUpdate
 {
     #if useLog
         NSLog(@"%@", @"start checkUpdate");
     #endif
     [self.updater checkForUpdatesInBackground];
-    /*
-    if (STAY_RUNNING) {
-        [updater checkForUpdatesInBackground];
-	} else {
-		[updater checkForUpdates:self];
-	}
-     */
 	CHECK_UPDATE = NO;
 }
 

@@ -17,11 +17,6 @@
 		2C3BFE3B1086F9B9004224D8 /* TerminalCommander.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 2C3BFE3A1086F9B9004224D8 /* TerminalCommander.applescript */; settings = {ATTRIBUTES = (); }; };
 		2C4958BF1C7DDAF9006427F3 /* NSRunningApplication+SmartActivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C4958BD1C7DDAF9006427F3 /* NSRunningApplication+SmartActivate.h */; };
 		2C4958C01C7DDAF9006427F3 /* NSRunningApplication+SmartActivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4958BE1C7DDAF9006427F3 /* NSRunningApplication+SmartActivate.m */; };
-		2C4958C91C7DDBF5006427F3 /* GUIScriptingChecker_Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C4958C21C7DDBF5006427F3 /* GUIScriptingChecker_Localizable.strings */; };
-		2C4958CA1C7DDBF5006427F3 /* GUIScriptingChecker.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C4958C41C7DDBF5006427F3 /* GUIScriptingChecker.h */; };
-		2C4958CB1C7DDBF5006427F3 /* GUIScriptingChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4958C51C7DDBF5006427F3 /* GUIScriptingChecker.m */; };
-		2C4958CC1C7DDBF5006427F3 /* SystemEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C4958C71C7DDBF5006427F3 /* SystemEvents.h */; };
-		2C4958CD1C7DDBF5006427F3 /* SystemPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C4958C81C7DDBF5006427F3 /* SystemPreferences.h */; };
 		2C4958D01C7DDD85006427F3 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4958CF1C7DDD85006427F3 /* ScriptingBridge.framework */; };
 		2C4958D81C7DE6FA006427F3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C4958D21C7DE6FA006427F3 /* Localizable.strings */; };
 		2C4958D91C7DE6FA006427F3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C4958D41C7DE6FA006427F3 /* MainMenu.xib */; };
@@ -135,12 +130,6 @@
 		2C3BFE3A1086F9B9004224D8 /* TerminalCommander.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = TerminalCommander.applescript; sourceTree = "<group>"; };
 		2C4958BD1C7DDAF9006427F3 /* NSRunningApplication+SmartActivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSRunningApplication+SmartActivate.h"; sourceTree = "<group>"; };
 		2C4958BE1C7DDAF9006427F3 /* NSRunningApplication+SmartActivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSRunningApplication+SmartActivate.m"; sourceTree = "<group>"; };
-		2C4958C31C7DDBF5006427F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/GUIScriptingChecker_Localizable.strings; sourceTree = "<group>"; };
-		2C4958C41C7DDBF5006427F3 /* GUIScriptingChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUIScriptingChecker.h; sourceTree = "<group>"; };
-		2C4958C51C7DDBF5006427F3 /* GUIScriptingChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUIScriptingChecker.m; sourceTree = "<group>"; };
-		2C4958C61C7DDBF5006427F3 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/GUIScriptingChecker_Localizable.strings; sourceTree = "<group>"; };
-		2C4958C71C7DDBF5006427F3 /* SystemEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemEvents.h; sourceTree = "<group>"; };
-		2C4958C81C7DDBF5006427F3 /* SystemPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemPreferences.h; sourceTree = "<group>"; };
 		2C4958CF1C7DDD85006427F3 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
 		2C4958D31C7DE6FA006427F3 /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2C4958D71C7DE6FA006427F3 /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ServicesMenu.strings; sourceTree = "<group>"; };
@@ -240,7 +229,6 @@
 			children = (
 				2C684665239AB04B00FF1691 /* Open in Terminal.entitlements */,
 				2CE6B34610723CBF005C6B05 /* History.rd */,
-				2C4958C11C7DDBF5006427F3 /* GUIScriptingChecker */,
 				2CAB48741BB51807009F0B09 /* TXFrontAccess */,
 				2C4958BC1C7DDAF9006427F3 /* NSRunningApplication-SmartActivate */,
 				080E96DDFE201D6D7F000001 /* Scripts */,
@@ -330,18 +318,6 @@
 			path = "NSRunningApplication-SmartActivate";
 			sourceTree = "<group>";
 		};
-		2C4958C11C7DDBF5006427F3 /* GUIScriptingChecker */ = {
-			isa = PBXGroup;
-			children = (
-				2C4958C21C7DDBF5006427F3 /* GUIScriptingChecker_Localizable.strings */,
-				2C4958C41C7DDBF5006427F3 /* GUIScriptingChecker.h */,
-				2C4958C51C7DDBF5006427F3 /* GUIScriptingChecker.m */,
-				2C4958C71C7DDBF5006427F3 /* SystemEvents.h */,
-				2C4958C81C7DDBF5006427F3 /* SystemPreferences.h */,
-			);
-			path = GUIScriptingChecker;
-			sourceTree = "<group>";
-		};
 		2C4FEA151BAA54C700F5563C /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -398,10 +374,7 @@
 				2CAC6C6923C5619F006B5F56 /* DateStringTransformer.h in Headers */,
 				2CAB48781BB51807009F0B09 /* TXFrontAccess.h in Headers */,
 				2C4958BF1C7DDAF9006427F3 /* NSRunningApplication+SmartActivate.h in Headers */,
-				2C4958CA1C7DDBF5006427F3 /* GUIScriptingChecker.h in Headers */,
 				2C15D0F723A2092500586891 /* LLManager.h in Headers */,
-				2C4958CC1C7DDBF5006427F3 /* SystemEvents.h in Headers */,
-				2C4958CD1C7DDBF5006427F3 /* SystemPreferences.h in Headers */,
 				2C78D7A123A0882300821769 /* PreferencesWindowController.h in Headers */,
 				2C15D0F923A2092500586891 /* LLStrings.h in Headers */,
 			);
@@ -536,7 +509,6 @@
 				2CE5E4AF1078EFD7007EE095 /* OiT_icon.icns in Resources */,
 				2C7B19251CAA2A2000B36ED9 /* cwd-tty.sh in Resources */,
 				2C4958DF1C7DFFAF006427F3 /* TXFrontAccessLocalizedStrings.strings in Resources */,
-				2C4958C91C7DDBF5006427F3 /* GUIScriptingChecker_Localizable.strings in Resources */,
 				2CAC6C6F23C58BE0006B5F56 /* PreferencesWindow.xib in Resources */,
 				2C4958D81C7DE6FA006427F3 /* Localizable.strings in Resources */,
 				2C4958D91C7DE6FA006427F3 /* MainMenu.xib in Resources */,
@@ -621,7 +593,6 @@
 				2CAB48791BB51807009F0B09 /* TXFrontAccess.m in Sources */,
 				2C4958C01C7DDAF9006427F3 /* NSRunningApplication+SmartActivate.m in Sources */,
 				2C78D7A223A0882300821769 /* PreferencesWindowController.m in Sources */,
-				2C4958CB1C7DDBF5006427F3 /* GUIScriptingChecker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,15 +617,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2C4958C21C7DDBF5006427F3 /* GUIScriptingChecker_Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2C4958C31C7DDBF5006427F3 /* en */,
-				2C4958C61C7DDBF5006427F3 /* ja */,
-			);
-			name = GUIScriptingChecker_Localizable.strings;
-			sourceTree = "<group>";
-		};
 		2C4958D21C7DE6FA006427F3 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

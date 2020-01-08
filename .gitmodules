@@ -31,6 +31,3 @@
 [submodule "NSRunningApplication-SmartActivate"]
 	path = NSRunningApplication-SmartActivate
 	url = http://github.com/tkurita/NSRunningApplication-SmartActivate.git
-[submodule "GUIScriptingChecker"]
-	path = GUIScriptingChecker
-	url = http://github.com/tkurita/GUIScriptingChecker.git
