@@ -38,6 +38,8 @@
 		2C81091B23A23D8100E8A0F4 /* LaunchAtLoginHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C81091A23A23D4F00E8A0F4 /* LaunchAtLoginHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2CAB48781BB51807009F0B09 /* TXFrontAccess.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CAB48751BB51807009F0B09 /* TXFrontAccess.h */; };
 		2CAB48791BB51807009F0B09 /* TXFrontAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB48761BB51807009F0B09 /* TXFrontAccess.m */; };
+		2CAC6C6923C5619F006B5F56 /* DateStringTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CAC6C6723C5619F006B5F56 /* DateStringTransformer.h */; };
+		2CAC6C6A23C5619F006B5F56 /* DateStringTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAC6C6823C5619F006B5F56 /* DateStringTransformer.m */; };
 		2CDC0F4F1BA18F8200A4990F /* AppleScriptObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CDC0F4E1BA18F8200A4990F /* AppleScriptObjC.framework */; };
 		2CE5E4AF1078EFD7007EE095 /* OiT_icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2CE5E4AE1078EFD7007EE095 /* OiT_icon.icns */; };
 		2CE6B2E6107227B7005C6B05 /* AppController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CE6B2E4107227B7005C6B05 /* AppController.h */; };
@@ -157,6 +159,8 @@
 		2C81091523A23D4F00E8A0F4 /* LaunchAtLoginHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LaunchAtLoginHelper.xcodeproj; path = LaunchAtLoginHelper/LaunchAtLoginHelper.xcodeproj; sourceTree = "<group>"; };
 		2CAB48751BB51807009F0B09 /* TXFrontAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXFrontAccess.h; sourceTree = "<group>"; };
 		2CAB48761BB51807009F0B09 /* TXFrontAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXFrontAccess.m; sourceTree = "<group>"; };
+		2CAC6C6723C5619F006B5F56 /* DateStringTransformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateStringTransformer.h; sourceTree = "<group>"; };
+		2CAC6C6823C5619F006B5F56 /* DateStringTransformer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateStringTransformer.m; sourceTree = "<group>"; };
 		2CBB6CC61C84354D00848E25 /* pre-action.mk */ = {isa = PBXFileReference; lastKnownFileType = text; path = "pre-action.mk"; sourceTree = "<group>"; };
 		2CDC0F4E1BA18F8200A4990F /* AppleScriptObjC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptObjC.framework; path = System/Library/Frameworks/AppleScriptObjC.framework; sourceTree = SDKROOT; };
 		2CE5E4AE1078EFD7007EE095 /* OiT_icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = OiT_icon.icns; sourceTree = "<group>"; };
@@ -252,6 +256,8 @@
 			isa = PBXGroup;
 			children = (
 				29B97316FDCFA39411CA2CEA /* main.m */,
+				2CAC6C6723C5619F006B5F56 /* DateStringTransformer.h */,
+				2CAC6C6823C5619F006B5F56 /* DateStringTransformer.m */,
 				2C78D79F23A0882300821769 /* PreferencesWindowController.h */,
 				2C78D7A023A0882300821769 /* PreferencesWindowController.m */,
 				2CE6B2E4107227B7005C6B05 /* AppController.h */,
@@ -381,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CE6B2E6107227B7005C6B05 /* AppController.h in Headers */,
+				2CAC6C6923C5619F006B5F56 /* DateStringTransformer.h in Headers */,
 				2CAB48781BB51807009F0B09 /* TXFrontAccess.h in Headers */,
 				2C4958BF1C7DDAF9006427F3 /* NSRunningApplication+SmartActivate.h in Headers */,
 				2C4958CA1C7DDBF5006427F3 /* GUIScriptingChecker.h in Headers */,
@@ -598,6 +605,7 @@
 				25757365072882A0000BE9CA /* Application.applescript in Sources */,
 				2C3BFE3B1086F9B9004224D8 /* TerminalCommander.applescript in Sources */,
 				2575736A072882A0000BE9CA /* main.m in Sources */,
+				2CAC6C6A23C5619F006B5F56 /* DateStringTransformer.m in Sources */,
 				2CE6B2E7107227B7005C6B05 /* AppController.m in Sources */,
 				2C7BB2C21BA25845005CC0E4 /* PathExtra.m in Sources */,
 				2C15D0F823A2092500586891 /* LLManager.m in Sources */,

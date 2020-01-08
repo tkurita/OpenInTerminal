@@ -10,6 +10,7 @@
 #import "MASShortcutView+Bindings.h"
 #import "AppController.h"
 #import "LLManager.h"
+#import "DateStringTransformer.h"
 
 @interface PreferencesWindowController ()
 
@@ -19,6 +20,13 @@ static PreferencesWindowController* sharedPrefWindow = nil;
 NSString *const kPreferenceGlobalShortcut = @"GlobalShortcut";
 
 @implementation PreferencesWindowController
+
++ (void)initialize    // Early initialization
+{
+    if ([PreferencesWindowController class] == self) {
+        [NSValueTransformer setValueTransformer:[DateStringTransformer new] forName:@"DateStringTrasformer"];
+    }
+}
 
 - (void)windowDidLoad {
     [super windowDidLoad];
@@ -45,14 +53,6 @@ NSString *const kPreferenceGlobalShortcut = @"GlobalShortcut";
     }
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey, id> *)change context:(void *)context
-{
-    NSLog(@"observeValueForKeyPath");
-    if ([keyPath isEqualToString:@"recording"]) {
-        [AppController sharedAppController].inhibitAction = [change[NSKeyValueChangeNewKey] boolValue];;
-    }
-}
-
 + (PreferencesWindowController *)sharedPreferencesWindow
 {
     if (!sharedPrefWindow) {
@@ -67,7 +67,7 @@ NSString *const kPreferenceGlobalShortcut = @"GlobalShortcut";
     [self setWindowFrameAutosaveName:@"PreferencesWindow"];
 }
 
--(void)windowWillClose:(NSNotification *)notification
+- (void)windowWillClose:(NSNotification *)notification
 {
     if (self == sharedPrefWindow) {
         sharedPrefWindow = nil;

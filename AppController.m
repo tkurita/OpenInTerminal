@@ -50,7 +50,7 @@ static BOOL CHECK_UPDATE = NO;
     #if useLog
         NSLog(@"%@", @"start checkUpdate");
     #endif
-    [updater checkForUpdatesInBackground];
+    [self.updater checkForUpdatesInBackground];
     /*
     if (STAY_RUNNING) {
         [updater checkForUpdatesInBackground];

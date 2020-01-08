@@ -8,9 +8,9 @@
 @end
 
 @interface AppController : NSObject {
-	IBOutlet SUUpdater *updater;
 	IBOutlet AppControlScript *controlScript;
 }
+@property (nonatomic, weak) IBOutlet SUUpdater *updater;
 @property(assign) BOOL forceQuit;
 @property(assign) BOOL inhibitAction;
 + (AppController *)sharedAppController;

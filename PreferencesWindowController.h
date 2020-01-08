@@ -13,7 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface PreferencesWindowController : NSWindowController
 
 @property (nonatomic, weak) IBOutlet MASShortcutView *shortcutView;
-
 @property (nonatomic, strong) id loginItem;
 
 + (PreferencesWindowController *)sharedPreferencesWindow;
