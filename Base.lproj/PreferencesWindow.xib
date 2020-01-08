@@ -69,14 +69,14 @@
                         </view>
                     </box>
                     <box fixedFrame="YES" title="Updates:" translatesAutoresizingMaskIntoConstraints="NO" id="2AL-AX-BLi">
-                        <rect key="frame" x="17" y="36" width="339" height="109"/>
+                        <rect key="frame" x="17" y="36" width="339" height="114"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <view key="contentView" id="Lou-jX-jBy">
-                            <rect key="frame" x="3" y="3" width="333" height="91"/>
+                            <rect key="frame" x="3" y="3" width="333" height="96"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jlo-k6-TaU">
-                                    <rect key="frame" x="11" y="67" width="225" height="18"/>
+                                    <rect key="frame" x="11" y="72" width="225" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="check" title="Automatically check for updates :" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="PWk-3S-8cr">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -87,7 +87,7 @@
                                     </connections>
                                 </button>
                                 <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jpf-bL-WyJ">
-                                    <rect key="frame" x="240" y="62" width="88" height="25"/>
+                                    <rect key="frame" x="240" y="67" width="88" height="25"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                     <popUpButtonCell key="cell" type="push" title="Daily" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="plZ-qS-xeV" id="KWO-iD-UNb">
                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -110,7 +110,7 @@
                                     </connections>
                                 </popUpButton>
                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zc7-uM-8sS">
-                                    <rect key="frame" x="83" y="22" width="167" height="32"/>
+                                    <rect key="frame" x="83" y="27" width="167" height="32"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="push" title="Check Now" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="a8a-Pc-1sy">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -121,8 +121,8 @@
                                     </connections>
                                 </button>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gap-yz-zSY">
-                                    <rect key="frame" x="11" y="5" width="316" height="16"/>
-                                    <autoresizingMask key="autoresizingMask"/>
+                                    <rect key="frame" x="11" y="9" width="316" height="16"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="last checked date" id="RaF-BT-evB">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>

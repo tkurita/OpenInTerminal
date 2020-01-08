@@ -23,7 +23,8 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
     [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
-    return [dateFormatter stringFromDate:date];
+    NSString *date_text = [dateFormatter stringFromDate:date];
+    return [NSString stringWithFormat:NSLocalizedString(@"Last checked date : %@", @""), date_text];
 }
 
 @end

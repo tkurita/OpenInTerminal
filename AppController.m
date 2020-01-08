@@ -166,6 +166,7 @@ void displayErrorDict(NSDictionary *errdict)
         LAUNCH_AS_LOGINITEM = NO;
     } else {
         PreferencesWindowController *prefwin = [PreferencesWindowController sharedPreferencesWindow];
+        [NSApp activateIgnoringOtherApps:YES];
         [prefwin showWindow:self];
     }
 	return YES;
