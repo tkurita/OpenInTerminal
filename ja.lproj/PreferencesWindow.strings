@@ -1,0 +1,33 @@
+
+/* Class = "NSBox"; title = "Updates:"; ObjectID = "2AL-AX-BLi"; */
+"2AL-AX-BLi.title" = "アップデート:";
+
+/* Class = "NSBox"; title = "Settings:"; ObjectID = "EOY-6j-9uq"; */
+"EOY-6j-9uq.title" = "設定:";
+
+/* Class = "NSMenuItem"; title = "Monthly"; ObjectID = "OsT-e6-QbX"; */
+"OsT-e6-QbX.title" = "毎月";
+
+/* Class = "NSButtonCell"; title = "Check for updates :"; ObjectID = "PWk-3S-8cr"; */
+"PWk-3S-8cr.title" = "自動的にアップデートを確認 :";
+
+/* Class = "NSWindow"; title = "Open in Terminal Preferences"; ObjectID = "QvC-M9-y7g"; */
+"QvC-M9-y7g.title" = "Open in Terminal 設定";
+
+/* Class = "NSTextFieldCell"; title = "last checked date"; ObjectID = "RaF-BT-evB"; */
+"RaF-BT-evB.title" = "最後のアップデート確認日";
+
+/* Class = "NSTextFieldCell"; title = "Shortcut key :"; ObjectID = "ZxL-o5-Kc5"; */
+"ZxL-o5-Kc5.title" = "ショートカットキー :";
+
+/* Class = "NSButtonCell"; title = "Check Now"; ObjectID = "a8a-Pc-1sy"; */
+"a8a-Pc-1sy.title" = "アップデートを確認";
+
+/* Class = "NSButtonCell"; title = "Launch at login"; ObjectID = "lkM-fb-wFF"; */
+"lkM-fb-wFF.title" = "ログイン時に起動";
+
+/* Class = "NSMenuItem"; title = "Daily"; ObjectID = "plZ-qS-xeV"; */
+"plZ-qS-xeV.title" = "毎日";
+
+/* Class = "NSMenuItem"; title = "Weekly"; ObjectID = "tT7-Ak-r96"; */
+"tT7-Ak-r96.title" = "毎週";
