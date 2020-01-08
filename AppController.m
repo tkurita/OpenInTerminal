@@ -6,36 +6,13 @@
 #import "MASShortcut.h"
 #import "MASShortcutBinder.h"
 
-#define useLog 1
+#define useLog 0
 
 static BOOL LAUNCH_AS_LOGINITEM = NO;
 static BOOL CHECK_UPDATE = NO;
 
 @implementation AppController
 
-/*
-- (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender
-{
-#if useLog
-	NSLog(@"start applicationShouldTerminate");
-#endif
-    if (_forceQuit) {return NSTerminateNow;}
-    
-    NSAppleEventDescriptor *ev = [ [NSAppleEventManager sharedAppleEventManager] currentAppleEvent];
-    #if useLog
-        NSLog(@"%@", [ev description]);
-    #endif
-    if (ev) { // quit event of AppleEvent
-        if (kAEQuitApplication ==  [ev eventID] ) {
-            return NSTerminateNow;
-        }
-    } else {
-        return NSTerminateNow;
-    }
-    
-    return NSTerminateCancel;
-}
-*/
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication
 {
@@ -61,16 +38,6 @@ static BOOL CHECK_UPDATE = NO;
 	CHECK_UPDATE = NO;
 }
 
-- (void)tryTerminate // deprecated
-{
-#if useLog
-	NSLog(@"window count : %ld", [[NSApp windows] count]);
-#endif
-	if (![[NSApp windows] count]) {
-		[NSApp terminate:self];
-	}
-}
-
 void displayErrorDict(NSDictionary *errdict)
 {
     int error_no = [(NSNumber *)errdict[@"number"] intValue];
@@ -92,9 +59,6 @@ void displayErrorDict(NSDictionary *errdict)
 	if (CHECK_UPDATE) {
 		[self checkUpdate];
 	}
-    /*
-    [self performSelectorOnMainThread:@selector(tryTerminate) withObject:nil waitUntilDone:NO];
-     */
 }
 
 - (void)applicationWillFinishLaunching:(NSNotification *)aNotification
@@ -171,7 +135,6 @@ void displayErrorDict(NSDictionary *errdict)
 {
 	NSDictionary *errdict = [controlScript serviceForPathes:filenames];
     displayErrorDict(errdict);
-    [self performSelectorOnMainThread:@selector(tryTerminate) withObject:nil waitUntilDone:NO];
 }
 
 - (void)processAtLocationFromPasteboard:(NSPasteboard *)pboard userData:(NSString *)data error:(NSString **)error
@@ -194,24 +157,6 @@ void displayErrorDict(NSDictionary *errdict)
 		[self checkUpdate];
 	}
 }
-
-/* depredated
-- (void)processForFrontContextFromPasteboard:(NSPasteboard *)pboard userData:(NSString *)data error:(NSString **)error
-{
-#if useLog
-	NSLog(@"start processAtLocationFromPasteboard");
-#endif
-    [NSApp deactivate]; // does not work
-    [[NSRunningApplication currentApplication] hide];
-#if useLog
-    NSLog(@"front app id : %@ in processForFrontContextFromPasteboard", [[TXFrontAccess frontAccessForFrontmostApp] bundleIdentifier]);
-#endif
-	[self processForLaunched];
-	if (CHECK_UPDATE) {
-		[self checkUpdate];
-	}
-}
-*/
 
 - (BOOL)applicationOpenUntitledFile:(NSApplication *)theApplication
 {
