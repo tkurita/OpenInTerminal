@@ -116,5 +116,9 @@
 	<string>https://www.script-factory.net/appcast/OpenInTerminal.xml</string>
 	<key>SUPublicDSAKeyFile</key>
 	<string>dsa_pub.pem</string>
+	<key>CFBundleHelpBookFolder</key>
+	<string>OpenInTerminalHelp</string>
+	<key>CFBundleHelpBookName</key>
+	<string>net.script-factory.OpenInTerminal.help</string>
 </dict>
 </plist>

@@ -37,6 +37,8 @@
 		2CAC6C6D23C57441006B5F56 /* CheckIntervalTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CAC6C6B23C57441006B5F56 /* CheckIntervalTransformer.h */; };
 		2CAC6C6E23C57441006B5F56 /* CheckIntervalTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAC6C6C23C57441006B5F56 /* CheckIntervalTransformer.m */; };
 		2CAC6C6F23C58BE0006B5F56 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CAC6C7123C58BE0006B5F56 /* PreferencesWindow.xib */; };
+		2CAECAB523C765C8006E509E /* HelpSetup.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CAECAB423C765C8006E509E /* HelpSetup.plist */; };
+		2CAECAB623C767E0006E509E /* OpenInTerminalHelp in Resources */ = {isa = PBXBuildFile; fileRef = 2CAECAB023C762C7006E509E /* OpenInTerminalHelp */; };
 		2CDC0F4F1BA18F8200A4990F /* AppleScriptObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CDC0F4E1BA18F8200A4990F /* AppleScriptObjC.framework */; };
 		2CE5E4AF1078EFD7007EE095 /* OiT_icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2CE5E4AE1078EFD7007EE095 /* OiT_icon.icns */; };
 		2CE6B2E6107227B7005C6B05 /* AppController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CE6B2E4107227B7005C6B05 /* AppController.h */; };
@@ -155,6 +157,8 @@
 		2CAC6C6C23C57441006B5F56 /* CheckIntervalTransformer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckIntervalTransformer.m; sourceTree = "<group>"; };
 		2CAC6C7023C58BE0006B5F56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PreferencesWindow.xib; sourceTree = "<group>"; };
 		2CAC6C7323C58BEC006B5F56 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/PreferencesWindow.strings; sourceTree = "<group>"; };
+		2CAECAB023C762C7006E509E /* OpenInTerminalHelp */ = {isa = PBXFileReference; lastKnownFileType = folder; path = OpenInTerminalHelp; sourceTree = "<group>"; };
+		2CAECAB423C765C8006E509E /* HelpSetup.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HelpSetup.plist; sourceTree = "<group>"; };
 		2CBB6CC61C84354D00848E25 /* pre-action.mk */ = {isa = PBXFileReference; lastKnownFileType = text; path = "pre-action.mk"; sourceTree = "<group>"; };
 		2CDC0F4E1BA18F8200A4990F /* AppleScriptObjC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptObjC.framework; path = System/Library/Frameworks/AppleScriptObjC.framework; sourceTree = SDKROOT; };
 		2CE5E4AE1078EFD7007EE095 /* OiT_icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = OiT_icon.icns; sourceTree = "<group>"; };
@@ -264,6 +268,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2CAECAB023C762C7006E509E /* OpenInTerminalHelp */,
 				2C4958D21C7DE6FA006427F3 /* Localizable.strings */,
 				2C4958D41C7DE6FA006427F3 /* MainMenu.xib */,
 				2CAC6C7123C58BE0006B5F56 /* PreferencesWindow.xib */,
@@ -273,6 +278,7 @@
 				2CE6B58A10757A46005C6B05 /* dsa_pub.pem */,
 				2CE6B57D10749FE4005C6B05 /* FactorySettings.plist */,
 				2CBB6CC61C84354D00848E25 /* pre-action.mk */,
+				2CAECAB423C765C8006E509E /* HelpSetup.plist */,
 				2C7B19241CAA2A2000B36ED9 /* cwd-tty.sh */,
 			);
 			name = Resources;
@@ -413,6 +419,8 @@
 				14D3C13EFE3A6507ED444F71 /* [CP] Embed Pods Frameworks */,
 				98C6260382124F3C409370F0 /* [CP] Copy Pods Resources */,
 				2C15D0ED23A2072300586891 /* CopyFiles */,
+				2CAECAB323C76583006E509E /* ShellScript */,
+				2CAECAB223C76492006E509E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -511,8 +519,10 @@
 				2C4958DF1C7DFFAF006427F3 /* TXFrontAccessLocalizedStrings.strings in Resources */,
 				2CAC6C6F23C58BE0006B5F56 /* PreferencesWindow.xib in Resources */,
 				2C4958D81C7DE6FA006427F3 /* Localizable.strings in Resources */,
+				2CAECAB623C767E0006E509E /* OpenInTerminalHelp in Resources */,
 				2C4958D91C7DE6FA006427F3 /* MainMenu.xib in Resources */,
 				2C4958DA1C7DE6FA006427F3 /* ServicesMenu.strings in Resources */,
+				2CAECAB523C765C8006E509E /* HelpSetup.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,6 +547,42 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Open in Terminal/Pods-Open in Terminal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2CAECAB223C76492006E509E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "codesign --verbose --force --deep -o runtime \\\n--sign \"${EXPANDED_CODE_SIGN_IDENTITY_NAME}\" \\\n\"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/AutoUpdate.app\"\n\ncodesign --verbose --force --deep -o runtime \\\n--sign \"${EXPANDED_CODE_SIGN_IDENTITY_NAME}\" \\\n\"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Contents/Library/LoginItems/LaunchAtLoginHelper.app\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2CAECAB323C76583006E509E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if ! echo \"Release MacAppStore\" | grep \"$CONFIGURATION\"; then\necho \"HelpBook setup script will run only with Release or MacAppStore configuration\";\nexit 0\nfi\ncd \"$BUILT_PRODUCTS_DIR\"\nSetupHelpBook \"$FULL_PRODUCT_NAME\"\n";
 			showEnvVarsInLog = 0;
 		};
 		98C6260382124F3C409370F0 /* [CP] Copy Pods Resources */ = {
