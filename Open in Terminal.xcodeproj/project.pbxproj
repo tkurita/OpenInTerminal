@@ -581,7 +581,7 @@
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
+			shellPath = "/bin/zsh -l";
 			shellScript = "if ! echo \"Release MacAppStore\" | grep \"$CONFIGURATION\"; then\necho \"HelpBook setup script will run only with Release or MacAppStore configuration\";\nexit 0\nfi\ncd \"$BUILT_PRODUCTS_DIR\"\nSetupHelpBook \"$FULL_PRODUCT_NAME\"\n";
 			showEnvVarsInLog = 0;
 		};
