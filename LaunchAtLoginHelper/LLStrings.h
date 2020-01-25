@@ -1,5 +1,5 @@
 // strings used by LLManager and LaunchAtLoginHelper
 //
 
-#define LLURLScheme @"net.script-factory.OpenInTerminal"
+#define LLURLScheme @"openinterminal"
 #define LLHelperBundleIdentifier @"net.script-factory.OpenInTerminal.LaunchAtLoginHelper"

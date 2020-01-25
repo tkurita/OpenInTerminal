@@ -25,6 +25,10 @@
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleGetInfoString</key>
 	<string>${PRODUCT_VERSION} $COPYRIGHT}</string>
+	<key>CFBundleHelpBookFolder</key>
+	<string>OpenInTerminalHelp</string>
+	<key>CFBundleHelpBookName</key>
+	<string>net.script-factory.OpenInTerminal.help</string>
 	<key>CFBundleIconFile</key>
 	<string>OiT_icon</string>
 	<key>CFBundleIdentifier</key>
@@ -36,7 +40,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>${PRODUCT_VERSION}</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
@@ -53,7 +57,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>21</string>
+	<string>22</string>
 	<key>DonationURL</key>
 	<string>https://www.script-factory.net/donationproxy.html</string>
 	<key>LSApplicationCategoryType</key>
@@ -116,9 +120,5 @@
 	<string>https://www.script-factory.net/appcast/OpenInTerminal.xml</string>
 	<key>SUPublicDSAKeyFile</key>
 	<string>dsa_pub.pem</string>
-	<key>CFBundleHelpBookFolder</key>
-	<string>OpenInTerminalHelp</string>
-	<key>CFBundleHelpBookName</key>
-	<string>net.script-factory.OpenInTerminal.help</string>
 </dict>
 </plist>
