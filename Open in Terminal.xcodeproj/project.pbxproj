@@ -141,6 +141,7 @@
 		2C4958E01C7DFFAF006427F3 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/TXFrontAccessLocalizedStrings.strings; sourceTree = "<group>"; };
 		2C4958E21C7E0001006427F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/TXFrontAccessLocalizedStrings.strings; sourceTree = "<group>"; };
 		2C4FEA141BAA54C700F5563C /* DonationReminder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DonationReminder.xcodeproj; path = DonationReminder/DonationReminder.xcodeproj; sourceTree = "<group>"; };
+		2C5C70DB23DBEB8B002F5F9E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/PreferencesWindow.strings; sourceTree = "<group>"; };
 		2C684665239AB04B00FF1691 /* Open in Terminal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Open in Terminal.entitlements"; sourceTree = "<group>"; };
 		2C78D79B23A0854300821769 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		2C78D79F23A0882300821769 /* PreferencesWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreferencesWindowController.h; sourceTree = "<group>"; };
@@ -156,7 +157,6 @@
 		2CAC6C6B23C57441006B5F56 /* CheckIntervalTransformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckIntervalTransformer.h; sourceTree = "<group>"; };
 		2CAC6C6C23C57441006B5F56 /* CheckIntervalTransformer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckIntervalTransformer.m; sourceTree = "<group>"; };
 		2CAC6C7023C58BE0006B5F56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PreferencesWindow.xib; sourceTree = "<group>"; };
-		2CAC6C7323C58BEC006B5F56 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/PreferencesWindow.strings; sourceTree = "<group>"; };
 		2CAECAB023C762C7006E509E /* OpenInTerminalHelp */ = {isa = PBXFileReference; lastKnownFileType = folder; path = OpenInTerminalHelp; sourceTree = "<group>"; };
 		2CAECAB423C765C8006E509E /* HelpSetup.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HelpSetup.plist; sourceTree = "<group>"; };
 		2CBB6CC61C84354D00848E25 /* pre-action.mk */ = {isa = PBXFileReference; lastKnownFileType = text; path = "pre-action.mk"; sourceTree = "<group>"; };
@@ -702,7 +702,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				2CAC6C7023C58BE0006B5F56 /* Base */,
-				2CAC6C7323C58BEC006B5F56 /* ja */,
+				2C5C70DB23DBEB8B002F5F9E /* ja */,
 			);
 			name = PreferencesWindow.xib;
 			sourceTree = "<group>";

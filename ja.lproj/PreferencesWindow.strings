@@ -31,3 +31,6 @@
 
 /* Class = "NSMenuItem"; title = "Weekly"; ObjectID = "tT7-Ak-r96"; */
 "tT7-Ak-r96.title" = "毎週";
+
+/* Class = "NSButtonCell"; title = "Donation"; ObjectID = "uGu-4r-dHq"; */
+"uGu-4r-dHq.title" = "寄付する";

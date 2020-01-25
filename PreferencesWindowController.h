@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) id loginItem;
 
 + (PreferencesWindowController *)sharedPreferencesWindow;
+- (IBAction)makeDonation:(id)sender;
+- (IBAction)sendEmail:(id)sender;
 
 @end
 

@@ -12,6 +12,7 @@
 #import "LLManager.h"
 #import "DateStringTransformer.h"
 #import "CheckIntervalTransformer.h"
+#import "DonationReminder/DonationReminder.h"
 
 @interface PreferencesWindowController ()
 
@@ -74,6 +75,16 @@ NSString *const kPreferenceGlobalShortcut = @"GlobalShortcut";
     if (self == sharedPrefWindow) {
         sharedPrefWindow = nil;
     }
+}
+
+- (IBAction)makeDonation:(id)sender
+{
+    [DonationReminder goToDonation];
+}
+
+- (IBAction)sendEmail:(id)sender
+{
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"mailto:scriptfactory@mac.com"]];
 }
 
 @end
