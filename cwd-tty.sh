@@ -1,3 +1,13 @@
+# script to generate a correspondence table between ttyname and
+# working directory.
+# Insert following line into .zprofile or .bash_profile.
+#
+#   source path-to-dir/cwd-tty.sh
+#
+
+# 2.0 -- 2020-01-09
+#   * Added support of zsh
+
 if [[ $TERM_PROGRAM = 'Apple_Terminal' ]] && [[ -z $INSIDE_EMACS ]]; then
   save_cwd() {
     local ttyname=`tty`;
@@ -37,4 +47,3 @@ if [[ $TERM_PROGRAM = 'Apple_Terminal' ]] && [[ -z $INSIDE_EMACS ]]; then
     PROMPT_COMMAND="save_cwd${PROMPT_COMMAND:+; $PROMPT_COMMAND}"
   fi
 fi
-
