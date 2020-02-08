@@ -7,7 +7,7 @@
 
 # 2.0 -- 2020-01-09
 #   * Added support of zsh
-
+
 if [[ $TERM_PROGRAM = 'Apple_Terminal' ]] && [[ -z $INSIDE_EMACS ]]; then
   save_cwd() {
     local ttyname=`tty`;
