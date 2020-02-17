@@ -55,7 +55,7 @@
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
                                     <connections>
-                                        <binding destination="ciX-ll-cIa" name="value" keyPath="values.IsOpenInPackageContets" id="2yK-ua-pyD"/>
+                                        <binding destination="ciX-ll-cIa" name="value" keyPath="values.IsOpenInPackageContents" id="ixl-Ul-fDV"/>
                                     </connections>
                                 </button>
                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1rC-yY-TZt">

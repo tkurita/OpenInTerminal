@@ -117,9 +117,17 @@ property NSUserDefaults : class "NSUserDefaults"
             else
                 set a_location to XFile's make_with(a_frontdoc's |path|() as text)
             end if
-			if not a_location's is_folder() or a_location's is_package() then
-				set a_location to a_location's parent_folder()
-			end if
+            
+            tell a_location
+                if is_folder() then
+                    set is_open_in_package to (NSUserDefaults's standardUserDefaults()'s boolForKey:"IsOpenInPackageContents") as boolean
+                    if (not is_open_in_package and is_package()) then
+                        set a_location to parent_folder()
+                    end if
+                else
+                    set a_location to parent_folder()
+                end if
+            end tell
 			set a_location to a_location's posix_path()
 		end if
         
@@ -164,18 +172,20 @@ property NSUserDefaults : class "NSUserDefaults"
 
 	on serviceForPathes_(a_list)
 		-- log "start serviceForPathes_"
-        set is_open_in_package to NSUserDefaults's standardUserDefaults()'s boolForKey:"IsOpenInPackageContents"
+        set is_open_in_package to (NSUserDefaults's standardUserDefaults()'s boolForKey:"IsOpenInPackageContents") as boolean
 		set pathlist to {}
 		try
 			if not setup() then return
 			repeat with a_path in a_list
 				set a_xfile to XFile's make_with((a_path as text) as POSIX file)
 				tell a_xfile
-                    if not is_folder() then
-                        if not (is_open_in_package and is_package()) then
+                    if is_folder() then
+                        if (not is_open_in_package and is_package()) then
                             set a_xfile to parent_folder()
                         end if
-					end if
+					else
+                        set a_xfile to parent_folder()
+                    end if
 				end tell
 				set end of pathlist to a_xfile's posix_path()
 			end repeat
