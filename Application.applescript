@@ -1,6 +1,6 @@
 script AppControlScript
 	property parent : class "NSObject"
-    
+property NSUserDefaults : class "NSUserDefaults"
 	property InsertionLocator : "@module"
 	property TerminalCommanderBase : "@module TerminalCommander"
 	property XFile : "@module"
@@ -164,14 +164,17 @@ script AppControlScript
 
 	on serviceForPathes_(a_list)
 		-- log "start serviceForPathes_"
+        set is_open_in_package to NSUserDefaults's standardUserDefaults()'s boolForKey:"IsOpenInPackageContents"
 		set pathlist to {}
 		try
 			if not setup() then return
 			repeat with a_path in a_list
 				set a_xfile to XFile's make_with((a_path as text) as POSIX file)
 				tell a_xfile
-					if not is_folder() or is_package() then
-						set a_xfile to parent_folder()
+                    if not is_folder() then
+                        if not (is_open_in_package and is_package()) then
+                            set a_xfile to parent_folder()
+                        end if
 					end if
 				end tell
 				set end of pathlist to a_xfile's posix_path()
