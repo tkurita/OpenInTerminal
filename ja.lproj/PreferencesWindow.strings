@@ -34,3 +34,9 @@
 
 /* Class = "NSButtonCell"; title = "Donation"; ObjectID = "uGu-4r-dHq"; */
 "uGu-4r-dHq.title" = "寄付する";
+
+/* Class = "NSButtonCell"; title = "Open Terminal in Pakcage Contents"; ObjectID = "eM0-ZB-9Vs"; */
+"eM0-ZB-9Vs.title" = "パッケージ内にターミナルを開く";
+
+/* Class = "NSButtonCell"; title = "Feedback"; ObjectID = "8od-hO-5qO"; */
+"8od-hO-5qO.title" = "フィードバック";

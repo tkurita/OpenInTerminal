@@ -17,31 +17,49 @@
         <window title="Open in Terminal Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="240" width="373" height="264"/>
+            <rect key="contentRect" x="196" y="240" width="373" height="275"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <value key="minSize" type="size" width="373" height="264"/>
             <value key="maxSize" type="size" width="500" height="264"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="373" height="264"/>
+                <rect key="frame" x="0.0" y="0.0" width="373" height="275"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <box fixedFrame="YES" title="Settings:" translatesAutoresizingMaskIntoConstraints="NO" id="EOY-6j-9uq">
-                        <rect key="frame" x="17" y="158" width="339" height="98"/>
+                        <rect key="frame" x="17" y="157" width="339" height="110"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                         <view key="contentView" id="rDh-O2-47O">
-                            <rect key="frame" x="3" y="3" width="333" height="80"/>
+                            <rect key="frame" x="3" y="3" width="333" height="92"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1el-WO-R3z">
-                                    <rect key="frame" x="10" y="52" width="89" height="16"/>
+                                    <rect key="frame" x="10" y="64" width="89" height="16"/>
                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Shortcut key :" id="ZxL-o5-Kc5">
                                         <font key="font" usesAppearanceFont="YES"/>
                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
+                                <customView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c5e-nv-L5f" customClass="MASShortcutView">
+                                    <rect key="frame" x="114" y="62" width="187" height="19"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="19" id="8mt-c0-HhW"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="Dzp-KT-h9O"/>
+                                    </constraints>
+                                </customView>
+                                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fCe-kr-fAk">
+                                    <rect key="frame" x="10" y="33" width="264" height="18"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <buttonCell key="cell" type="check" title="Open Terminal in Package Contents" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="eM0-ZB-9Vs">
+                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <binding destination="ciX-ll-cIa" name="value" keyPath="values.IsOpenInPackageContets" id="2yK-ua-pyD"/>
+                                    </connections>
+                                </button>
                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1rC-yY-TZt">
-                                    <rect key="frame" x="10" y="19" width="171" height="18"/>
+                                    <rect key="frame" x="10" y="9" width="171" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="check" title="Launch at login" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="lkM-fb-wFF">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -51,13 +69,6 @@
                                         <binding destination="-2" name="value" keyPath="launchAtLogin" id="cYs-Jn-gmo"/>
                                     </connections>
                                 </button>
-                                <customView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c5e-nv-L5f" customClass="MASShortcutView">
-                                    <rect key="frame" x="114" y="50" width="187" height="19"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="19" id="8mt-c0-HhW"/>
-                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="Dzp-KT-h9O"/>
-                                    </constraints>
-                                </customView>
                             </subviews>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="c5e-nv-L5f" secondAttribute="trailing" constant="11" id="1NI-ap-zDq"/>
@@ -69,14 +80,14 @@
                         </view>
                     </box>
                     <box fixedFrame="YES" title="Updates:" translatesAutoresizingMaskIntoConstraints="NO" id="2AL-AX-BLi">
-                        <rect key="frame" x="17" y="36" width="339" height="114"/>
+                        <rect key="frame" x="17" y="36" width="339" height="117"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <view key="contentView" id="Lou-jX-jBy">
-                            <rect key="frame" x="3" y="3" width="333" height="96"/>
+                            <rect key="frame" x="3" y="3" width="333" height="99"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jlo-k6-TaU">
-                                    <rect key="frame" x="11" y="72" width="225" height="18"/>
+                                    <rect key="frame" x="11" y="75" width="225" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="check" title="Automatically check for updates :" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="PWk-3S-8cr">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -87,7 +98,7 @@
                                     </connections>
                                 </button>
                                 <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jpf-bL-WyJ">
-                                    <rect key="frame" x="240" y="67" width="88" height="25"/>
+                                    <rect key="frame" x="240" y="70" width="88" height="25"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                     <popUpButtonCell key="cell" type="push" title="Daily" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="plZ-qS-xeV" id="KWO-iD-UNb">
                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -110,7 +121,7 @@
                                     </connections>
                                 </popUpButton>
                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zc7-uM-8sS">
-                                    <rect key="frame" x="83" y="27" width="167" height="32"/>
+                                    <rect key="frame" x="83" y="30" width="167" height="32"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="push" title="Check Now" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="a8a-Pc-1sy">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -151,7 +162,7 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KDJ-yt-42W">
-                        <rect key="frame" x="16" y="2" width="95" height="32"/>
+                        <rect key="frame" x="14" y="2" width="95" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="Donation" bezelStyle="rounded" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uGu-4r-dHq">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -162,11 +173,11 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Dz-OR-b8T">
-                        <rect key="frame" x="107" y="7" width="47" height="23"/>
+                        <rect key="frame" x="103" y="2" width="125" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <buttonCell key="cell" type="square" title="📧" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="8od-hO-5qO">
+                        <buttonCell key="cell" type="push" title="Feedback" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8od-hO-5qO">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system" size="28"/>
+                            <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
                             <action selector="sendEmail:" target="-2" id="dxF-Tx-5G9"/>
@@ -174,7 +185,7 @@
                     </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="85.5" y="158"/>
+            <point key="canvasLocation" x="85.5" y="163.5"/>
         </window>
         <userDefaultsController representsSharedInstance="YES" id="XR0-Xt-JAq"/>
         <userDefaultsController id="ciX-ll-cIa"/>
