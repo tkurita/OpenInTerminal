@@ -9,9 +9,10 @@ When there is a terminal of the target working directory, the terminal window wi
 
 ## Home page
 English :
-* http://www.script-factory.net/software/terminal/OpenInTerminal/en/index.html
+* https://www.script-factory.net/software/terminal/OpenInTerminal/en/index.html
+
 Japanese :
-* http://www.script-factory.net/software/terminal/OpenInTerminal/index.html
+* https://www.script-factory.net/software/terminal/OpenInTerminal/index.html
 
 ## Building
 Reqirements :
@@ -23,7 +24,7 @@ Reqirements :
 
 ## Licence
 
-Copyright &copy; 2007-2016 Kurita Tetsuro
+Copyright &copy; 2003-2020 Kurita Tetsuro
 Licensed under the [GPL license][GPL].
  
 [GPL]: http://www.gnu.org/licenses/gpl.html
